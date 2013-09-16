@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://riziv.fgov.be/GuardsImportService" xmlns:s1="http://microsoft.com/wsdl/types/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://riziv.fgov.be/GuardsImportService" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://riziv.fgov.be/GuardsImportService">
+      <s:import namespace="http://microsoft.com/wsdl/types/" />
+      <s:element name="ImportMedegaXml">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="medegaXml">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="xmlFileName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ImportMedegaXmlResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ImportMedegaXmlResult" type="s1:guid" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetImportMedegaXmlResults">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="trackingId" type="s1:guid" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetImportMedegaXmlResultsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetImportMedegaXmlResultsResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ImportMedegaGuard">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="medegaGuardRequest" type="tns:ImportMedegaGuardRequest" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ImportMedegaGuardRequest">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="PeriodId" type="s:long" />
+          <s:element minOccurs="1" maxOccurs="1" name="FileId" type="s:long" />
+          <s:element minOccurs="1" maxOccurs="1" name="ImportXmlId" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" name="RizivNumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LastName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FirstName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BankAccountNumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="GuardDate" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="GuardStartTime" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="GuardEndTime" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ZoneId" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="ZoneName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="GeographicEntityName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NisCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ZipCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ResponsableRizivNumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ResponsableLastName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ResponsableFirstName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ValidationError" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ImportMedegaGuardResult">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="PeriodId" type="s:long" />
+          <s:element minOccurs="1" maxOccurs="1" name="FileId" type="s:long" />
+          <s:element minOccurs="1" maxOccurs="1" name="GuardStatus" type="tns:GuardStates" />
+          <s:element minOccurs="0" maxOccurs="1" name="FailureDescription" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FailureCode" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="GuardStates">
+        <s:restriction base="s:string">
+          <s:enumeration value="Imported" />
+          <s:enumeration value="Overlapping" />
+          <s:enumeration value="New" />
+          <s:enumeration value="Error" />
+          <s:enumeration value="Paid" />
+        </s:restriction>
+      </s:simpleType>
+      <s:element name="ImportMedegaGuardResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ImportMedegaGuardResult" type="tns:ImportMedegaGuardResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="test">
+        <s:complexType />
+      </s:element>
+      <s:element name="testResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="testResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://microsoft.com/wsdl/types/">
+      <s:simpleType name="guid">
+        <s:restriction base="s:string">
+          <s:pattern value="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}" />
+        </s:restriction>
+      </s:simpleType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="ImportMedegaXmlSoapIn">
+    <wsdl:part name="parameters" element="tns:ImportMedegaXml" />
+  </wsdl:message>
+  <wsdl:message name="ImportMedegaXmlSoapOut">
+    <wsdl:part name="parameters" element="tns:ImportMedegaXmlResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetImportMedegaXmlResultsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetImportMedegaXmlResults" />
+  </wsdl:message>
+  <wsdl:message name="GetImportMedegaXmlResultsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetImportMedegaXmlResultsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ImportMedegaGuardSoapIn">
+    <wsdl:part name="parameters" element="tns:ImportMedegaGuard" />
+  </wsdl:message>
+  <wsdl:message name="ImportMedegaGuardSoapOut">
+    <wsdl:part name="parameters" element="tns:ImportMedegaGuardResponse" />
+  </wsdl:message>
+  <wsdl:message name="testSoapIn">
+    <wsdl:part name="parameters" element="tns:test" />
+  </wsdl:message>
+  <wsdl:message name="testSoapOut">
+    <wsdl:part name="parameters" element="tns:testResponse" />
+  </wsdl:message>
+  <wsdl:portType name="GuardsImportServiceSoap">
+    <wsdl:operation name="ImportMedegaXml">
+      <wsdl:input message="tns:ImportMedegaXmlSoapIn" />
+      <wsdl:output message="tns:ImportMedegaXmlSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetImportMedegaXmlResults">
+      <wsdl:input message="tns:GetImportMedegaXmlResultsSoapIn" />
+      <wsdl:output message="tns:GetImportMedegaXmlResultsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ImportMedegaGuard">
+      <wsdl:input message="tns:ImportMedegaGuardSoapIn" />
+      <wsdl:output message="tns:ImportMedegaGuardSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="test">
+      <wsdl:input message="tns:testSoapIn" />
+      <wsdl:output message="tns:testSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="GuardsImportServiceSoap" type="tns:GuardsImportServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ImportMedegaXml">
+      <soap:operation soapAction="http://riziv.fgov.be/GuardsImportService/ImportMedegaXml" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetImportMedegaXmlResults">
+      <soap:operation soapAction="http://riziv.fgov.be/GuardsImportService/GetImportMedegaXmlResults" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ImportMedegaGuard">
+      <soap:operation soapAction="http://riziv.fgov.be/GuardsImportService/ImportMedegaGuard" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="test">
+      <soap:operation soapAction="http://riziv.fgov.be/GuardsImportService/test" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="GuardsImportServiceSoap12" type="tns:GuardsImportServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ImportMedegaXml">
+      <soap12:operation soapAction="http://riziv.fgov.be/GuardsImportService/ImportMedegaXml" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetImportMedegaXmlResults">
+      <soap12:operation soapAction="http://riziv.fgov.be/GuardsImportService/GetImportMedegaXmlResults" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ImportMedegaGuard">
+      <soap12:operation soapAction="http://riziv.fgov.be/GuardsImportService/ImportMedegaGuard" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="test">
+      <soap12:operation soapAction="http://riziv.fgov.be/GuardsImportService/test" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="GuardsImportService">
+    <wsdl:port name="GuardsImportServiceSoap" binding="tns:GuardsImportServiceSoap">
+      <soap:address location="http://iisd-tst/szvmedegaservice/GuardsImportService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="GuardsImportServiceSoap12" binding="tns:GuardsImportServiceSoap12">
+      <soap12:address location="http://iisd-tst/szvmedegaservice/GuardsImportService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

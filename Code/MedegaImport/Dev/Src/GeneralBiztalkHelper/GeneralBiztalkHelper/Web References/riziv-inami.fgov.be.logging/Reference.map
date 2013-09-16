@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DiscoveryClientResultsFile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Results>
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.ContractReference" url="http://biztalk-val/Riziv.Applications.BizTalk.Logging_Proxy/WebService_Riziv_Applications_BizTalk_Logging.asmx?wsdl" filename="WebService_Riziv_Applications_BizTalk_Logging.wsdl" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.DiscoveryDocumentReference" url="http://biztalk-val/Riziv.Applications.BizTalk.Logging_Proxy/WebService_Riziv_Applications_BizTalk_Logging.asmx?disco" filename="WebService_Riziv_Applications_BizTalk_Logging.disco" />
+  </Results>
+</DiscoveryClientResultsFile>

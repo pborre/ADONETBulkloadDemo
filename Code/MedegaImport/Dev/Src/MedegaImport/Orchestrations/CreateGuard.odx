@@ -1,0 +1,620 @@
+﻿#if __DESIGNER_DATA
+#error Do not define __DESIGNER_DATA.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<om:MetaModel MajorVersion="1" MinorVersion="3" Core="2b131234-7959-458d-834f-2dc0769ce683" ScheduleModel="66366196-361d-448d-976f-cab5e87496d2" xmlns:om="http://schemas.microsoft.com/BizTalk/2003/DesignerData">
+    <om:Element Type="Module" OID="85ddcdba-0bf3-4817-ac3e-8ebbc76655b5" LowerBound="1.1" HigherBound="151.1">
+        <om:Property Name="ReportToAnalyst" Value="True" />
+        <om:Property Name="Name" Value="MedegaImport" />
+        <om:Property Name="Signal" Value="False" />
+        <om:Element Type="PortType" OID="fee2308b-7a5d-46df-ac81-b9144d47877a" ParentLink="Module_PortType" LowerBound="16.1" HigherBound="23.1">
+            <om:Property Name="Synchronous" Value="True" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="AnalystComments" Value="&lt;wsdl:portType name=&quot;IGuardService&quot;/&gt;&#xD;&#xA;" />
+            <om:Property Name="Name" Value="IGuardService" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="OperationDeclaration" OID="ecdd4e94-42e0-4dff-af0d-025770da91e6" ParentLink="PortType_OperationDeclaration" LowerBound="18.1" HigherBound="22.1">
+                <om:Property Name="OperationType" Value="RequestResponse" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="AnalystComments" Value="&lt;wsdl:operation name=&quot;CreateGuard&quot;/&gt;&#xD;&#xA;" />
+                <om:Property Name="Name" Value="CreateGuard" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="MessageRef" OID="20c505bc-b8d1-42ee-bd79-c8561db83ef5" ParentLink="OperationDeclaration_RequestMessageRef" LowerBound="20.13" HigherBound="20.51">
+                    <om:Property Name="Ref" Value="MedegaImport.IGuardService_CreateGuard_InputMessage" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="AnalystComments" Value="&lt;wsdl:input message=&quot;http://tempuri.org/:IGuardService_CreateGuard_InputMessage&quot;/&gt;&#xD;&#xA;Action=&quot;http://tempuri.org/IGuardService/CreateGuard&quot;&#xD;&#xA;" />
+                    <om:Property Name="Name" Value="Request" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+                <om:Element Type="MessageRef" OID="90ef13b2-176b-4947-b68e-bb4b24ab323c" ParentLink="OperationDeclaration_ResponseMessageRef" LowerBound="20.53" HigherBound="20.92">
+                    <om:Property Name="Ref" Value="MedegaImport.IGuardService_CreateGuard_OutputMessage" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="AnalystComments" Value="&lt;wsdl:output message=&quot;http://tempuri.org/:IGuardService_CreateGuard_OutputMessage&quot;/&gt;&#xD;&#xA;Action=&quot;http://tempuri.org/IGuardService/CreateGuardResponse&quot;&#xD;&#xA;" />
+                    <om:Property Name="Name" Value="Response" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+                <om:Element Type="MessageRef" OID="8c7b1dd6-796e-4614-a6b0-e73c29d1cb17" ParentLink="OperationDeclaration_FaultMessageRef" LowerBound="20.94" HigherBound="20.130">
+                    <om:Property Name="Ref" Value="BTS.soap_envelope_1__1.Fault" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Fault" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+        <om:Element Type="PortType" OID="09dbfc1a-f9ea-4aee-9938-c4e81ef82fb1" ParentLink="Module_PortType" LowerBound="23.1" HigherBound="30.1">
+            <om:Property Name="Synchronous" Value="False" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="AnalystComments" Value="Adapter metadata port type: " />
+            <om:Property Name="Name" Value="SQLCreateGuardPT" />
+            <om:Property Name="Signal" Value="True" />
+            <om:Element Type="OperationDeclaration" OID="ed901bb4-58a7-497f-8bf5-7233cfa5c8d1" ParentLink="PortType_OperationDeclaration" LowerBound="25.1" HigherBound="29.1">
+                <om:Property Name="OperationType" Value="OneWay" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="AnalystComments" Value="Adapter metadata operation: " />
+                <om:Property Name="Name" Value="procedure" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="MessageRef" OID="4540f7bc-52a5-45a0-89e0-ec05e5a656b1" ParentLink="OperationDeclaration_RequestMessageRef" LowerBound="27.13" HigherBound="27.34">
+                    <om:Property Name="Ref" Value="MedegaImport.CreateGuardPollResult" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="AnalystComments" Value="Adapter metadata operation message: " />
+                    <om:Property Name="Name" Value="Request" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+        <om:Element Type="PortType" OID="289fefaa-9aab-4831-8576-148072b1f540" ParentLink="Module_PortType" LowerBound="30.1" HigherBound="37.1">
+            <om:Property Name="Synchronous" Value="False" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="RcvCreateGuardNodePT" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="OperationDeclaration" OID="b5ea3327-8d52-4f93-a2d7-240179c17193" ParentLink="PortType_OperationDeclaration" LowerBound="32.1" HigherBound="36.1">
+                <om:Property Name="OperationType" Value="OneWay" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="CreateGuard" />
+                <om:Property Name="Signal" Value="True" />
+                <om:Element Type="MessageRef" OID="ad71de24-594a-496d-b25f-c51c683cb1a9" ParentLink="OperationDeclaration_RequestMessageRef" LowerBound="34.13" HigherBound="34.36">
+                    <om:Property Name="Ref" Value="MedegaImport.Schemas.CreateGuardNode" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="GuardNode" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+        <om:Element Type="MultipartMessageType" OID="388baee1-555f-4c6a-93e0-ce436c6b410c" ParentLink="Module_MessageType" LowerBound="4.1" HigherBound="8.1">
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="AnalystComments" Value="&lt;wsdl:message name=&quot;IGuardService_CreateGuard_InputMessage&quot;/&gt;&#xD;&#xA;" />
+            <om:Property Name="Name" Value="IGuardService_CreateGuard_InputMessage" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="PartDeclaration" OID="fa035d5e-d706-480f-813f-3eda4fd2951f" ParentLink="MultipartMessageType_PartDeclaration" LowerBound="6.1" HigherBound="7.1">
+                <om:Property Name="ClassName" Value="MedegaImport.GuardService_tempuri_org.CreateGuard" />
+                <om:Property Name="IsBodyPart" Value="True" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="AnalystComments" Value="&lt;wsdl:part name=&quot;parameters&quot;/&gt;&#xD;&#xA;" />
+                <om:Property Name="Name" Value="parameters" />
+                <om:Property Name="Signal" Value="False" />
+            </om:Element>
+        </om:Element>
+        <om:Element Type="MultipartMessageType" OID="683d196a-3138-4276-8a8b-8d4a331096ee" ParentLink="Module_MessageType" LowerBound="8.1" HigherBound="12.1">
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="AnalystComments" Value="&lt;wsdl:message name=&quot;IGuardService_CreateGuard_OutputMessage&quot;/&gt;&#xD;&#xA;" />
+            <om:Property Name="Name" Value="IGuardService_CreateGuard_OutputMessage" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="PartDeclaration" OID="00114392-0c65-48b4-8d6e-8a8d9ad70477" ParentLink="MultipartMessageType_PartDeclaration" LowerBound="10.1" HigherBound="11.1">
+                <om:Property Name="ClassName" Value="MedegaImport.GuardService_tempuri_org.CreateGuardResponse" />
+                <om:Property Name="IsBodyPart" Value="True" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="AnalystComments" Value="&lt;wsdl:part name=&quot;parameters&quot;/&gt;&#xD;&#xA;" />
+                <om:Property Name="Name" Value="parameters" />
+                <om:Property Name="Signal" Value="False" />
+            </om:Element>
+        </om:Element>
+        <om:Element Type="MultipartMessageType" OID="6ccd07f1-ab19-4bf3-a7e8-1586a8faa6d0" ParentLink="Module_MessageType" LowerBound="12.1" HigherBound="16.1">
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="AnalystComments" Value="Adapter metadata message type: " />
+            <om:Property Name="Name" Value="CreateGuardPollResult" />
+            <om:Property Name="Signal" Value="True" />
+            <om:Element Type="PartDeclaration" OID="a595e753-2768-43af-906e-56efb94e7858" ParentLink="MultipartMessageType_PartDeclaration" LowerBound="14.1" HigherBound="15.1">
+                <om:Property Name="ClassName" Value="MedegaImport.SQLCreateGuardPolling" />
+                <om:Property Name="IsBodyPart" Value="True" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="AnalystComments" Value="Adapter metadata message part: " />
+                <om:Property Name="Name" Value="parameters" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+        </om:Element>
+        <om:Element Type="ServiceDeclaration" OID="fb8753fc-bd02-4a64-9ded-d4bb9c17120c" ParentLink="Module_ServiceDeclaration" LowerBound="37.1" HigherBound="150.1">
+            <om:Property Name="InitializedTransactionType" Value="False" />
+            <om:Property Name="IsInvokable" Value="False" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="CreateGuard" />
+            <om:Property Name="Signal" Value="True" />
+            <om:Element Type="VariableDeclaration" OID="1cf021cd-7045-4347-ad4b-b22512479511" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="49.1" HigherBound="50.1">
+                <om:Property Name="UseDefaultConstructor" Value="True" />
+                <om:Property Name="Type" Value="System.Exception" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="CreateGuardException" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="VariableDeclaration" OID="e5ad6a99-dd5f-4326-a433-ddde8b86bad2" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="50.1" HigherBound="51.1">
+                <om:Property Name="UseDefaultConstructor" Value="False" />
+                <om:Property Name="Type" Value="System.Int64" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="NodeId" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="VariableDeclaration" OID="f616023a-5243-4276-95cb-38848008e4bf" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="51.1" HigherBound="52.1">
+                <om:Property Name="UseDefaultConstructor" Value="False" />
+                <om:Property Name="Type" Value="System.Int32" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="StatusId" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="VariableDeclaration" OID="d0722ba5-7f54-4f93-9145-2675a8c74094" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="52.1" HigherBound="53.1">
+                <om:Property Name="UseDefaultConstructor" Value="False" />
+                <om:Property Name="Type" Value="System.String" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="ReasonOfFailure" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="VariableDeclaration" OID="a9f617b9-4227-4d04-806d-1c98cee4784f" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="53.1" HigherBound="54.1">
+                <om:Property Name="InitialValue" Value="&quot;&quot;" />
+                <om:Property Name="UseDefaultConstructor" Value="False" />
+                <om:Property Name="Type" Value="System.String" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="ExceptionDescription" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="VariableDeclaration" OID="04eabe4f-0392-4c50-886c-3fbd59ff3bb8" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="54.1" HigherBound="55.1">
+                <om:Property Name="InitialValue" Value="&quot;&quot;" />
+                <om:Property Name="UseDefaultConstructor" Value="False" />
+                <om:Property Name="Type" Value="System.String" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="InnerExceptionDescription" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="VariableDeclaration" OID="ae28598e-4969-4520-8e50-4b88eb1a2aa1" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="55.1" HigherBound="56.1">
+                <om:Property Name="UseDefaultConstructor" Value="True" />
+                <om:Property Name="Type" Value="System.Xml.XmlDocument" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="tempXmlDoc" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="VariableDeclaration" OID="670172cf-b9ec-4420-ba21-849f1507800a" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="56.1" HigherBound="57.1">
+                <om:Property Name="UseDefaultConstructor" Value="False" />
+                <om:Property Name="Type" Value="System.Int32" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="returnCode" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="d5cbc42b-8fbd-4d71-92a5-b43652ecf596" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="45.1" HigherBound="46.1">
+                <om:Property Name="Type" Value="System.Xml.XmlDocument" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Context" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="c79a983b-5fe6-4687-949d-72081b88d2ab" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="46.1" HigherBound="47.1">
+                <om:Property Name="Type" Value="MedegaImport.Schemas.CreateGuardNode" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="CreateGuardNodeMsg" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="32dcb6e8-cb57-488f-ba64-95d2ef4badd8" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="47.1" HigherBound="48.1">
+                <om:Property Name="Type" Value="MedegaImport.IGuardService_CreateGuard_InputMessage" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="CreateGuardRequest" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="a31c9842-a137-49a0-b5e4-e5e6b328084a" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="48.1" HigherBound="49.1">
+                <om:Property Name="Type" Value="MedegaImport.IGuardService_CreateGuard_OutputMessage" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="CreateGuardResponse" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="ServiceBody" OID="f289a3ba-f840-4e2e-8cb8-5dcd90f486db" ParentLink="ServiceDeclaration_ServiceBody">
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="Receive" OID="57e07653-eae5-4775-b759-fc1835e3e0b3" ParentLink="ServiceBody_Statement" LowerBound="59.1" HigherBound="66.1">
+                    <om:Property Name="Activate" Value="True" />
+                    <om:Property Name="PortName" Value="RcvGuardNode" />
+                    <om:Property Name="MessageName" Value="CreateGuardNodeMsg" />
+                    <om:Property Name="OperationName" Value="CreateGuard" />
+                    <om:Property Name="OperationMessageName" Value="GuardNode" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="RcvGuardNode" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+                <om:Element Type="Construct" OID="c3415c46-b36f-4739-9876-755d35d1c500" ParentLink="ServiceBody_Statement" LowerBound="66.1" HigherBound="81.1">
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Initialize" />
+                    <om:Property Name="Signal" Value="True" />
+                    <om:Element Type="MessageRef" OID="ec289974-75c6-47c5-981e-554c9d13e2a5" ParentLink="Construct_MessageRef" LowerBound="67.23" HigherBound="67.30">
+                        <om:Property Name="Ref" Value="Context" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Signal" Value="False" />
+                    </om:Element>
+                    <om:Element Type="MessageRef" OID="a12e5dde-3853-4d49-aceb-915ea2340d77" ParentLink="Construct_MessageRef" LowerBound="67.32" HigherBound="67.51">
+                        <om:Property Name="Ref" Value="CreateGuardResponse" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Signal" Value="False" />
+                    </om:Element>
+                    <om:Element Type="MessageAssignment" OID="2b3e66b9-fb9c-4d61-abfd-7dcaaa050fb3" ParentLink="ComplexStatement_Statement" LowerBound="69.1" HigherBound="80.1">
+                        <om:Property Name="Expression" Value="tempXmlDoc= new System.Xml.XmlDocument();&#xD;&#xA;tempXmlDoc.LoadXml(&quot;&lt;empty/&gt;&quot;);&#xD;&#xA;&#xD;&#xA;Context = tempXmlDoc;&#xD;&#xA;CreateGuardResponse.parameters = tempXmlDoc;&#xD;&#xA;returnCode = 0;&#xD;&#xA;ExceptionDescription=&quot;&quot;;&#xD;&#xA;ReasonOfFailure=&quot;&quot;;&#xD;&#xA;tempXmlDoc = CreateGuardNodeMsg;&#xD;&#xA;//System.Diagnostics.EventLog.WriteEntry(&quot;MedegaImport&quot;, tempXmlDoc.OuterXml);" />
+                        <om:Property Name="ReportToAnalyst" Value="False" />
+                        <om:Property Name="Name" Value="Initialize" />
+                        <om:Property Name="Signal" Value="False" />
+                    </om:Element>
+                </om:Element>
+                <om:Element Type="Scope" OID="143011b5-f318-456e-82bd-9907be480c48" ParentLink="ServiceBody_Statement" LowerBound="81.1" HigherBound="148.1">
+                    <om:Property Name="InitializedTransactionType" Value="True" />
+                    <om:Property Name="IsSynchronized" Value="False" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Try" />
+                    <om:Property Name="Signal" Value="True" />
+                    <om:Element Type="Construct" OID="cdf80c02-c5f4-46bd-ae04-b61c2da63b6b" ParentLink="ComplexStatement_Statement" LowerBound="86.1" HigherBound="97.1">
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Name" Value="Construct Create Guard" />
+                        <om:Property Name="Signal" Value="True" />
+                        <om:Element Type="MessageRef" OID="3d8b0ef7-b740-4d1b-9f10-0aadc7929d5e" ParentLink="Construct_MessageRef" LowerBound="87.31" HigherBound="87.38">
+                            <om:Property Name="Ref" Value="Context" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Signal" Value="False" />
+                        </om:Element>
+                        <om:Element Type="MessageRef" OID="e877699e-2524-4169-b9a3-e994f20e6477" ParentLink="Construct_MessageRef" LowerBound="87.40" HigherBound="87.58">
+                            <om:Property Name="Ref" Value="CreateGuardRequest" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Signal" Value="False" />
+                        </om:Element>
+                        <om:Element Type="Transform" OID="772c28da-4598-4786-88ae-40d7b76d91f6" ParentLink="ComplexStatement_Statement" LowerBound="89.1" HigherBound="91.1">
+                            <om:Property Name="ClassName" Value="MedegaImport.MapCreateGuardRequest" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="MapCreateGuard" />
+                            <om:Property Name="Signal" Value="True" />
+                            <om:Element Type="MessagePartRef" OID="49aaa470-3f98-4442-8395-e98c48e5de21" ParentLink="Transform_InputMessagePartRef" LowerBound="90.105" HigherBound="90.123">
+                                <om:Property Name="MessageRef" Value="CreateGuardNodeMsg" />
+                                <om:Property Name="ReportToAnalyst" Value="True" />
+                                <om:Property Name="Name" Value="MessagePartReference_1" />
+                                <om:Property Name="Signal" Value="False" />
+                            </om:Element>
+                            <om:Element Type="MessagePartRef" OID="225a5bc1-c386-457d-a58a-ade07a60d254" ParentLink="Transform_OutputMessagePartRef" LowerBound="90.36" HigherBound="90.65">
+                                <om:Property Name="MessageRef" Value="CreateGuardRequest" />
+                                <om:Property Name="PartRef" Value="parameters" />
+                                <om:Property Name="ReportToAnalyst" Value="True" />
+                                <om:Property Name="Name" Value="MessagePartReference_2" />
+                                <om:Property Name="Signal" Value="False" />
+                            </om:Element>
+                        </om:Element>
+                        <om:Element Type="MessageAssignment" OID="84caf992-b4d6-461c-84af-5439522425d9" ParentLink="ComplexStatement_Statement" LowerBound="91.1" HigherBound="96.1">
+                            <om:Property Name="Expression" Value="Context = CreateGuardRequest.parameters;&#xD;&#xA;&#xD;&#xA;tempXmlDoc = CreateGuardRequest.parameters;&#xD;&#xA;//System.Diagnostics.EventLog.WriteEntry(&quot;MedegaImport&quot;,tempXmlDoc.OuterXml);" />
+                            <om:Property Name="ReportToAnalyst" Value="False" />
+                            <om:Property Name="Name" Value="Assign context" />
+                            <om:Property Name="Signal" Value="False" />
+                        </om:Element>
+                    </om:Element>
+                    <om:Element Type="Scope" OID="01176e6d-6c53-47fd-9f9b-3292f764eb27" ParentLink="ComplexStatement_Statement" LowerBound="97.1" HigherBound="124.1">
+                        <om:Property Name="InitializedTransactionType" Value="True" />
+                        <om:Property Name="IsSynchronized" Value="False" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Name" Value="Try" />
+                        <om:Property Name="Signal" Value="True" />
+                        <om:Element Type="Send" OID="fa0fcf45-cb55-44f4-954d-925a6574bd55" ParentLink="ComplexStatement_Statement" LowerBound="102.1" HigherBound="104.1">
+                            <om:Property Name="PortName" Value="CreateGuardService" />
+                            <om:Property Name="MessageName" Value="CreateGuardRequest" />
+                            <om:Property Name="OperationName" Value="CreateGuard" />
+                            <om:Property Name="OperationMessageName" Value="Request" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="Send CreateGuard" />
+                            <om:Property Name="Signal" Value="True" />
+                        </om:Element>
+                        <om:Element Type="Receive" OID="21a8f133-5452-41c5-b71a-b1dcb0ec261f" ParentLink="ComplexStatement_Statement" LowerBound="104.1" HigherBound="106.1">
+                            <om:Property Name="Activate" Value="False" />
+                            <om:Property Name="PortName" Value="CreateGuardService" />
+                            <om:Property Name="MessageName" Value="CreateGuardResponse" />
+                            <om:Property Name="OperationName" Value="CreateGuard" />
+                            <om:Property Name="OperationMessageName" Value="Response" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="Receive response" />
+                            <om:Property Name="Signal" Value="True" />
+                        </om:Element>
+                        <om:Element Type="Catch" OID="909ee54c-6df4-49c8-b396-7efe7bd767b7" ParentLink="Scope_Catch" LowerBound="109.1" HigherBound="122.1">
+                            <om:Property Name="ExceptionName" Value="faultException" />
+                            <om:Property Name="ExceptionType" Value="CreateGuardService.CreateGuard.Fault" />
+                            <om:Property Name="IsFaultMessage" Value="False" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="Catch Soap Fault" />
+                            <om:Property Name="Signal" Value="True" />
+                            <om:Element Type="VariableAssignment" OID="7a98ed2d-28f8-4c8f-b24b-559d3648ff97" ParentLink="Catch_Statement" LowerBound="112.1" HigherBound="119.1">
+                                <om:Property Name="Expression" Value="tempXmlDoc = xpath(faultException, &quot;//*[local-name()='faultcode']&quot;);&#xD;&#xA;ExceptionDescription = System.Convert.ToString(tempXmlDoc.OuterXml);&#xD;&#xA;tempXmlDoc = xpath(faultException, &quot;//*[local-name()='faultstring']&quot;);&#xD;&#xA;InnerExceptionDescription = System.Convert.ToString(tempXmlDoc.OuterXml);&#xD;&#xA;CreateGuardException = new System.Exception(&quot;Error while calling the CreateGuard Webservice\n&quot;,&#xD;&#xA;    new System.Exception(ExceptionDescription + &quot;\n&quot; + InnerExceptionDescription));&#xD;&#xA;" />
+                                <om:Property Name="ReportToAnalyst" Value="True" />
+                                <om:Property Name="Name" Value="Create exception" />
+                                <om:Property Name="Signal" Value="False" />
+                            </om:Element>
+                            <om:Element Type="Throw" OID="c0ac0fd9-adbb-4d28-933c-c3b9e26ee89f" ParentLink="Catch_Statement" LowerBound="119.1" HigherBound="121.1">
+                                <om:Property Name="ThrownReference" Value="CreateGuardException" />
+                                <om:Property Name="ReportToAnalyst" Value="True" />
+                                <om:Property Name="Name" Value="Throw" />
+                                <om:Property Name="Signal" Value="True" />
+                            </om:Element>
+                        </om:Element>
+                    </om:Element>
+                    <om:Element Type="Catch" OID="b6588860-02c9-45e5-9a66-3f926ae34fd2" ParentLink="Scope_Catch" LowerBound="127.1" HigherBound="146.1">
+                        <om:Property Name="ExceptionName" Value="exc" />
+                        <om:Property Name="ExceptionType" Value="System.Exception" />
+                        <om:Property Name="IsFaultMessage" Value="False" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Name" Value="Catch System.Exception" />
+                        <om:Property Name="Signal" Value="True" />
+                        <om:Element Type="VariableAssignment" OID="1deddb07-6c07-4c65-8bbc-7f4b7a3bce47" ParentLink="Catch_Statement" LowerBound="130.1" HigherBound="141.1">
+                            <om:Property Name="Expression" Value="NodeId = CreateGuardNodeMsg.NodeId;&#xD;&#xA;StatusId = System.Convert.ToInt32( MedegaImport.MedegaImportTypes.MedegaNodeStatus.InError );&#xD;&#xA;ReasonOfFailure = exc.Message;&#xD;&#xA;&#xD;&#xA;ExceptionDescription = exc.Message;&#xD;&#xA;InnerExceptionDescription = &quot;&quot;;&#xD;&#xA;if(exc.InnerException != null)&#xD;&#xA;{&#xD;&#xA;    InnerExceptionDescription = exc.InnerException.Message;&#xD;&#xA;}&#xD;&#xA;" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="Set variables" />
+                            <om:Property Name="Signal" Value="True" />
+                        </om:Element>
+                        <om:Element Type="Call" OID="9d699ace-27d3-4b68-9014-6b10c9c87d09" ParentLink="Catch_Statement" LowerBound="141.1" HigherBound="143.1">
+                            <om:Property Name="Identifier" Value="HandleExeption" />
+                            <om:Property Name="Invokee" Value="MedegaImport.HandleException" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="Handle Exeption" />
+                            <om:Property Name="Signal" Value="False" />
+                            <om:Element Type="Parameter" OID="4509ad6a-4844-406e-9a8e-5e0009fa2dd8" ParentLink="InvokeStatement_Parameter">
+                                <om:Property Name="Direction" Value="Ref" />
+                                <om:Property Name="Name" Value="returnCode" />
+                                <om:Property Name="Type" Value="System.Int32" />
+                                <om:Property Name="Signal" Value="False" />
+                            </om:Element>
+                            <om:Element Type="Parameter" OID="2295f5fb-f5d0-4cef-ab15-566b9c8f8247" ParentLink="InvokeStatement_Parameter">
+                                <om:Property Name="Direction" Value="In" />
+                                <om:Property Name="Name" Value="Context" />
+                                <om:Property Name="Type" Value="System.Xml.XmlDocument" />
+                                <om:Property Name="Signal" Value="False" />
+                            </om:Element>
+                            <om:Element Type="Parameter" OID="a10c2ce5-7cc8-471f-974f-de38e525dc8c" ParentLink="InvokeStatement_Parameter">
+                                <om:Property Name="Direction" Value="In" />
+                                <om:Property Name="Name" Value="Context" />
+                                <om:Property Name="Type" Value="System.Xml.XmlDocument" />
+                                <om:Property Name="Signal" Value="False" />
+                            </om:Element>
+                            <om:Element Type="Parameter" OID="4ed83b49-881f-4b00-ae16-8f691578dcb3" ParentLink="InvokeStatement_Parameter">
+                                <om:Property Name="Direction" Value="In" />
+                                <om:Property Name="Name" Value="ExceptionDescription" />
+                                <om:Property Name="Type" Value="System.String" />
+                                <om:Property Name="Signal" Value="False" />
+                            </om:Element>
+                            <om:Element Type="Parameter" OID="26cdbf3c-cfd8-4784-89af-8da589bcf4f2" ParentLink="InvokeStatement_Parameter">
+                                <om:Property Name="Direction" Value="In" />
+                                <om:Property Name="Name" Value="InnerExceptionDescription" />
+                                <om:Property Name="Type" Value="System.String" />
+                                <om:Property Name="Signal" Value="False" />
+                            </om:Element>
+                        </om:Element>
+                        <om:Element Type="Call" OID="d8d32391-627f-489f-8bc8-371b7c6c27b7" ParentLink="Catch_Statement" LowerBound="143.1" HigherBound="145.1">
+                            <om:Property Name="Identifier" Value="CallUpdateNodeStatus" />
+                            <om:Property Name="Invokee" Value="MedegaImport.subUpdateNodeStatus" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="Update Node Status" />
+                            <om:Property Name="Signal" Value="False" />
+                            <om:Element Type="Parameter" OID="f89c07df-dda8-41fe-b27d-5688846fe9e1" ParentLink="InvokeStatement_Parameter">
+                                <om:Property Name="Direction" Value="In" />
+                                <om:Property Name="Name" Value="NodeId" />
+                                <om:Property Name="Type" Value="System.Int64" />
+                                <om:Property Name="Signal" Value="False" />
+                            </om:Element>
+                            <om:Element Type="Parameter" OID="9151e1f4-3620-4a3d-9fc0-5586b59806e0" ParentLink="InvokeStatement_Parameter">
+                                <om:Property Name="Direction" Value="In" />
+                                <om:Property Name="Name" Value="StatusId" />
+                                <om:Property Name="Type" Value="System.Int32" />
+                                <om:Property Name="Signal" Value="False" />
+                            </om:Element>
+                            <om:Element Type="Parameter" OID="e15c6d5c-d361-410a-b715-d154d39884fd" ParentLink="InvokeStatement_Parameter">
+                                <om:Property Name="Direction" Value="In" />
+                                <om:Property Name="Name" Value="ReasonOfFailure" />
+                                <om:Property Name="Type" Value="System.String" />
+                                <om:Property Name="Signal" Value="False" />
+                            </om:Element>
+                        </om:Element>
+                    </om:Element>
+                </om:Element>
+            </om:Element>
+            <om:Element Type="PortDeclaration" OID="77d77858-4438-401c-81a3-b18e7d99055d" ParentLink="ServiceDeclaration_PortDeclaration" LowerBound="40.1" HigherBound="42.1">
+                <om:Property Name="PortModifier" Value="Implements" />
+                <om:Property Name="Orientation" Value="Left" />
+                <om:Property Name="PortIndex" Value="0" />
+                <om:Property Name="IsWebPort" Value="False" />
+                <om:Property Name="OrderedDelivery" Value="False" />
+                <om:Property Name="DeliveryNotification" Value="None" />
+                <om:Property Name="Type" Value="MedegaImport.RcvCreateGuardNodePT" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="RcvGuardNode" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="LogicalBindingAttribute" OID="8dee0ba1-4dd3-43e3-881a-a889e762655b" ParentLink="PortDeclaration_CLRAttribute" LowerBound="40.1" HigherBound="41.1">
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="PortDeclaration" OID="5e24945a-1270-44bc-b7da-dfc62bf7b73e" ParentLink="ServiceDeclaration_PortDeclaration" LowerBound="42.1" HigherBound="45.1">
+                <om:Property Name="PortModifier" Value="Uses" />
+                <om:Property Name="Orientation" Value="Right" />
+                <om:Property Name="PortIndex" Value="46" />
+                <om:Property Name="IsWebPort" Value="False" />
+                <om:Property Name="OrderedDelivery" Value="False" />
+                <om:Property Name="DeliveryNotification" Value="Transmitted" />
+                <om:Property Name="Type" Value="MedegaImport.IGuardService" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="CreateGuardService" />
+                <om:Property Name="Signal" Value="True" />
+                <om:Element Type="LogicalBindingAttribute" OID="4f32c9bd-e8ce-4966-9389-c1a6af75193e" ParentLink="PortDeclaration_CLRAttribute" LowerBound="42.1" HigherBound="43.1">
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+    </om:Element>
+</om:MetaModel>
+#endif // __DESIGNER_DATA
+[Microsoft.XLANGs.BaseTypes.BPELExportable(false)]
+module MedegaImport
+{
+    internal messagetype IGuardService_CreateGuard_InputMessage
+    {
+        body GuardService_tempuri_org.CreateGuard parameters;
+    };
+    internal messagetype IGuardService_CreateGuard_OutputMessage
+    {
+        body GuardService_tempuri_org.CreateGuardResponse parameters;
+    };
+    internal messagetype CreateGuardPollResult
+    {
+        body SQLCreateGuardPolling parameters;
+    };
+    internal porttype IGuardService
+    {
+        requestresponse CreateGuard
+        {
+            IGuardService_CreateGuard_InputMessage, IGuardService_CreateGuard_OutputMessage, Fault = BTS.soap_envelope_1__1.Fault
+        };
+    };
+    internal porttype SQLCreateGuardPT
+    {
+        oneway procedure
+        {
+            CreateGuardPollResult
+        };
+    };
+    internal porttype RcvCreateGuardNodePT
+    {
+        oneway CreateGuard
+        {
+            Schemas.CreateGuardNode
+        };
+    };
+    [Microsoft.XLANGs.BaseTypes.BPELExportable(false)]
+    internal service CreateGuard
+    {
+        [Microsoft.XLANGs.BaseTypes.LogicalBinding()]
+        port implements RcvCreateGuardNodePT RcvGuardNode;
+        [Microsoft.XLANGs.BaseTypes.LogicalBinding()]
+        [Microsoft.XLANGs.BaseTypes.DeliveryNotification(Microsoft.XLANGs.BaseTypes.DeliveryNotification.NotificationLevel.Transmitted)]
+        port uses IGuardService CreateGuardService;
+        message System.Xml.XmlDocument Context;
+        message Schemas.CreateGuardNode CreateGuardNodeMsg;
+        message IGuardService_CreateGuard_InputMessage CreateGuardRequest;
+        message IGuardService_CreateGuard_OutputMessage CreateGuardResponse;
+        System.Exception CreateGuardException;
+        System.Int64 NodeId;
+        System.Int32 StatusId;
+        System.String ReasonOfFailure;
+        System.String ExceptionDescription;
+        System.String InnerExceptionDescription;
+        System.Xml.XmlDocument tempXmlDoc;
+        System.Int32 returnCode;
+        body ()
+        {
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("57e07653-eae5-4775-b759-fc1835e3e0b3")]
+            activate receive (RcvGuardNode.CreateGuard, CreateGuardNodeMsg);
+            CreateGuardException = new System.Exception();
+            ReasonOfFailure = "";
+            ExceptionDescription = "";
+            InnerExceptionDescription = "";
+            tempXmlDoc = new System.Xml.XmlDocument();
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("c3415c46-b36f-4739-9876-755d35d1c500")]
+            construct Context, CreateGuardResponse
+            {
+                [Microsoft.XLANGs.BaseTypes.DesignerPosition("2b3e66b9-fb9c-4d61-abfd-7dcaaa050fb3")]
+                tempXmlDoc= new System.Xml.XmlDocument();
+                tempXmlDoc.LoadXml("<empty/>");
+                
+                Context = tempXmlDoc;
+                CreateGuardResponse.parameters = tempXmlDoc;
+                returnCode = 0;
+                ExceptionDescription="";
+                ReasonOfFailure="";
+                tempXmlDoc = CreateGuardNodeMsg;
+                //System.Diagnostics.EventLog.WriteEntry("MedegaImport", tempXmlDoc.OuterXml);
+            }
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("143011b5-f318-456e-82bd-9907be480c48")]
+            scope
+            {
+                body
+                {
+                    [Microsoft.XLANGs.BaseTypes.DesignerPosition("cdf80c02-c5f4-46bd-ae04-b61c2da63b6b")]
+                    construct Context, CreateGuardRequest
+                    {
+                        [Microsoft.XLANGs.BaseTypes.DesignerPosition("772c28da-4598-4786-88ae-40d7b76d91f6")]
+                        transform (CreateGuardRequest.parameters) = MedegaImport.MapCreateGuardRequest (CreateGuardNodeMsg);
+                        [Microsoft.XLANGs.BaseTypes.DesignerPosition("84caf992-b4d6-461c-84af-5439522425d9")]
+                        Context = CreateGuardRequest.parameters;
+                        
+                        tempXmlDoc = CreateGuardRequest.parameters;
+                        //System.Diagnostics.EventLog.WriteEntry("MedegaImport",tempXmlDoc.OuterXml);
+                    }
+                    [Microsoft.XLANGs.BaseTypes.DesignerPosition("01176e6d-6c53-47fd-9f9b-3292f764eb27")]
+                    scope
+                    {
+                        body
+                        {
+                            [Microsoft.XLANGs.BaseTypes.DesignerPosition("fa0fcf45-cb55-44f4-954d-925a6574bd55")]
+                            send (CreateGuardService.CreateGuard, CreateGuardRequest);
+                            [Microsoft.XLANGs.BaseTypes.DesignerPosition("21a8f133-5452-41c5-b71a-b1dcb0ec261f")]
+                            receive (CreateGuardService.CreateGuard, CreateGuardResponse);
+                        }
+                        exceptions
+                        {
+                            [Microsoft.XLANGs.BaseTypes.DesignerPosition("909ee54c-6df4-49c8-b396-7efe7bd767b7")]
+                            catch (CreateGuardService.CreateGuard.Fault faultException)
+                            {
+                                [Microsoft.XLANGs.BaseTypes.DesignerPosition("7a98ed2d-28f8-4c8f-b24b-559d3648ff97")]
+                                tempXmlDoc = xpath(faultException, "//*[local-name()='faultcode']");
+                                ExceptionDescription = System.Convert.ToString(tempXmlDoc.OuterXml);
+                                tempXmlDoc = xpath(faultException, "//*[local-name()='faultstring']");
+                                InnerExceptionDescription = System.Convert.ToString(tempXmlDoc.OuterXml);
+                                CreateGuardException = new System.Exception("Error while calling the CreateGuard Webservice\n",
+                                    new System.Exception(ExceptionDescription + "\n" + InnerExceptionDescription));
+                                [Microsoft.XLANGs.BaseTypes.DesignerPosition("c0ac0fd9-adbb-4d28-933c-c3b9e26ee89f")]
+                                throw CreateGuardException;
+                            }
+                        }
+                    }
+                }
+                exceptions
+                {
+                    [Microsoft.XLANGs.BaseTypes.DesignerPosition("b6588860-02c9-45e5-9a66-3f926ae34fd2")]
+                    catch (System.Exception exc)
+                    {
+                        [Microsoft.XLANGs.BaseTypes.DesignerPosition("1deddb07-6c07-4c65-8bbc-7f4b7a3bce47")]
+                        NodeId = CreateGuardNodeMsg.NodeId;
+                        StatusId = System.Convert.ToInt32( MedegaImport.MedegaImportTypes.MedegaNodeStatus.InError );
+                        ReasonOfFailure = exc.Message;
+                        
+                        ExceptionDescription = exc.Message;
+                        InnerExceptionDescription = "";
+                        if(exc.InnerException != null)
+                        {
+                            InnerExceptionDescription = exc.InnerException.Message;
+                        }
+                        [Microsoft.XLANGs.BaseTypes.DesignerPosition("9d699ace-27d3-4b68-9014-6b10c9c87d09")]
+                        call MedegaImport.HandleException (ref returnCode, Context, Context, ExceptionDescription, InnerExceptionDescription);
+                        [Microsoft.XLANGs.BaseTypes.DesignerPosition("d8d32391-627f-489f-8bc8-371b7c6c27b7")]
+                        call MedegaImport.subUpdateNodeStatus (NodeId, StatusId, ReasonOfFailure);
+                    }
+                }
+            }
+        }
+    }
+}
+

@@ -1,0 +1,231 @@
+﻿<VisualStudioProject>
+    <BIZTALK
+        ProductVersion = "3.6.1404"
+        SchemaVersion = "1.0"
+        ProjectGuid = "{602843A2-E311-47B4-A584-319C88DF7B47}"
+        SccProjectName = '"$/Development/BizTalk Projects/MedegaImport/MedegaImport", KXUGAAAA'
+        SccLocalPath = ".."
+        SccProvider = "MSSCCI:Microsoft Visual SourceSafe"
+    >
+        <Build>
+            <Settings>
+                <EditorCommon/>
+                <ProjectCommon
+                    AssemblyKeyName = ""
+                    AssemblyKeyFile = "..\..\Key\hod.snk"
+                    AssemblyDelaySign = "False"
+                    AssemblyTitle = ""
+                    AssemblyDescription = ""
+                    AssemblyDefaultAlias = ""
+                    AssemblyConfiguration = ""
+                    AssemblyTrademark = ""
+                    AssemblyProduct = ""
+                    AssemblyInformationalVersion = "1.0.0.2"
+                    AssemblyFileVersion = "1.0.0.2"
+                    AssemblyCopyright = ""
+                    AssemblyCompany = ""
+                    AssemblyVersion = "1.0.0.2"
+                    DefaultNamespace = "MedegaImport"
+                    AssemblyName = "MedegaImport"
+                />
+                <Config
+                    Name = "Development"
+                    ApplicationName = "MedegaImport"
+                    BpelCompliance = "True"
+                    GenerateDebuggingInformation = "True"
+                    EmbedTrackingInformation = "True"
+                    TreatWarningsAsErrors = "False"
+                    WarningLevel = "4"
+                    OutputPath = "bin\Development\"
+                />
+                <Config
+                    Name = "Deployment"
+                    ApplicationName = ""
+                    BpelCompliance = "True"
+                    GenerateDebuggingInformation = "False"
+                    EmbedTrackingInformation = "True"
+                    TreatWarningsAsErrors = "False"
+                    WarningLevel = "4"
+                    OutputPath = "bin\Deployment\"
+                />
+            </Settings>
+            <References>
+                <Reference
+                    Name = "System"
+                    AssemblyName = "System"
+                />
+                <Reference
+                    Name = "System.XML"
+                    AssemblyName = "System.Xml"
+                />
+                <Reference
+                    Name = "System.configuration"
+                    AssemblyName = "System.Configuration"
+                />
+                <Reference
+                    Name = "Microsoft.BizTalk.DefaultPipelines"
+                    AssemblyName = "Microsoft.BizTalk.DefaultPipelines"
+                />
+                <Reference
+                    Name = "Microsoft.BizTalk.GlobalPropertySchemas"
+                    AssemblyName = "Microsoft.BizTalk.GlobalPropertySchemas"
+                />
+                <Reference
+                    Name = "MedegaImportSchema"
+                    Project = "{BC1EF6A3-CA99-42D4-9DE1-602FB3AADDD0}"
+                    Package = "{EF7E3281-CD33-11D4-8326-00C04FA0CE8D}"
+                />
+                <Reference
+                    Name = "GeneralBiztalkHelper"
+                    Project = "{13D49CFD-FED5-44E8-971B-8AE2E1D024CC}"
+                    Package = "{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}"
+                />
+                <Reference
+                    Name = "Microsoft.BizTalk.Pipeline.Components"
+                    AssemblyName = "Microsoft.BizTalk.Pipeline.Components"
+                    HintPath = "C:\windows\assembly\GAC_MSIL\Microsoft.BizTalk.Pipeline.Components\3.0.1.0__31bf3856ad364e35\Microsoft.BizTalk.Pipeline.Components.dll"
+                />
+                <Reference
+                    Name = "System.Web.Services"
+                    AssemblyName = "System.Web.Services"
+                    HintPath = "C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\System.Web.Services.dll"
+                />
+                <Reference
+                    Name = "MedegaImportTypes"
+                    Project = "{4E813134-5ABA-44AF-A3B7-A1186C903F50}"
+                    Package = "{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}"
+                />
+                <Reference
+                    Name = "XslTransform"
+                    AssemblyName = "XslTransform"
+                    HintPath = "C:\Program Files\Microsoft BizTalk Server 2006\Pipeline Components\XslTransform.dll"
+                />
+                <Reference
+                    Name = "BizTalkSSOHelper"
+                    AssemblyName = "BizTalkSSOHelper"
+                    HintPath = "..\BizTalkSSOHelper\bin\Debug\BizTalkSSOHelper.dll"
+                />
+            </References>
+        </Build>
+        <Files>
+            <Include>
+                <File
+                    RelPath = "Key\hod.snk"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "Mappings\CreateDB2ImportFileRequest.btm"
+                    BuildAction = "Compile"
+                    Namespace = "MedegaImport.Mappings"
+                    Type = "CreateDB2ImportFileRequest"
+                />
+                <File
+                    RelPath = "Mappings\CreateDB2ImportXmlRequest.btm"
+                    BuildAction = "Compile"
+                    Namespace = "MedegaImport.Mappings"
+                    Type = "CreateDB2ImportXmlRequest"
+                />
+                <File
+                    RelPath = "Mappings\CreateDB2ImportXmlRequest.xsl"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "Mappings\DB2ImportXMLtoImportGuardRequest.btm"
+                    BuildAction = "Compile"
+                    Namespace = "MedegaImport.Mappings"
+                    Type = "DB2ImportXMLtoImportGuardRequest"
+                />
+                <File
+                    RelPath = "Mappings\DB2ImportXMLtoImportGuardRequest.xsl"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "Orchestrations\HandleException.odx"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Orchestrations\ImportGuards.odx"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Orchestrations\subImportFile.odx"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Orchestrations\subImportGuardRecord.odx"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Orchestrations\subUpdateFileStatus.odx"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Pipelines\MedegaImportFile.btp"
+                    BuildAction = "Compile"
+                    Namespace = "MedegaImport.Pipelines"
+                    Type = "MedegaImportFile"
+                />
+                <File
+                    RelPath = "Pipelines\NoNamespaceDB2Pipeline.btp"
+                    BuildAction = "Compile"
+                    Namespace = "MedegaImport.Pipelines"
+                    Type = "NoNamespaceDB2Pipeline"
+                />
+                <File
+                    RelPath = "Schemas\DB2_ImportFile.xsd"
+                    BuildAction = "Compile"
+                    Namespace = "MedegaImport.Schemas"
+                    Type = "DB2_ImportFile"
+                />
+                <File
+                    RelPath = "Schemas\DB2_ImportXml.xsd"
+                    BuildAction = "Compile"
+                    Namespace = "MedegaImport.Schemas"
+                    Type = "DB2_ImportXml"
+                />
+                <File
+                    RelPath = "Schemas\DB2_UpdateFileStatus.xsd"
+                    BuildAction = "Compile"
+                    Namespace = "MedegaImport.Schemas"
+                    Type = "DB2_UpdateFileStatus"
+                />
+                <File
+                    RelPath = "Web References\GuardsImportService\GuardsImportService.disco"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "Web References\GuardsImportService\GuardsImportService.wsdl"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "Web References\GuardsImportService\Reference.map"
+                    BuildAction = "None"
+                    Namespace = "MedegaImport.GuardsImportService"
+                    Generator = "MSDiscoCodeGenerator"
+                />
+                <File
+                    RelPath = "Web References\GuardsImportService\Reference.odx"
+                    DependentUpon = "Reference.map"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Web References\GuardsImportService\Reference.xsd"
+                    DependentUpon = "Reference.map"
+                    BuildAction = "Compile"
+                    Namespace = "MedegaImport.GuardsImportService"
+                    Type = "Reference"
+                />
+                <Folder
+                    RelPath = "Web References\GuardsImportService\"
+                    WebReferenceUrl = "http://iisd-tst/szvmedegaservice/GuardsImportService.asmx"
+                    UrlBehavior = "Static"
+                />
+                <Folder
+                    RelPath = "Web References\"
+                    WebReferences = "TRUE"
+                />
+            </Include>
+        </Files>
+    </BIZTALK>
+</VisualStudioProject>
+

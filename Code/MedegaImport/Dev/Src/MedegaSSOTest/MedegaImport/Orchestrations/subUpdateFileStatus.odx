@@ -1,0 +1,368 @@
+﻿#if __DESIGNER_DATA
+#error Do not define __DESIGNER_DATA.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<om:MetaModel MajorVersion="1" MinorVersion="3" Core="2b131234-7959-458d-834f-2dc0769ce683" ScheduleModel="66366196-361d-448d-976f-cab5e87496d2" xmlns:om="http://schemas.microsoft.com/BizTalk/2003/DesignerData">
+    <om:Element Type="Module" OID="0c6ab1af-2c04-46a0-927a-37acfc98a931" LowerBound="1.1" HigherBound="86.1">
+        <om:Property Name="ReportToAnalyst" Value="True" />
+        <om:Property Name="Name" Value="MedegaImport" />
+        <om:Property Name="Signal" Value="False" />
+        <om:Element Type="PortType" OID="42bce6e3-ce3f-4fbe-ab0b-1026cef7538d" ParentLink="Module_PortType" LowerBound="4.1" HigherBound="11.1">
+            <om:Property Name="Synchronous" Value="True" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="DB2UpdateFileStatusType" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="OperationDeclaration" OID="c14375e1-4f8c-4f27-ba00-1c045081cad1" ParentLink="PortType_OperationDeclaration" LowerBound="6.1" HigherBound="10.1">
+                <om:Property Name="OperationType" Value="RequestResponse" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="UpdateFileStatus" />
+                <om:Property Name="Signal" Value="True" />
+                <om:Element Type="MessageRef" OID="0001b183-b50a-401d-972e-b90354a4d26e" ParentLink="OperationDeclaration_RequestMessageRef" LowerBound="8.13" HigherBound="8.65">
+                    <om:Property Name="Ref" Value="MedegaImport.Schemas.DB2_UpdateFileStatus.UpdateFileStatusRequest" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Request" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+                <om:Element Type="MessageRef" OID="44cbe465-5585-4a85-a3ad-1bcfd2d15094" ParentLink="OperationDeclaration_ResponseMessageRef" LowerBound="8.67" HigherBound="8.120">
+                    <om:Property Name="Ref" Value="MedegaImport.Schemas.DB2_UpdateFileStatus.UpdateFileStatusResponse" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Response" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+        <om:Element Type="ServiceDeclaration" OID="0472e4cc-8098-43d2-b82e-756edc6defa6" ParentLink="Module_ServiceDeclaration" LowerBound="11.1" HigherBound="85.1">
+            <om:Property Name="InitializedTransactionType" Value="False" />
+            <om:Property Name="IsInvokable" Value="True" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="subUpdateFileStatus" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="VariableDeclaration" OID="793fc1e5-de1b-4dfc-907e-263591fbda86" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="20.1" HigherBound="21.1">
+                <om:Property Name="UseDefaultConstructor" Value="False" />
+                <om:Property Name="Type" Value="System.String" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="InnerExceptionDescription" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="VariableDeclaration" OID="c800e7d9-53d5-4940-8f02-24952aeb2f34" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="21.1" HigherBound="22.1">
+                <om:Property Name="UseDefaultConstructor" Value="False" />
+                <om:Property Name="Type" Value="System.String" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="ExceptionDescription" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="VariableDeclaration" OID="8a150708-59c5-478c-bb62-d9d7ca81329b" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="22.1" HigherBound="23.1">
+                <om:Property Name="UseDefaultConstructor" Value="True" />
+                <om:Property Name="Type" Value="System.Xml.XmlDocument" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="tempXmlDoc" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="VariableDeclaration" OID="4b996d87-4345-4c3e-9c34-ddf7d5b19b13" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="23.1" HigherBound="24.1">
+                <om:Property Name="UseDefaultConstructor" Value="False" />
+                <om:Property Name="Type" Value="System.Int32" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="returnCode" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="VariableDeclaration" OID="5ad92776-acc8-4b1e-93ce-2485cc9042d8" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="24.1" HigherBound="25.1">
+                <om:Property Name="UseDefaultConstructor" Value="True" />
+                <om:Property Name="Type" Value="System.Exception" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="UpdateFileStatusExc" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="VariableDeclaration" OID="47123ce7-424b-4170-a193-5015db6ba9a3" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="25.1" HigherBound="26.1">
+                <om:Property Name="UseDefaultConstructor" Value="False" />
+                <om:Property Name="Type" Value="System.String" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="tempString" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="VariableDeclaration" OID="d77562f8-6cf5-43b3-be31-b80e78f17641" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="26.1" HigherBound="27.1">
+                <om:Property Name="UseDefaultConstructor" Value="True" />
+                <om:Property Name="Type" Value="CODit.BizTalkHelpers.BizTalkSSOHelper" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="SSOHelper" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="7490d2ad-9745-4085-95f4-c2049ccde9da" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="16.1" HigherBound="17.1">
+                <om:Property Name="Type" Value="MedegaImport.Schemas.DB2_UpdateFileStatus.UpdateFileStatusRequest" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="DB2UpdateFileStatusRequest" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="e77dccb8-1681-440e-8475-a9e04f9e6423" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="17.1" HigherBound="18.1">
+                <om:Property Name="Type" Value="MedegaImport.Schemas.DB2_UpdateFileStatus.UpdateFileStatusResponse" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="DB2UpdateFileStatusResponse" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="aa835780-75be-44d0-837d-fd617b367106" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="18.1" HigherBound="19.1">
+                <om:Property Name="Type" Value="System.Xml.XmlDocument" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Context" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="f3957024-f33b-4c71-82fa-f172f2b58feb" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="19.1" HigherBound="20.1">
+                <om:Property Name="Type" Value="System.Xml.XmlDocument" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="ErrMsg" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="ServiceBody" OID="257b4299-1b27-4ff2-bc6d-2776b9fc19aa" ParentLink="ServiceDeclaration_ServiceBody">
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="VariableDeclaration" OID="f1e7b04c-bd8d-4b68-a278-522aed583db6" ParentLink="ServiceBody_Declaration" LowerBound="27.15" HigherBound="27.34">
+                    <om:Property Name="UseDefaultConstructor" Value="False" />
+                    <om:Property Name="Type" Value="System.Int32" />
+                    <om:Property Name="ParamDirection" Value="In" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="FileId" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+                <om:Element Type="VariableDeclaration" OID="34e2f361-a03c-475f-acb8-e550e60427ed" ParentLink="ServiceBody_Declaration" LowerBound="27.36" HigherBound="27.57">
+                    <om:Property Name="UseDefaultConstructor" Value="False" />
+                    <om:Property Name="Type" Value="System.Int32" />
+                    <om:Property Name="ParamDirection" Value="In" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="StatusId" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+                <om:Element Type="Construct" OID="d03854a6-7efe-4636-8fd8-3d600361a80a" ParentLink="ServiceBody_Statement" LowerBound="35.1" HigherBound="45.1">
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Initialize" />
+                    <om:Property Name="Signal" Value="True" />
+                    <om:Element Type="MessageRef" OID="f6c5147b-21b1-429b-9aaa-544631c7d8f5" ParentLink="Construct_MessageRef" LowerBound="36.23" HigherBound="36.30">
+                        <om:Property Name="Ref" Value="Context" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Signal" Value="False" />
+                    </om:Element>
+                    <om:Element Type="MessageRef" OID="aec8b1f3-7b53-4a27-bf1f-d6285d596e55" ParentLink="Construct_MessageRef" LowerBound="36.32" HigherBound="36.38">
+                        <om:Property Name="Ref" Value="ErrMsg" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Signal" Value="False" />
+                    </om:Element>
+                    <om:Element Type="MessageAssignment" OID="864fcc0d-cc9f-4dd0-b428-b511453636b7" ParentLink="ComplexStatement_Statement" LowerBound="38.1" HigherBound="44.1">
+                        <om:Property Name="Expression" Value="tempXmlDoc= new System.Xml.XmlDocument();&#xD;&#xA;tempXmlDoc.LoadXml(&quot;&lt;empty/&gt;&quot;);&#xD;&#xA;&#xD;&#xA;Context = tempXmlDoc;&#xD;&#xA;ErrMsg = tempXmlDoc;&#xD;&#xA;" />
+                        <om:Property Name="ReportToAnalyst" Value="False" />
+                        <om:Property Name="Name" Value="Initialize" />
+                        <om:Property Name="Signal" Value="True" />
+                    </om:Element>
+                </om:Element>
+                <om:Element Type="Scope" OID="fcf10cc0-d8ee-420a-b487-be7923b17d67" ParentLink="ServiceBody_Statement" LowerBound="45.1" HigherBound="83.1">
+                    <om:Property Name="InitializedTransactionType" Value="True" />
+                    <om:Property Name="IsSynchronized" Value="False" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Try" />
+                    <om:Property Name="Signal" Value="True" />
+                    <om:Element Type="Construct" OID="e8c4a390-66e8-4eb7-ba0f-ad8130b741da" ParentLink="ComplexStatement_Statement" LowerBound="50.1" HigherBound="64.1">
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Name" Value="Create UpdateFileStatusRequest" />
+                        <om:Property Name="Signal" Value="True" />
+                        <om:Element Type="MessageRef" OID="6ab43805-e868-4740-84a3-32e54c23a701" ParentLink="Construct_MessageRef" LowerBound="51.31" HigherBound="51.57">
+                            <om:Property Name="Ref" Value="DB2UpdateFileStatusRequest" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Signal" Value="False" />
+                        </om:Element>
+                        <om:Element Type="MessageRef" OID="3fc4317f-1da1-40d5-9fae-26ac30649e2c" ParentLink="Construct_MessageRef" LowerBound="51.59" HigherBound="51.66">
+                            <om:Property Name="Ref" Value="Context" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Signal" Value="False" />
+                        </om:Element>
+                        <om:Element Type="MessageAssignment" OID="cc1d86cf-45f2-4401-b8dd-03d45b5cc268" ParentLink="ComplexStatement_Statement" LowerBound="53.1" HigherBound="63.1">
+                            <om:Property Name="Expression" Value="tempXmlDoc= new System.Xml.XmlDocument();&#xD;&#xA;tempString = System.String.Format(&quot;&lt;ns0:UpdateFileStatusRequest xmlns:ns0=\&quot;http://inami-riziv.fgov.be.medega\&quot;&gt;&lt;sync&gt;&lt;StoredProcedure&gt;&lt;UPDATEFILESTATUS FILEID=\&quot;{0}\&quot; STATUSID=\&quot;{1}\&quot; /&gt;&lt;/StoredProcedure&gt;&lt;/sync&gt;&lt;/ns0:UpdateFileStatusRequest&gt;&quot;&#xD;&#xA;    , FileId, StatusId);&#xD;&#xA;&#xD;&#xA;tempXmlDoc.LoadXml(tempString);&#xD;&#xA;DB2UpdateFileStatusRequest = tempXmlDoc;&#xD;&#xA;DB2UpdateFileStatusRequest(BTS.SSOTicket) = SSOHelper.IssueSelfTicket();&#xD;&#xA;&#xD;&#xA;Context = DB2UpdateFileStatusRequest;&#xD;&#xA;" />
+                            <om:Property Name="ReportToAnalyst" Value="False" />
+                            <om:Property Name="Name" Value="MessageAssignment_1" />
+                            <om:Property Name="Signal" Value="False" />
+                        </om:Element>
+                    </om:Element>
+                    <om:Element Type="Send" OID="b2b09c60-85e6-4b6f-949e-1989c739e963" ParentLink="ComplexStatement_Statement" LowerBound="64.1" HigherBound="66.1">
+                        <om:Property Name="PortName" Value="DB2UpdateFileStatus" />
+                        <om:Property Name="MessageName" Value="DB2UpdateFileStatusRequest" />
+                        <om:Property Name="OperationName" Value="UpdateFileStatus" />
+                        <om:Property Name="OperationMessageName" Value="Request" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Name" Value="UpdateFileStatus" />
+                        <om:Property Name="Signal" Value="True" />
+                    </om:Element>
+                    <om:Element Type="Receive" OID="362debb6-d721-448e-948a-29210b15133b" ParentLink="ComplexStatement_Statement" LowerBound="66.1" HigherBound="68.1">
+                        <om:Property Name="Activate" Value="False" />
+                        <om:Property Name="PortName" Value="DB2UpdateFileStatus" />
+                        <om:Property Name="MessageName" Value="DB2UpdateFileStatusResponse" />
+                        <om:Property Name="OperationName" Value="UpdateFileStatus" />
+                        <om:Property Name="OperationMessageName" Value="Response" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Name" Value="Receive DB2 Response" />
+                        <om:Property Name="Signal" Value="True" />
+                    </om:Element>
+                    <om:Element Type="Catch" OID="40675d6c-ca14-4d89-80b8-49659e5065db" ParentLink="Scope_Catch" LowerBound="71.1" HigherBound="81.1">
+                        <om:Property Name="ExceptionName" Value="ex" />
+                        <om:Property Name="ExceptionType" Value="System.Exception" />
+                        <om:Property Name="IsFaultMessage" Value="False" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Name" Value="Catch" />
+                        <om:Property Name="Signal" Value="True" />
+                        <om:Element Type="VariableAssignment" OID="ce50523b-5571-46c0-ac17-8d85ea6090bc" ParentLink="Catch_Statement" LowerBound="74.1" HigherBound="78.1">
+                            <om:Property Name="Expression" Value="returnCode = -1;&#xD;&#xA;ExceptionDescription = ex.Message;&#xD;&#xA;InnerExceptionDescription = &quot;&quot;;" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="Set ex" />
+                            <om:Property Name="Signal" Value="True" />
+                        </om:Element>
+                        <om:Element Type="Call" OID="6cdf8d35-94be-4cff-9bce-5ad180fd4b13" ParentLink="Catch_Statement" LowerBound="78.1" HigherBound="80.1">
+                            <om:Property Name="Identifier" Value="HandleXmlException" />
+                            <om:Property Name="Invokee" Value="MedegaImport.HandleException" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="HandleXmlException" />
+                            <om:Property Name="Signal" Value="False" />
+                            <om:Element Type="Parameter" OID="f67b8086-4aac-4faa-997a-b3ad3d813ec2" ParentLink="InvokeStatement_Parameter">
+                                <om:Property Name="Direction" Value="Ref" />
+                                <om:Property Name="Name" Value="returnCode" />
+                                <om:Property Name="Type" Value="System.Int32" />
+                                <om:Property Name="Signal" Value="False" />
+                            </om:Element>
+                            <om:Element Type="Parameter" OID="17d519f8-afef-47c8-96b2-93afcb19dac7" ParentLink="InvokeStatement_Parameter">
+                                <om:Property Name="Direction" Value="In" />
+                                <om:Property Name="Name" Value="Context" />
+                                <om:Property Name="Type" Value="System.Xml.XmlDocument" />
+                                <om:Property Name="Signal" Value="False" />
+                            </om:Element>
+                            <om:Element Type="Parameter" OID="1d55befa-3381-4e5c-b0c6-30300fac4fc7" ParentLink="InvokeStatement_Parameter">
+                                <om:Property Name="Direction" Value="In" />
+                                <om:Property Name="Name" Value="ErrMsg" />
+                                <om:Property Name="Type" Value="System.Xml.XmlDocument" />
+                                <om:Property Name="Signal" Value="False" />
+                            </om:Element>
+                            <om:Element Type="Parameter" OID="9d150bfa-6dd0-4779-8abd-4f7b851a77ab" ParentLink="InvokeStatement_Parameter">
+                                <om:Property Name="Direction" Value="In" />
+                                <om:Property Name="Name" Value="ExceptionDescription" />
+                                <om:Property Name="Type" Value="System.String" />
+                                <om:Property Name="Signal" Value="False" />
+                            </om:Element>
+                            <om:Element Type="Parameter" OID="a8b5c1a1-2dca-420e-8291-97571a55c34b" ParentLink="InvokeStatement_Parameter">
+                                <om:Property Name="Direction" Value="In" />
+                                <om:Property Name="Name" Value="InnerExceptionDescription" />
+                                <om:Property Name="Type" Value="System.String" />
+                                <om:Property Name="Signal" Value="False" />
+                            </om:Element>
+                        </om:Element>
+                    </om:Element>
+                </om:Element>
+            </om:Element>
+            <om:Element Type="PortDeclaration" OID="11fea5c7-a917-442d-b9ad-c2435da186cd" ParentLink="ServiceDeclaration_PortDeclaration" LowerBound="14.1" HigherBound="16.1">
+                <om:Property Name="PortModifier" Value="Uses" />
+                <om:Property Name="Orientation" Value="Right" />
+                <om:Property Name="PortIndex" Value="30" />
+                <om:Property Name="IsWebPort" Value="False" />
+                <om:Property Name="OrderedDelivery" Value="False" />
+                <om:Property Name="DeliveryNotification" Value="None" />
+                <om:Property Name="Type" Value="MedegaImport.DB2UpdateFileStatusType" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="DB2UpdateFileStatus" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="LogicalBindingAttribute" OID="2318306d-0dad-4a62-afe9-8d0853ffd5a5" ParentLink="PortDeclaration_CLRAttribute" LowerBound="14.1" HigherBound="15.1">
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+    </om:Element>
+</om:MetaModel>
+#endif // __DESIGNER_DATA
+[Microsoft.XLANGs.BaseTypes.BPELExportable(false)]
+module MedegaImport
+{
+    internal porttype DB2UpdateFileStatusType
+    {
+        requestresponse UpdateFileStatus
+        {
+            Schemas.DB2_UpdateFileStatus.UpdateFileStatusRequest, Schemas.DB2_UpdateFileStatus.UpdateFileStatusResponse
+        };
+    };
+    [Microsoft.XLANGs.BaseTypes.BPELExportable(false)]
+    internal service subUpdateFileStatus
+    {
+        [Microsoft.XLANGs.BaseTypes.LogicalBinding()]
+        port uses DB2UpdateFileStatusType DB2UpdateFileStatus;
+        message Schemas.DB2_UpdateFileStatus.UpdateFileStatusRequest DB2UpdateFileStatusRequest;
+        message Schemas.DB2_UpdateFileStatus.UpdateFileStatusResponse DB2UpdateFileStatusResponse;
+        message System.Xml.XmlDocument Context;
+        message System.Xml.XmlDocument ErrMsg;
+        System.String InnerExceptionDescription;
+        System.String ExceptionDescription;
+        System.Xml.XmlDocument tempXmlDoc;
+        System.Int32 returnCode;
+        System.Exception UpdateFileStatusExc;
+        System.String tempString;
+        CODit.BizTalkHelpers.BizTalkSSOHelper SSOHelper;
+        body (System.Int32 FileId, System.Int32 StatusId)
+        {
+            InnerExceptionDescription = "";
+            ExceptionDescription = "";
+            tempXmlDoc = new System.Xml.XmlDocument();
+            UpdateFileStatusExc = new System.Exception();
+            tempString = "";
+            SSOHelper = new CODit.BizTalkHelpers.BizTalkSSOHelper();
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("d03854a6-7efe-4636-8fd8-3d600361a80a")]
+            construct Context, ErrMsg
+            {
+                [Microsoft.XLANGs.BaseTypes.DesignerPosition("864fcc0d-cc9f-4dd0-b428-b511453636b7")]
+                tempXmlDoc= new System.Xml.XmlDocument();
+                tempXmlDoc.LoadXml("<empty/>");
+                
+                Context = tempXmlDoc;
+                ErrMsg = tempXmlDoc;
+            }
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("fcf10cc0-d8ee-420a-b487-be7923b17d67")]
+            scope
+            {
+                body
+                {
+                    [Microsoft.XLANGs.BaseTypes.DesignerPosition("e8c4a390-66e8-4eb7-ba0f-ad8130b741da")]
+                    construct DB2UpdateFileStatusRequest, Context
+                    {
+                        [Microsoft.XLANGs.BaseTypes.DesignerPosition("cc1d86cf-45f2-4401-b8dd-03d45b5cc268")]
+                        tempXmlDoc= new System.Xml.XmlDocument();
+                        tempString = System.String.Format("<ns0:UpdateFileStatusRequest xmlns:ns0=\"http://inami-riziv.fgov.be.medega\"><sync><StoredProcedure><UPDATEFILESTATUS FILEID=\"{0}\" STATUSID=\"{1}\" /></StoredProcedure></sync></ns0:UpdateFileStatusRequest>"
+                            , FileId, StatusId);
+                        
+                        tempXmlDoc.LoadXml(tempString);
+                        DB2UpdateFileStatusRequest = tempXmlDoc;
+                        DB2UpdateFileStatusRequest(BTS.SSOTicket) = SSOHelper.IssueSelfTicket();
+                        
+                        Context = DB2UpdateFileStatusRequest;
+                    }
+                    [Microsoft.XLANGs.BaseTypes.DesignerPosition("b2b09c60-85e6-4b6f-949e-1989c739e963")]
+                    send (DB2UpdateFileStatus.UpdateFileStatus, DB2UpdateFileStatusRequest);
+                    [Microsoft.XLANGs.BaseTypes.DesignerPosition("362debb6-d721-448e-948a-29210b15133b")]
+                    receive (DB2UpdateFileStatus.UpdateFileStatus, DB2UpdateFileStatusResponse);
+                }
+                exceptions
+                {
+                    [Microsoft.XLANGs.BaseTypes.DesignerPosition("40675d6c-ca14-4d89-80b8-49659e5065db")]
+                    catch (System.Exception ex)
+                    {
+                        [Microsoft.XLANGs.BaseTypes.DesignerPosition("ce50523b-5571-46c0-ac17-8d85ea6090bc")]
+                        returnCode = -1;
+                        ExceptionDescription = ex.Message;
+                        InnerExceptionDescription = "";
+                        [Microsoft.XLANGs.BaseTypes.DesignerPosition("6cdf8d35-94be-4cff-9bce-5ad180fd4b13")]
+                        call MedegaImport.HandleException (ref returnCode, Context, ErrMsg, ExceptionDescription, InnerExceptionDescription);
+                    }
+                }
+            }
+        }
+    }
+}
+

@@ -1,0 +1,192 @@
+﻿#if __DESIGNER_DATA
+#error Do not define __DESIGNER_DATA.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<om:MetaModel MajorVersion="1" MinorVersion="3" Core="2b131234-7959-458d-834f-2dc0769ce683" ScheduleModel="66366196-361d-448d-976f-cab5e87496d2" xmlns:om="http://schemas.microsoft.com/BizTalk/2003/DesignerData">
+    <om:Element Type="Module" OID="3741e704-022a-40b0-9ad5-7bc327ff1d68" LowerBound="1.1" HigherBound="66.1">
+        <om:Property Name="ReportToAnalyst" Value="True" />
+        <om:Property Name="Name" Value="MedegaImport.GuardsImportService.GuardsImportService_" />
+        <om:Property Name="Signal" Value="False" />
+        <om:Element Type="MethodMessageType" OID="00000000-0000-0000-0000-000000000000" ParentLink="Module_MessageType">
+            <om:Property Name="Url" Value="http://iisd-tst/szvmedegaservice/GuardsImportService.asmx" />
+            <om:Property Name="TypeModifier" Value="Public" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="MedegaImport.GuardsImportService.GuardsImportService" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="MethodMessageOperation" OID="0d6c5794-3378-4d49-bbd6-9786e4c7073c" ParentLink="MethodMessageType_MethodMessageOperation">
+                <om:Property Name="OperationName" Value="ImportMedegaXml" />
+                <om:Property Name="OperationDirection" Value="Request" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="ImportMedegaXml_request" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="WebOperationPart" OID="7e7aea6f-fd7d-4250-b24b-a6332d246589" ParentLink="MethodMessageOperation_WebOperationPart">
+                    <om:Property Name="ClassName" Value="System.Xml.XmlDocument" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="medegaXml" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+                <om:Element Type="WebOperationPart" OID="70664766-9306-4852-9164-eb1014352abf" ParentLink="MethodMessageOperation_WebOperationPart">
+                    <om:Property Name="ClassName" Value="System.String" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="xmlFileName" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="MethodMessageOperation" OID="ba5f68ab-3c8c-4711-8c03-6c1b72984754" ParentLink="MethodMessageType_MethodMessageOperation">
+                <om:Property Name="OperationName" Value="ImportMedegaXml" />
+                <om:Property Name="OperationDirection" Value="Response" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="ImportMedegaXml_response" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="WebOperationPart" OID="21c31b97-0284-40e8-acc6-1c97df215414" ParentLink="MethodMessageOperation_WebOperationPart">
+                    <om:Property Name="ClassName" Value="System.Guid" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="ImportMedegaXmlResult" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="MethodMessageOperation" OID="294ef701-0b9d-4acb-9f8b-6e3db095aedb" ParentLink="MethodMessageType_MethodMessageOperation">
+                <om:Property Name="OperationName" Value="GetImportMedegaXmlResults" />
+                <om:Property Name="OperationDirection" Value="Request" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="GetImportMedegaXmlResults_request" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="WebOperationPart" OID="4a94b1a2-0669-408d-bf40-f91efcea111d" ParentLink="MethodMessageOperation_WebOperationPart">
+                    <om:Property Name="ClassName" Value="System.Guid" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="trackingId" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="MethodMessageOperation" OID="641f5685-0310-49bd-b5b4-1e49ccff20cb" ParentLink="MethodMessageType_MethodMessageOperation">
+                <om:Property Name="OperationName" Value="GetImportMedegaXmlResults" />
+                <om:Property Name="OperationDirection" Value="Response" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="GetImportMedegaXmlResults_response" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="WebOperationPart" OID="43bdf006-1020-468b-b25d-057e4ffe22e8" ParentLink="MethodMessageOperation_WebOperationPart">
+                    <om:Property Name="ClassName" Value="System.Object" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="GetImportMedegaXmlResultsResult" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="MethodMessageOperation" OID="9a695563-b4c7-4062-b893-a4e2ad982193" ParentLink="MethodMessageType_MethodMessageOperation">
+                <om:Property Name="OperationName" Value="ImportMedegaGuard" />
+                <om:Property Name="OperationDirection" Value="Request" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="ImportMedegaGuard_request" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="WebOperationPart" OID="fd4475a1-f273-4068-adb8-9e89e929d9f3" ParentLink="MethodMessageOperation_WebOperationPart">
+                    <om:Property Name="ClassName" Value="MedegaImport.GuardsImportService.Reference.ImportMedegaGuardRequest" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="medegaGuardRequest" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="MethodMessageOperation" OID="dc3c816d-d152-4dcf-b7c3-79d6ee8ba32b" ParentLink="MethodMessageType_MethodMessageOperation">
+                <om:Property Name="OperationName" Value="ImportMedegaGuard" />
+                <om:Property Name="OperationDirection" Value="Response" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="ImportMedegaGuard_response" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="WebOperationPart" OID="a374eed0-39d7-47af-b951-2b3ae2713b1a" ParentLink="MethodMessageOperation_WebOperationPart">
+                    <om:Property Name="ClassName" Value="MedegaImport.GuardsImportService.Reference.ImportMedegaGuardResult" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="ImportMedegaGuardResult" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="MethodMessageOperation" OID="4ea9342b-d263-46a2-83bf-26b41125950f" ParentLink="MethodMessageType_MethodMessageOperation">
+                <om:Property Name="OperationName" Value="test" />
+                <om:Property Name="OperationDirection" Value="Request" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="test_request" />
+                <om:Property Name="Signal" Value="False" />
+            </om:Element>
+            <om:Element Type="MethodMessageOperation" OID="45068829-20ed-48e8-9bc5-c7a1eae09e25" ParentLink="MethodMessageType_MethodMessageOperation">
+                <om:Property Name="OperationName" Value="test" />
+                <om:Property Name="OperationDirection" Value="Response" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="test_response" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="WebOperationPart" OID="c43996ed-2df0-4dc7-a3e2-1464161fabfd" ParentLink="MethodMessageOperation_WebOperationPart">
+                    <om:Property Name="ClassName" Value="System.Boolean" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="testResult" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+        <om:Element Type="TargetXMLNamespaceAttribute" OID="7bce0c6d-59c2-4500-a43e-b9b5f99cb79f" ParentLink="Module_CLRAttribute" LowerBound="2.1" HigherBound="3.1">
+            <om:Property Name="TargetXMLNamespace" Value="http://riziv.fgov.be/GuardsImportService" />
+            <om:Property Name="Signal" Value="False" />
+        </om:Element>
+    </om:Element>
+</om:MetaModel>
+#endif // __DESIGNER_DATA
+[Microsoft.XLANGs.BaseTypes.BPELExportable(true)]
+[Microsoft.XLANGs.BaseTypes.TargetXmlNamespaceAttribute("http://riziv.fgov.be/GuardsImportService")]
+module MedegaImport.GuardsImportService.GuardsImportService_
+{
+    [Microsoft.XLANGs.BaseTypes.WebPortBinding(typeof(MedegaImport.GuardsImportService.GuardsImportService), "ImportMedegaXml", Microsoft.XLANGs.BaseTypes.EXLangSMessageInfo.eRequest)]
+    public messagetype ImportMedegaXml_request
+    {
+        body System.Xml.XmlDocument medegaXml;
+        System.String xmlFileName;
+    };
+    [Microsoft.XLANGs.BaseTypes.WebPortBinding(typeof(MedegaImport.GuardsImportService.GuardsImportService), "ImportMedegaXml", Microsoft.XLANGs.BaseTypes.EXLangSMessageInfo.eResponse)]
+    public messagetype ImportMedegaXml_response
+    {
+        body System.Guid ImportMedegaXmlResult;
+    };
+    [Microsoft.XLANGs.BaseTypes.WebPortBinding(typeof(MedegaImport.GuardsImportService.GuardsImportService), "GetImportMedegaXmlResults", Microsoft.XLANGs.BaseTypes.EXLangSMessageInfo.eRequest)]
+    public messagetype GetImportMedegaXmlResults_request
+    {
+        body System.Guid trackingId;
+    };
+    [Microsoft.XLANGs.BaseTypes.WebPortBinding(typeof(MedegaImport.GuardsImportService.GuardsImportService), "GetImportMedegaXmlResults", Microsoft.XLANGs.BaseTypes.EXLangSMessageInfo.eResponse)]
+    public messagetype GetImportMedegaXmlResults_response
+    {
+        body System.Object GetImportMedegaXmlResultsResult;
+    };
+    [Microsoft.XLANGs.BaseTypes.WebPortBinding(typeof(MedegaImport.GuardsImportService.GuardsImportService), "ImportMedegaGuard", Microsoft.XLANGs.BaseTypes.EXLangSMessageInfo.eRequest)]
+    public messagetype ImportMedegaGuard_request
+    {
+        body MedegaImport.GuardsImportService.Reference.ImportMedegaGuardRequest medegaGuardRequest;
+    };
+    [Microsoft.XLANGs.BaseTypes.WebPortBinding(typeof(MedegaImport.GuardsImportService.GuardsImportService), "ImportMedegaGuard", Microsoft.XLANGs.BaseTypes.EXLangSMessageInfo.eResponse)]
+    public messagetype ImportMedegaGuard_response
+    {
+        body MedegaImport.GuardsImportService.Reference.ImportMedegaGuardResult ImportMedegaGuardResult;
+    };
+    [Microsoft.XLANGs.BaseTypes.WebPortBinding(typeof(MedegaImport.GuardsImportService.GuardsImportService), "test", Microsoft.XLANGs.BaseTypes.EXLangSMessageInfo.eRequest)]
+    public messagetype test_request
+    {
+    };
+    [Microsoft.XLANGs.BaseTypes.WebPortBinding(typeof(MedegaImport.GuardsImportService.GuardsImportService), "test", Microsoft.XLANGs.BaseTypes.EXLangSMessageInfo.eResponse)]
+    public messagetype test_response
+    {
+        body System.Boolean testResult;
+    };
+    [Microsoft.XLANGs.BaseTypes.WSDLProxyName(typeof(MedegaImport.GuardsImportService.GuardsImportService))]
+    public porttype GuardsImportService
+    {
+        requestresponse ImportMedegaGuard
+        {
+            MedegaImport.GuardsImportService.GuardsImportService_.ImportMedegaGuard_request, MedegaImport.GuardsImportService.GuardsImportService_.ImportMedegaGuard_response
+        };
+        requestresponse ImportMedegaXml
+        {
+            MedegaImport.GuardsImportService.GuardsImportService_.ImportMedegaXml_request, MedegaImport.GuardsImportService.GuardsImportService_.ImportMedegaXml_response
+        };
+        requestresponse GetImportMedegaXmlResults
+        {
+            MedegaImport.GuardsImportService.GuardsImportService_.GetImportMedegaXmlResults_request, MedegaImport.GuardsImportService.GuardsImportService_.GetImportMedegaXmlResults_response
+        };
+        requestresponse test
+        {
+            MedegaImport.GuardsImportService.GuardsImportService_.test_request, MedegaImport.GuardsImportService.GuardsImportService_.test_response
+        };
+    };
+}
+

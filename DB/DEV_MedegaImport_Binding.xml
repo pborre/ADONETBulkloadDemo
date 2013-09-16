@@ -1,0 +1,934 @@
+<?xml version="1.0" encoding="utf-8"?>
+<BindingInfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Assembly="Microsoft.BizTalk.Deployment, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" Version="3.5.1.0" BindingStatus="FullyBound" BoundEndpoints="9" TotalEndpoints="9">
+  <Timestamp>2011-10-03T11:51:16.0246128+02:00</Timestamp>
+  <ModuleRefCollection>
+    <ModuleRef Name="[Application:MedegaImport]" Version="" Culture="" PublicKeyToken="" FullName="[Application:MedegaImport], Version=, Culture=, PublicKeyToken=">
+      <Services />
+      <TrackedSchemas>
+        <Schema FullName="MedegaImportSchema.Schemas.Medega_Guard_Record" RootName="ROW" AssemblyQualifiedName="MedegaImportSchema.Schemas.Medega_Guard_Record,RIZIV.MedegaImportSchema, Version=2.0.0.0, Culture=neutral, PublicKeyToken=7d624d93bf081b87" AlwaysTrackAllProperties="false" Description="">
+          <TrackedPropertyNames />
+        </Schema>
+        <Schema FullName="MedegaImportSchema.Schemas.Medega_Guard" RootName="ROWSET" AssemblyQualifiedName="MedegaImportSchema.Schemas.Medega_Guard,RIZIV.MedegaImportSchema, Version=2.0.0.0, Culture=neutral, PublicKeyToken=7d624d93bf081b87" AlwaysTrackAllProperties="false" Description="">
+          <TrackedPropertyNames />
+        </Schema>
+        <Schema FullName="MedegaImportSchema.Schemas.GeneralFileInfo" RootName="FileInfo" AssemblyQualifiedName="MedegaImportSchema.Schemas.GeneralFileInfo,RIZIV.MedegaImportSchema, Version=2.0.0.0, Culture=neutral, PublicKeyToken=7d624d93bf081b87" AlwaysTrackAllProperties="false" Description="">
+          <TrackedPropertyNames />
+        </Schema>
+        <Schema FullName="MedegaImport.PropertySchema.MedegaPropertySchema" AssemblyQualifiedName="MedegaImport.PropertySchema.MedegaPropertySchema,RIZIV.MedegaImport, Version=2.0.0.0, Culture=neutral, PublicKeyToken=7d624d93bf081b87" AlwaysTrackAllProperties="false" Description="">
+          <TrackedPropertyNames />
+        </Schema>
+        <Schema FullName="MedegaImport.SQLMedegaFileDonePolling" RootName="MedegaFileDone" AssemblyQualifiedName="MedegaImport.SQLMedegaFileDonePolling,RIZIV.MedegaImport, Version=2.0.0.0, Culture=neutral, PublicKeyToken=7d624d93bf081b87" AlwaysTrackAllProperties="false" Description="">
+          <TrackedPropertyNames />
+        </Schema>
+        <Schema FullName="MedegaImport.SQLCreateMedegaXmlNode" RootName="CreateMedegaXmlNodeRequest" AssemblyQualifiedName="MedegaImport.SQLCreateMedegaXmlNode,RIZIV.MedegaImport, Version=2.0.0.0, Culture=neutral, PublicKeyToken=7d624d93bf081b87" AlwaysTrackAllProperties="false" Description="">
+          <TrackedPropertyNames />
+        </Schema>
+        <Schema FullName="MedegaImport.SQLCreateMedegaXmlNode" RootName="CreateMedegaXmlNodeResponse" AssemblyQualifiedName="MedegaImport.SQLCreateMedegaXmlNode,RIZIV.MedegaImport, Version=2.0.0.0, Culture=neutral, PublicKeyToken=7d624d93bf081b87" AlwaysTrackAllProperties="false" Description="">
+          <TrackedPropertyNames />
+        </Schema>
+        <Schema FullName="MedegaImport.SQLCreateMedegaFile" RootName="CreateMedegaFileRequest" AssemblyQualifiedName="MedegaImport.SQLCreateMedegaFile,RIZIV.MedegaImport, Version=2.0.0.0, Culture=neutral, PublicKeyToken=7d624d93bf081b87" AlwaysTrackAllProperties="false" Description="">
+          <TrackedPropertyNames />
+        </Schema>
+        <Schema FullName="MedegaImport.SQLCreateMedegaFile" RootName="CreateMedegaFileResponse" AssemblyQualifiedName="MedegaImport.SQLCreateMedegaFile,RIZIV.MedegaImport, Version=2.0.0.0, Culture=neutral, PublicKeyToken=7d624d93bf081b87" AlwaysTrackAllProperties="false" Description="">
+          <TrackedPropertyNames />
+        </Schema>
+        <Schema FullName="MedegaImport.GuardsImportService.Reference" RootName="GuardStates" AssemblyQualifiedName="MedegaImport.GuardsImportService.Reference,RIZIV.MedegaImport, Version=2.0.0.0, Culture=neutral, PublicKeyToken=7d624d93bf081b87" AlwaysTrackAllProperties="false" Description="">
+          <TrackedPropertyNames />
+        </Schema>
+        <Schema FullName="MedegaImport.GuardsImportService.Reference" RootName="ImportMedegaGuardRequest" AssemblyQualifiedName="MedegaImport.GuardsImportService.Reference,RIZIV.MedegaImport, Version=2.0.0.0, Culture=neutral, PublicKeyToken=7d624d93bf081b87" AlwaysTrackAllProperties="false" Description="">
+          <TrackedPropertyNames />
+        </Schema>
+        <Schema FullName="MedegaImport.GuardsImportService.Reference" RootName="ImportMedegaGuardResult" AssemblyQualifiedName="MedegaImport.GuardsImportService.Reference,RIZIV.MedegaImport, Version=2.0.0.0, Culture=neutral, PublicKeyToken=7d624d93bf081b87" AlwaysTrackAllProperties="false" Description="">
+          <TrackedPropertyNames />
+        </Schema>
+        <Schema FullName="MedegaImport.SQLUpdateNodeStatus" RootName="UpdateNodeStatusRequest" AssemblyQualifiedName="MedegaImport.SQLUpdateNodeStatus,RIZIV.MedegaImport, Version=2.0.0.0, Culture=neutral, PublicKeyToken=7d624d93bf081b87" AlwaysTrackAllProperties="false" Description="">
+          <TrackedPropertyNames />
+        </Schema>
+        <Schema FullName="MedegaImport.SQLUpdateNodeStatus" RootName="UpdateNodeStatusResponse" AssemblyQualifiedName="MedegaImport.SQLUpdateNodeStatus,RIZIV.MedegaImport, Version=2.0.0.0, Culture=neutral, PublicKeyToken=7d624d93bf081b87" AlwaysTrackAllProperties="false" Description="">
+          <TrackedPropertyNames />
+        </Schema>
+        <Schema FullName="MedegaImport.SQLUpdateFileStatus" RootName="SQLUpdateFileStatusRequest" AssemblyQualifiedName="MedegaImport.SQLUpdateFileStatus,RIZIV.MedegaImport, Version=2.0.0.0, Culture=neutral, PublicKeyToken=7d624d93bf081b87" AlwaysTrackAllProperties="false" Description="">
+          <TrackedPropertyNames />
+        </Schema>
+        <Schema FullName="MedegaImport.SQLUpdateFileStatus" RootName="SQLUpdateFileStatusResponse" AssemblyQualifiedName="MedegaImport.SQLUpdateFileStatus,RIZIV.MedegaImport, Version=2.0.0.0, Culture=neutral, PublicKeyToken=7d624d93bf081b87" AlwaysTrackAllProperties="false" Description="">
+          <TrackedPropertyNames />
+        </Schema>
+        <Schema FullName="MedegaImport.SQLCreateGuardPolling" RootName="CreateGuardPolling" AssemblyQualifiedName="MedegaImport.SQLCreateGuardPolling,RIZIV.MedegaImport, Version=2.0.0.0, Culture=neutral, PublicKeyToken=7d624d93bf081b87" AlwaysTrackAllProperties="false" Description="">
+          <TrackedPropertyNames />
+        </Schema>
+        <Schema FullName="MedegaImport.GuardService_schemas_microsoft_com_2003_10_Serialization" RootName="anyType" AssemblyQualifiedName="MedegaImport.GuardService_schemas_microsoft_com_2003_10_Serialization,RIZIV.MedegaImport, Version=2.0.0.0, Culture=neutral, PublicKeyToken=7d624d93bf081b87" AlwaysTrackAllProperties="false" Description="">
+          <TrackedPropertyNames />
+        </Schema>
+        <Schema FullName="MedegaImport.GuardService_schemas_microsoft_com_2003_10_Serialization" RootName="anyURI" AssemblyQualifiedName="MedegaImport.GuardService_schemas_microsoft_com_2003_10_Serialization,RIZIV.MedegaImport, Version=2.0.0.0, Culture=neutral, PublicKeyToken=7d624d93bf081b87" AlwaysTrackAllProperties="false" Description="">
+          <TrackedPropertyNames />
+        </Schema>
+        <Schema FullName="MedegaImport.GuardService_schemas_microsoft_com_2003_10_Serialization" RootName="base64Binary" AssemblyQualifiedName="MedegaImport.GuardService_schemas_microsoft_com_2003_10_Serialization,RIZIV.MedegaImport, Version=2.0.0.0, Culture=neutral, PublicKeyToken=7d624d93bf081b87" AlwaysTrackAllProperties="false" Description="">
+          <TrackedPropertyNames />
+        </Schema>
+        <Schema FullName="MedegaImport.GuardService_schemas_microsoft_com_2003_10_Serialization" RootName="boolean" AssemblyQualifiedName="MedegaImport.GuardService_schemas_microsoft_com_2003_10_Serialization,RIZIV.MedegaImport, Version=2.0.0.0, Culture=neutral, PublicKeyToken=7d624d93bf081b87" AlwaysTrackAllProperties="false" Description="">
+          <TrackedPropertyNames />
+        </Schema>
+        <Schema FullName="MedegaImport.GuardService_schemas_microsoft_com_2003_10_Serialization" RootName="byte" AssemblyQualifiedName="MedegaImport.GuardService_schemas_microsoft_com_2003_10_Serialization,RIZIV.MedegaImport, Version=2.0.0.0, Culture=neutral, PublicKeyToken=7d624d93bf081b87" AlwaysTrackAllProperties="false" Description="">
+          <TrackedPropertyNames />
+        </Schema>
+        <Schema FullName="MedegaImport.GuardService_schemas_microsoft_com_2003_10_Serialization" RootName="char" AssemblyQualifiedName="MedegaImport.GuardService_schemas_microsoft_com_2003_10_Serialization,RIZIV.MedegaImport, Version=2.0.0.0, Culture=neutral, PublicKeyToken=7d624d93bf081b87" AlwaysTrackAllProperties="false" Description="">
+          <TrackedPropertyNames />
+        </Schema>
+        <Schema FullName="MedegaImport.GuardService_schemas_microsoft_com_2003_10_Serialization" RootName="dateTime" AssemblyQualifiedName="MedegaImport.GuardService_schemas_microsoft_com_2003_10_Serialization,RIZIV.MedegaImport, Version=2.0.0.0, Culture=neutral, PublicKeyToken=7d624d93bf081b87" AlwaysTrackAllProperties="false" Description="">
+          <TrackedPropertyNames />
+        </Schema>
+        <Schema FullName="MedegaImport.GuardService_schemas_microsoft_com_2003_10_Serialization" RootName="decimal" AssemblyQualifiedName="MedegaImport.GuardService_schemas_microsoft_com_2003_10_Serialization,RIZIV.MedegaImport, Version=2.0.0.0, Culture=neutral, PublicKeyToken=7d624d93bf081b87" AlwaysTrackAllProperties="false" Description="">
+          <TrackedPropertyNames />
+        </Schema>
+        <Schema FullName="MedegaImport.GuardService_schemas_microsoft_com_2003_10_Serialization" RootName="double" AssemblyQualifiedName="MedegaImport.GuardService_schemas_microsoft_com_2003_10_Serialization,RIZIV.MedegaImport, Version=2.0.0.0, Culture=neutral, PublicKeyToken=7d624d93bf081b87" AlwaysTrackAllProperties="false" Description="">
+          <TrackedPropertyNames />
+        </Schema>
+        <Schema FullName="MedegaImport.GuardService_schemas_microsoft_com_2003_10_Serialization" RootName="duration" AssemblyQualifiedName="MedegaImport.GuardService_schemas_microsoft_com_2003_10_Serialization,RIZIV.MedegaImport, Version=2.0.0.0, Culture=neutral, PublicKeyToken=7d624d93bf081b87" AlwaysTrackAllProperties="false" Description="">
+          <TrackedPropertyNames />
+        </Schema>
+        <Schema FullName="MedegaImport.GuardService_schemas_microsoft_com_2003_10_Serialization" RootName="float" AssemblyQualifiedName="MedegaImport.GuardService_schemas_microsoft_com_2003_10_Serialization,RIZIV.MedegaImport, Version=2.0.0.0, Culture=neutral, PublicKeyToken=7d624d93bf081b87" AlwaysTrackAllProperties="false" Description="">
+          <TrackedPropertyNames />
+        </Schema>
+        <Schema FullName="MedegaImport.GuardService_schemas_microsoft_com_2003_10_Serialization" RootName="guid" AssemblyQualifiedName="MedegaImport.GuardService_schemas_microsoft_com_2003_10_Serialization,RIZIV.MedegaImport, Version=2.0.0.0, Culture=neutral, PublicKeyToken=7d624d93bf081b87" AlwaysTrackAllProperties="false" Description="">
+          <TrackedPropertyNames />
+        </Schema>
+        <Schema FullName="MedegaImport.GuardService_schemas_microsoft_com_2003_10_Serialization" RootName="int" AssemblyQualifiedName="MedegaImport.GuardService_schemas_microsoft_com_2003_10_Serialization,RIZIV.MedegaImport, Version=2.0.0.0, Culture=neutral, PublicKeyToken=7d624d93bf081b87" AlwaysTrackAllProperties="false" Description="">
+          <TrackedPropertyNames />
+        </Schema>
+        <Schema FullName="MedegaImport.GuardService_schemas_microsoft_com_2003_10_Serialization" RootName="long" AssemblyQualifiedName="MedegaImport.GuardService_schemas_microsoft_com_2003_10_Serialization,RIZIV.MedegaImport, Version=2.0.0.0, Culture=neutral, PublicKeyToken=7d624d93bf081b87" AlwaysTrackAllProperties="false" Description="">
+          <TrackedPropertyNames />
+        </Schema>
+        <Schema FullName="MedegaImport.GuardService_schemas_microsoft_com_2003_10_Serialization" RootName="QName" AssemblyQualifiedName="MedegaImport.GuardService_schemas_microsoft_com_2003_10_Serialization,RIZIV.MedegaImport, Version=2.0.0.0, Culture=neutral, PublicKeyToken=7d624d93bf081b87" AlwaysTrackAllProperties="false" Description="">
+          <TrackedPropertyNames />
+        </Schema>
+        <Schema FullName="MedegaImport.GuardService_schemas_microsoft_com_2003_10_Serialization" RootName="short" AssemblyQualifiedName="MedegaImport.GuardService_schemas_microsoft_com_2003_10_Serialization,RIZIV.MedegaImport, Version=2.0.0.0, Culture=neutral, PublicKeyToken=7d624d93bf081b87" AlwaysTrackAllProperties="false" Description="">
+          <TrackedPropertyNames />
+        </Schema>
+        <Schema FullName="MedegaImport.GuardService_schemas_microsoft_com_2003_10_Serialization" RootName="string" AssemblyQualifiedName="MedegaImport.GuardService_schemas_microsoft_com_2003_10_Serialization,RIZIV.MedegaImport, Version=2.0.0.0, Culture=neutral, PublicKeyToken=7d624d93bf081b87" AlwaysTrackAllProperties="false" Description="">
+          <TrackedPropertyNames />
+        </Schema>
+        <Schema FullName="MedegaImport.GuardService_schemas_microsoft_com_2003_10_Serialization" RootName="unsignedByte" AssemblyQualifiedName="MedegaImport.GuardService_schemas_microsoft_com_2003_10_Serialization,RIZIV.MedegaImport, Version=2.0.0.0, Culture=neutral, PublicKeyToken=7d624d93bf081b87" AlwaysTrackAllProperties="false" Description="">
+          <TrackedPropertyNames />
+        </Schema>
+        <Schema FullName="MedegaImport.GuardService_schemas_microsoft_com_2003_10_Serialization" RootName="unsignedInt" AssemblyQualifiedName="MedegaImport.GuardService_schemas_microsoft_com_2003_10_Serialization,RIZIV.MedegaImport, Version=2.0.0.0, Culture=neutral, PublicKeyToken=7d624d93bf081b87" AlwaysTrackAllProperties="false" Description="">
+          <TrackedPropertyNames />
+        </Schema>
+        <Schema FullName="MedegaImport.GuardService_schemas_microsoft_com_2003_10_Serialization" RootName="unsignedLong" AssemblyQualifiedName="MedegaImport.GuardService_schemas_microsoft_com_2003_10_Serialization,RIZIV.MedegaImport, Version=2.0.0.0, Culture=neutral, PublicKeyToken=7d624d93bf081b87" AlwaysTrackAllProperties="false" Description="">
+          <TrackedPropertyNames />
+        </Schema>
+        <Schema FullName="MedegaImport.GuardService_schemas_microsoft_com_2003_10_Serialization" RootName="unsignedShort" AssemblyQualifiedName="MedegaImport.GuardService_schemas_microsoft_com_2003_10_Serialization,RIZIV.MedegaImport, Version=2.0.0.0, Culture=neutral, PublicKeyToken=7d624d93bf081b87" AlwaysTrackAllProperties="false" Description="">
+          <TrackedPropertyNames />
+        </Schema>
+        <Schema FullName="MedegaImport.GuardService_riziv_fgov_be_hodmedega_importmedegaguardresult" RootName="ImportMedegaGuardResult" AssemblyQualifiedName="MedegaImport.GuardService_riziv_fgov_be_hodmedega_importmedegaguardresult,RIZIV.MedegaImport, Version=2.0.0.0, Culture=neutral, PublicKeyToken=7d624d93bf081b87" AlwaysTrackAllProperties="false" Description="">
+          <TrackedPropertyNames />
+        </Schema>
+        <Schema FullName="MedegaImport.GuardService_riziv_fgov_be_hodmedega_importmedegaguardrequest" RootName="ImportMedegaGuardRequest" AssemblyQualifiedName="MedegaImport.GuardService_riziv_fgov_be_hodmedega_importmedegaguardrequest,RIZIV.MedegaImport, Version=2.0.0.0, Culture=neutral, PublicKeyToken=7d624d93bf081b87" AlwaysTrackAllProperties="false" Description="">
+          <TrackedPropertyNames />
+        </Schema>
+        <Schema FullName="MedegaImport.Schemas.CreateGuardNode" RootName="Node" AssemblyQualifiedName="MedegaImport.Schemas.CreateGuardNode,RIZIV.MedegaImport, Version=2.0.0.0, Culture=neutral, PublicKeyToken=7d624d93bf081b87" AlwaysTrackAllProperties="false" Description="">
+          <TrackedPropertyNames />
+        </Schema>
+        <Schema FullName="MedegaImport.Schemas.MedegaFileStatus" RootName="F" AssemblyQualifiedName="MedegaImport.Schemas.MedegaFileStatus,RIZIV.MedegaImport, Version=2.0.0.0, Culture=neutral, PublicKeyToken=7d624d93bf081b87" AlwaysTrackAllProperties="false" Description="">
+          <TrackedPropertyNames />
+        </Schema>
+        <Schema FullName="MedegaImport.GuardService_tempuri_org" RootName="CreateGuard" AssemblyQualifiedName="MedegaImport.GuardService_tempuri_org,RIZIV.MedegaImport, Version=2.0.0.0, Culture=neutral, PublicKeyToken=7d624d93bf081b87" AlwaysTrackAllProperties="false" Description="">
+          <TrackedPropertyNames />
+        </Schema>
+        <Schema FullName="MedegaImport.GuardService_tempuri_org" RootName="CreateGuardResponse" AssemblyQualifiedName="MedegaImport.GuardService_tempuri_org,RIZIV.MedegaImport, Version=2.0.0.0, Culture=neutral, PublicKeyToken=7d624d93bf081b87" AlwaysTrackAllProperties="false" Description="">
+          <TrackedPropertyNames />
+        </Schema>
+      </TrackedSchemas>
+    </ModuleRef>
+    <ModuleRef Name="RIZIV.MedegaImportSchema" Version="2.0.0.0" Culture="neutral" PublicKeyToken="7d624d93bf081b87" FullName="RIZIV.MedegaImportSchema, Version=2.0.0.0, Culture=neutral, PublicKeyToken=7d624d93bf081b87">
+      <Services />
+      <TrackedSchemas />
+    </ModuleRef>
+    <ModuleRef Name="RIZIV.MedegaImport" Version="2.0.0.0" Culture="neutral" PublicKeyToken="7d624d93bf081b87" FullName="RIZIV.MedegaImport, Version=2.0.0.0, Culture=neutral, PublicKeyToken=7d624d93bf081b87">
+      <Services>
+        <Service Name="MedegaImport.CreateGuard" State="Started" TrackingOption="ServiceStartEnd MessageSendReceive OrchestrationEvents" Description="">
+          <Ports>
+            <Port Name="RcvGuardNode" Modifier="2" BindingOption="1">
+              <SendPortRef xsi:nil="true" />
+              <DistributionListRef xsi:nil="true" />
+              <ReceivePortRef Name="MedegaImport.CreateGuards" />
+            </Port>
+            <Port Name="CreateGuardService" Modifier="1" BindingOption="1">
+              <SendPortRef Name="MedegaImport.CreateGuardService" />
+              <DistributionListRef xsi:nil="true" />
+              <ReceivePortRef xsi:nil="true" />
+            </Port>
+          </Ports>
+          <Roles />
+          <Host Name="BizTalkServerApplication" NTGroupName="BizTalk Application Users" Type="1" Trusted="true" />
+        </Service>
+        <Service Name="MedegaImport.HandleException" State="Started" TrackingOption="ServiceStartEnd MessageSendReceive OrchestrationEvents" Description="">
+          <Ports>
+            <Port Name="SendErrContext" Modifier="1" BindingOption="1">
+              <SendPortRef Name="MedegaImport.MailTechnicalException" />
+              <DistributionListRef xsi:nil="true" />
+              <ReceivePortRef xsi:nil="true" />
+            </Port>
+            <Port Name="SendErrMsg" Modifier="1" BindingOption="1">
+              <SendPortRef Name="tempMedegaLogger" />
+              <DistributionListRef xsi:nil="true" />
+              <ReceivePortRef xsi:nil="true" />
+            </Port>
+          </Ports>
+          <Roles />
+          <Host Name="BizTalkServerApplication" NTGroupName="BizTalk Application Users" Type="1" Trusted="true" />
+        </Service>
+        <Service Name="MedegaImport.ImportGuards" State="Started" TrackingOption="ServiceStartEnd MessageSendReceive OrchestrationEvents" Description="">
+          <Ports>
+            <Port Name="ReceiveGuards" Modifier="2" BindingOption="1">
+              <SendPortRef xsi:nil="true" />
+              <DistributionListRef xsi:nil="true" />
+              <ReceivePortRef Name="MedegaImport.ReceiveGuards" />
+            </Port>
+          </Ports>
+          <Roles />
+          <Host Name="BizTalkServerApplication" NTGroupName="BizTalk Application Users" Type="1" Trusted="true" />
+        </Service>
+        <Service Name="MedegaImport.subImportFile" State="Started" TrackingOption="ServiceStartEnd MessageSendReceive OrchestrationEvents" Description="">
+          <Ports>
+            <Port Name="CreateMedegaFile" Modifier="1" BindingOption="1">
+              <SendPortRef Name="MedegaImport.SQLImportFile" />
+              <DistributionListRef xsi:nil="true" />
+              <ReceivePortRef xsi:nil="true" />
+            </Port>
+          </Ports>
+          <Roles />
+          <Host Name="BizTalkServerApplication" NTGroupName="BizTalk Application Users" Type="1" Trusted="true" />
+        </Service>
+        <Service Name="MedegaImport.subImportGuardRecord" State="Started" TrackingOption="ServiceStartEnd MessageSendReceive OrchestrationEvents" Description="">
+          <Ports>
+            <Port Name="SendBusinessErrors" Modifier="1" BindingOption="1">
+              <SendPortRef Name="MedegaImport.MailBusinessException" />
+              <DistributionListRef xsi:nil="true" />
+              <ReceivePortRef xsi:nil="true" />
+            </Port>
+          </Ports>
+          <Roles />
+          <Host Name="BizTalkServerApplication" NTGroupName="BizTalk Application Users" Type="1" Trusted="true" />
+        </Service>
+        <Service Name="MedegaImport.subUpdateFileStatus" State="Started" TrackingOption="ServiceStartEnd MessageSendReceive OrchestrationEvents" Description="">
+          <Ports>
+            <Port Name="SQLUpdateFileStatusPort" Modifier="1" BindingOption="1">
+              <SendPortRef Name="MedegaImport.SQLUpdateFileStatus" />
+              <DistributionListRef xsi:nil="true" />
+              <ReceivePortRef xsi:nil="true" />
+            </Port>
+          </Ports>
+          <Roles />
+          <Host Name="BizTalkServerApplication" NTGroupName="BizTalk Application Users" Type="1" Trusted="true" />
+        </Service>
+        <Service Name="MedegaImport.subUpdateNodeStatus" State="Started" TrackingOption="ServiceStartEnd MessageSendReceive OrchestrationEvents" Description="">
+          <Ports>
+            <Port Name="SQLUpdateNodeStatusPort" Modifier="1" BindingOption="1">
+              <SendPortRef Name="MedegaImport.SQLUpdateNodeStatus" />
+              <DistributionListRef xsi:nil="true" />
+              <ReceivePortRef xsi:nil="true" />
+            </Port>
+          </Ports>
+          <Roles />
+          <Host Name="BizTalkServerApplication" NTGroupName="BizTalk Application Users" Type="1" Trusted="true" />
+        </Service>
+      </Services>
+      <TrackedSchemas />
+    </ModuleRef>
+  </ModuleRefCollection>
+  <SendPortCollection>
+    <SendPort Name="MedegaImport.InvalideImportGuards" IsStatic="true" IsTwoWay="false" BindingOption="0">
+      <Description xsi:nil="true" />
+      <TransmitPipeline Name="Microsoft.BizTalk.DefaultPipelines.PassThruTransmit" FullyQualifiedName="Microsoft.BizTalk.DefaultPipelines.PassThruTransmit, Microsoft.BizTalk.DefaultPipelines, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" Type="2" TrackingOption="ServiceStartEnd MessageSendReceive PipelineEvents" Description="" />
+      <PrimaryTransport>
+        <Address>C:\TestArea\MedegaImport\MedegaInvalidInput\%MessageID%.xml</Address>
+        <TransportType Name="FILE" Capabilities="11" ConfigurationClsid="5e49e3a6-b4fc-4077-b44c-22f34a242fdb" />
+        <TransportTypeData>&lt;CustomProps&gt;&lt;UseTempFileOnWrite vt="11"&gt;0&lt;/UseTempFileOnWrite&gt;&lt;CopyMode vt="19"&gt;1&lt;/CopyMode&gt;&lt;FileName vt="8"&gt;%MessageID%.xml&lt;/FileName&gt;&lt;AllowCacheOnWrite vt="11"&gt;0&lt;/AllowCacheOnWrite&gt;&lt;/CustomProps&gt;</TransportTypeData>
+        <RetryCount>3</RetryCount>
+        <RetryInterval>5</RetryInterval>
+        <ServiceWindowEnabled>false</ServiceWindowEnabled>
+        <FromTime>2000-01-01T23:00:00</FromTime>
+        <ToTime>2000-01-01T22:59:59</ToTime>
+        <Primary>true</Primary>
+        <OrderedDelivery>false</OrderedDelivery>
+        <DeliveryNotification>1</DeliveryNotification>
+        <SendHandler Name="BizTalkServerApplication" HostTrusted="true">
+          <TransportType Name="FILE" Capabilities="11" ConfigurationClsid="5e49e3a6-b4fc-4077-b44c-22f34a242fdb" />
+        </SendHandler>
+      </PrimaryTransport>
+      <SecondaryTransport>
+        <Address />
+        <RetryCount>3</RetryCount>
+        <RetryInterval>5</RetryInterval>
+        <ServiceWindowEnabled>false</ServiceWindowEnabled>
+        <FromTime>2000-01-01T23:00:00</FromTime>
+        <ToTime>2000-01-01T22:59:59</ToTime>
+        <Primary>false</Primary>
+        <OrderedDelivery>false</OrderedDelivery>
+        <DeliveryNotification>1</DeliveryNotification>
+        <SendHandler xsi:nil="true" />
+      </SecondaryTransport>
+      <ReceivePipelineData xsi:nil="true" />
+      <Tracking>0</Tracking>
+      <Filter>&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;Filter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;Group&gt;
+    &lt;Statement Property="ErrorReport.ReceivePortName" Operator="0" Value="MedegaImport.ReceiveGuards" /&gt;
+    &lt;Statement Property="ErrorReport.ErrorType" Operator="6" /&gt;
+  &lt;/Group&gt;
+  &lt;Group&gt;
+    &lt;Statement Property="ErrorReport.ReceivePortName" Operator="0" Value="MedegaImport.CreateGuards" /&gt;
+    &lt;Statement Property="ErrorReport.ErrorType" Operator="6" /&gt;
+  &lt;/Group&gt;
+&lt;/Filter&gt;</Filter>
+      <Transforms />
+      <OrderedDelivery>false</OrderedDelivery>
+      <Priority>5</Priority>
+      <StopSendingOnFailure>false</StopSendingOnFailure>
+      <RouteFailedMessage>false</RouteFailedMessage>
+      <ApplicationName>MedegaImport</ApplicationName>
+    </SendPort>
+    <SendPort Name="MedegaImport.SQLImportFile" IsStatic="true" IsTwoWay="true" BindingOption="1">
+      <Description xsi:nil="true" />
+      <TransmitPipeline Name="Microsoft.BizTalk.DefaultPipelines.XMLTransmit" FullyQualifiedName="Microsoft.BizTalk.DefaultPipelines.XMLTransmit, Microsoft.BizTalk.DefaultPipelines, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" Type="2" TrackingOption="ServiceStartEnd MessageSendReceive PipelineEvents" Description="" />
+      <PrimaryTransport>
+        <Address>SQL://./DHODMedega/</Address>
+        <TransportType Name="SQL" Capabilities="81163" ConfigurationClsid="6e688659-1374-4f37-90dc-40cb6dd3c73d" />
+        <TransportTypeData>&lt;CustomProps&gt;&lt;AdapterConfig vt="8"&gt;&amp;lt;Send xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&amp;gt;&amp;lt;connectionString&amp;gt;Provider=SQLOLEDB.1;Integrated Security=SSPI;Persist Security Info=False;User ID=MedegaImport_user;Initial Catalog=DHODMedega;Data Source=.&amp;lt;/connectionString&amp;gt;&amp;lt;outputRootElementName&amp;gt;CreateMedegaFileResponse&amp;lt;/outputRootElementName&amp;gt;&amp;lt;documentTargetNamespace&amp;gt;http://inami-riziv.fgov.be.medega&amp;lt;/documentTargetNamespace&amp;gt;&amp;lt;uri&amp;gt;SQL://./DHODMedega/&amp;lt;/uri&amp;gt;&amp;lt;/Send&amp;gt;&lt;/AdapterConfig&gt;&lt;/CustomProps&gt;</TransportTypeData>
+        <RetryCount>3</RetryCount>
+        <RetryInterval>5</RetryInterval>
+        <ServiceWindowEnabled>false</ServiceWindowEnabled>
+        <FromTime>2000-01-01T23:00:00</FromTime>
+        <ToTime>2000-01-01T22:59:59</ToTime>
+        <Primary>true</Primary>
+        <OrderedDelivery>false</OrderedDelivery>
+        <DeliveryNotification>1</DeliveryNotification>
+        <SendHandler Name="BizTalkServerApplication" HostTrusted="true">
+          <TransportType Name="SQL" Capabilities="81163" ConfigurationClsid="6e688659-1374-4f37-90dc-40cb6dd3c73d" />
+        </SendHandler>
+      </PrimaryTransport>
+      <SecondaryTransport>
+        <Address />
+        <RetryCount>3</RetryCount>
+        <RetryInterval>5</RetryInterval>
+        <ServiceWindowEnabled>false</ServiceWindowEnabled>
+        <FromTime>2000-01-01T23:00:00</FromTime>
+        <ToTime>2000-01-01T22:59:59</ToTime>
+        <Primary>false</Primary>
+        <OrderedDelivery>false</OrderedDelivery>
+        <DeliveryNotification>1</DeliveryNotification>
+        <SendHandler xsi:nil="true" />
+      </SecondaryTransport>
+      <ReceivePipeline Name="Microsoft.BizTalk.DefaultPipelines.XMLReceive" FullyQualifiedName="Microsoft.BizTalk.DefaultPipelines.XMLReceive, Microsoft.BizTalk.DefaultPipelines, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" Type="1" TrackingOption="ServiceStartEnd MessageSendReceive InboundMessageBody OutboundMessageBody PipelineEvents" Description="" />
+      <ReceivePipelineData xsi:nil="true" />
+      <Tracking>0</Tracking>
+      <Filter />
+      <Transforms />
+      <InboundTransforms />
+      <OrderedDelivery>false</OrderedDelivery>
+      <Priority>5</Priority>
+      <StopSendingOnFailure>false</StopSendingOnFailure>
+      <RouteFailedMessage>false</RouteFailedMessage>
+      <ApplicationName>MedegaImport</ApplicationName>
+    </SendPort>
+    <SendPort Name="MedegaImport.CopyImportGuard" IsStatic="true" IsTwoWay="false" BindingOption="0">
+      <Description xsi:nil="true" />
+      <TransmitPipeline Name="Microsoft.BizTalk.DefaultPipelines.PassThruTransmit" FullyQualifiedName="Microsoft.BizTalk.DefaultPipelines.PassThruTransmit, Microsoft.BizTalk.DefaultPipelines, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" Type="2" TrackingOption="ServiceStartEnd MessageSendReceive PipelineEvents" Description="" />
+      <PrimaryTransport>
+        <Address>C:\TestArea\MedegaImport\MedegaInputCopy\%MessageID%.xml</Address>
+        <TransportType Name="FILE" Capabilities="11" ConfigurationClsid="5e49e3a6-b4fc-4077-b44c-22f34a242fdb" />
+        <TransportTypeData>&lt;CustomProps&gt;&lt;UseTempFileOnWrite vt="11"&gt;0&lt;/UseTempFileOnWrite&gt;&lt;CopyMode vt="19"&gt;1&lt;/CopyMode&gt;&lt;FileName vt="8"&gt;%MessageID%.xml&lt;/FileName&gt;&lt;AllowCacheOnWrite vt="11"&gt;0&lt;/AllowCacheOnWrite&gt;&lt;/CustomProps&gt;</TransportTypeData>
+        <RetryCount>3</RetryCount>
+        <RetryInterval>5</RetryInterval>
+        <ServiceWindowEnabled>false</ServiceWindowEnabled>
+        <FromTime>2000-01-01T23:00:00</FromTime>
+        <ToTime>2000-01-01T22:59:59</ToTime>
+        <Primary>true</Primary>
+        <OrderedDelivery>false</OrderedDelivery>
+        <DeliveryNotification>1</DeliveryNotification>
+        <SendHandler Name="BizTalkServerApplication" HostTrusted="true">
+          <TransportType Name="FILE" Capabilities="11" ConfigurationClsid="5e49e3a6-b4fc-4077-b44c-22f34a242fdb" />
+        </SendHandler>
+      </PrimaryTransport>
+      <SecondaryTransport>
+        <Address />
+        <RetryCount>3</RetryCount>
+        <RetryInterval>5</RetryInterval>
+        <ServiceWindowEnabled>false</ServiceWindowEnabled>
+        <FromTime>2000-01-01T23:00:00</FromTime>
+        <ToTime>2000-01-01T22:59:59</ToTime>
+        <Primary>false</Primary>
+        <OrderedDelivery>false</OrderedDelivery>
+        <DeliveryNotification>1</DeliveryNotification>
+        <SendHandler xsi:nil="true" />
+      </SecondaryTransport>
+      <ReceivePipelineData xsi:nil="true" />
+      <Tracking>0</Tracking>
+      <Filter>&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;Filter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;Group&gt;
+    &lt;Statement Property="BTS.ReceivePortName" Operator="0" Value="MedegaImport.ReceiveGuards" /&gt;
+  &lt;/Group&gt;
+&lt;/Filter&gt;</Filter>
+      <Transforms />
+      <OrderedDelivery>false</OrderedDelivery>
+      <Priority>5</Priority>
+      <StopSendingOnFailure>false</StopSendingOnFailure>
+      <RouteFailedMessage>false</RouteFailedMessage>
+      <ApplicationName>MedegaImport</ApplicationName>
+    </SendPort>
+    <SendPort Name="tempMedegaLogger" IsStatic="true" IsTwoWay="false" BindingOption="1">
+      <Description xsi:nil="true" />
+      <TransmitPipeline Name="Microsoft.BizTalk.DefaultPipelines.PassThruTransmit" FullyQualifiedName="Microsoft.BizTalk.DefaultPipelines.PassThruTransmit, Microsoft.BizTalk.DefaultPipelines, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" Type="2" TrackingOption="ServiceStartEnd MessageSendReceive PipelineEvents" Description="" />
+      <PrimaryTransport>
+        <Address>C:\TestArea\MedegaImport\MedegaExceptions\%MessageID%.xml</Address>
+        <TransportType Name="FILE" Capabilities="11" ConfigurationClsid="5e49e3a6-b4fc-4077-b44c-22f34a242fdb" />
+        <TransportTypeData>&lt;CustomProps&gt;&lt;UseTempFileOnWrite vt="11"&gt;0&lt;/UseTempFileOnWrite&gt;&lt;CopyMode vt="19"&gt;1&lt;/CopyMode&gt;&lt;FileName vt="8"&gt;%MessageID%.xml&lt;/FileName&gt;&lt;AllowCacheOnWrite vt="11"&gt;0&lt;/AllowCacheOnWrite&gt;&lt;/CustomProps&gt;</TransportTypeData>
+        <RetryCount>3</RetryCount>
+        <RetryInterval>5</RetryInterval>
+        <ServiceWindowEnabled>false</ServiceWindowEnabled>
+        <FromTime>2000-01-01T23:00:00</FromTime>
+        <ToTime>2000-01-01T22:59:59</ToTime>
+        <Primary>true</Primary>
+        <OrderedDelivery>false</OrderedDelivery>
+        <DeliveryNotification>1</DeliveryNotification>
+        <SendHandler Name="BizTalkServerApplication" HostTrusted="true">
+          <TransportType Name="FILE" Capabilities="11" ConfigurationClsid="5e49e3a6-b4fc-4077-b44c-22f34a242fdb" />
+        </SendHandler>
+      </PrimaryTransport>
+      <SecondaryTransport>
+        <Address />
+        <RetryCount>3</RetryCount>
+        <RetryInterval>5</RetryInterval>
+        <ServiceWindowEnabled>false</ServiceWindowEnabled>
+        <FromTime>2000-01-01T23:00:00</FromTime>
+        <ToTime>2000-01-01T22:59:59</ToTime>
+        <Primary>false</Primary>
+        <OrderedDelivery>false</OrderedDelivery>
+        <DeliveryNotification>1</DeliveryNotification>
+        <SendHandler xsi:nil="true" />
+      </SecondaryTransport>
+      <ReceivePipelineData xsi:nil="true" />
+      <Tracking>0</Tracking>
+      <Filter />
+      <Transforms />
+      <OrderedDelivery>false</OrderedDelivery>
+      <Priority>5</Priority>
+      <StopSendingOnFailure>false</StopSendingOnFailure>
+      <RouteFailedMessage>false</RouteFailedMessage>
+      <ApplicationName>MedegaImport</ApplicationName>
+    </SendPort>
+    <SendPort Name="MedegaImport.MailBusinessOk" IsStatic="true" IsTwoWay="false" BindingOption="0">
+      <Description xsi:nil="true" />
+      <TransmitPipeline Name="Microsoft.BizTalk.DefaultPipelines.PassThruTransmit" FullyQualifiedName="Microsoft.BizTalk.DefaultPipelines.PassThruTransmit, Microsoft.BizTalk.DefaultPipelines, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" Type="2" TrackingOption="ServiceStartEnd MessageSendReceive PipelineEvents" Description="" />
+      <PrimaryTransport>
+        <Address>peter.borremans@riziv.fgov.be</Address>
+        <TransportType Name="SMTP" Capabilities="2" ConfigurationClsid="8f36b311-b670-4cf6-aaec-04ebb80ed48d" />
+        <TransportTypeData>&lt;CustomProps&gt;&lt;DeliveryReceipt vt="11"&gt;0&lt;/DeliveryReceipt&gt;&lt;From vt="8"&gt;Biztalk.ICT@riziv.fgov.be&lt;/From&gt;&lt;MessagePartsAttachments vt="19"&gt;2&lt;/MessagePartsAttachments&gt;&lt;CC vt="8"&gt;dany.michiels@riziv.fgov.be; peter.borremans@riziv.fgov.be&lt;/CC&gt;&lt;SMTPAuthenticate vt="19"&gt;0&lt;/SMTPAuthenticate&gt;&lt;EmailBodyText vt="8"&gt;Guards File import done!
+The file Id can be found in the attachment.&lt;/EmailBodyText&gt;&lt;ReadReceipt vt="11"&gt;0&lt;/ReadReceipt&gt;&lt;To vt="8"&gt;peter.borremans@riziv.fgov.be&lt;/To&gt;&lt;EmailBodyFileCharset vt="8"&gt;utf-8&lt;/EmailBodyFileCharset&gt;&lt;Subject vt="8"&gt;MedegaImport Import Guards file done.&lt;/Subject&gt;&lt;SMTPHost vt="8"&gt;mail.riziv.be&lt;/SMTPHost&gt;&lt;EmailBodyTextCharset vt="8"&gt;utf-8&lt;/EmailBodyTextCharset&gt;&lt;/CustomProps&gt;</TransportTypeData>
+        <RetryCount>0</RetryCount>
+        <RetryInterval>5</RetryInterval>
+        <ServiceWindowEnabled>false</ServiceWindowEnabled>
+        <FromTime>2000-01-01T23:00:00</FromTime>
+        <ToTime>2000-01-01T22:59:59</ToTime>
+        <Primary>true</Primary>
+        <OrderedDelivery>false</OrderedDelivery>
+        <DeliveryNotification>1</DeliveryNotification>
+        <SendHandler Name="BizTalkServerApplication" HostTrusted="true">
+          <TransportType Name="SMTP" Capabilities="2" ConfigurationClsid="8f36b311-b670-4cf6-aaec-04ebb80ed48d" />
+        </SendHandler>
+      </PrimaryTransport>
+      <SecondaryTransport>
+        <Address />
+        <RetryCount>3</RetryCount>
+        <RetryInterval>5</RetryInterval>
+        <ServiceWindowEnabled>false</ServiceWindowEnabled>
+        <FromTime>2000-01-01T23:00:00</FromTime>
+        <ToTime>2000-01-01T22:59:59</ToTime>
+        <Primary>false</Primary>
+        <OrderedDelivery>false</OrderedDelivery>
+        <DeliveryNotification>1</DeliveryNotification>
+        <SendHandler xsi:nil="true" />
+      </SecondaryTransport>
+      <ReceivePipelineData xsi:nil="true" />
+      <Tracking>0</Tracking>
+      <Filter>&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;Filter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;Group&gt;
+    &lt;Statement Property="MedegaImport.PropertySchema.Status" Operator="0" Value="5" /&gt;
+  &lt;/Group&gt;
+&lt;/Filter&gt;</Filter>
+      <Transforms />
+      <OrderedDelivery>false</OrderedDelivery>
+      <Priority>5</Priority>
+      <StopSendingOnFailure>false</StopSendingOnFailure>
+      <RouteFailedMessage>false</RouteFailedMessage>
+      <ApplicationName>MedegaImport</ApplicationName>
+    </SendPort>
+    <SendPort Name="MedegaImport.MailTechnicalException" IsStatic="true" IsTwoWay="false" BindingOption="1">
+      <Description xsi:nil="true" />
+      <TransmitPipeline Name="Microsoft.BizTalk.DefaultPipelines.PassThruTransmit" FullyQualifiedName="Microsoft.BizTalk.DefaultPipelines.PassThruTransmit, Microsoft.BizTalk.DefaultPipelines, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" Type="2" TrackingOption="ServiceStartEnd MessageSendReceive PipelineEvents" Description="" />
+      <PrimaryTransport>
+        <Address>peter.borremans@riziv.fgov.be</Address>
+        <TransportType Name="SMTP" Capabilities="2" ConfigurationClsid="8f36b311-b670-4cf6-aaec-04ebb80ed48d" />
+        <TransportTypeData>&lt;CustomProps&gt;&lt;DeliveryReceipt vt="11"&gt;0&lt;/DeliveryReceipt&gt;&lt;From vt="8"&gt;Biztalk.ICT@riziv.fgov.be&lt;/From&gt;&lt;MessagePartsAttachments vt="19"&gt;2&lt;/MessagePartsAttachments&gt;&lt;CC vt="8"&gt;peter.borremans@riziv.fgov.be&lt;/CC&gt;&lt;SMTPAuthenticate vt="19"&gt;0&lt;/SMTPAuthenticate&gt;&lt;EmailBodyText vt="8"&gt;A technical exception occured while importing a Guards file.
+The record that caused the error is attached.&lt;/EmailBodyText&gt;&lt;ReadReceipt vt="11"&gt;0&lt;/ReadReceipt&gt;&lt;To vt="8"&gt;peter.borremans@riziv.fgov.be&lt;/To&gt;&lt;EmailBodyFileCharset vt="8"&gt;utf-8&lt;/EmailBodyFileCharset&gt;&lt;Subject vt="8"&gt;MedegaImport technical exception&lt;/Subject&gt;&lt;SMTPHost vt="8"&gt;mail.riziv.be&lt;/SMTPHost&gt;&lt;EmailBodyTextCharset vt="8"&gt;utf-8&lt;/EmailBodyTextCharset&gt;&lt;/CustomProps&gt;</TransportTypeData>
+        <RetryCount>0</RetryCount>
+        <RetryInterval>5</RetryInterval>
+        <ServiceWindowEnabled>false</ServiceWindowEnabled>
+        <FromTime>2000-01-01T23:00:00</FromTime>
+        <ToTime>2000-01-01T22:59:59</ToTime>
+        <Primary>true</Primary>
+        <OrderedDelivery>false</OrderedDelivery>
+        <DeliveryNotification>1</DeliveryNotification>
+        <SendHandler Name="BizTalkServerApplication" HostTrusted="true">
+          <TransportType Name="SMTP" Capabilities="2" ConfigurationClsid="8f36b311-b670-4cf6-aaec-04ebb80ed48d" />
+        </SendHandler>
+      </PrimaryTransport>
+      <SecondaryTransport>
+        <Address />
+        <RetryCount>3</RetryCount>
+        <RetryInterval>5</RetryInterval>
+        <ServiceWindowEnabled>false</ServiceWindowEnabled>
+        <FromTime>2000-01-01T23:00:00</FromTime>
+        <ToTime>2000-01-01T22:59:59</ToTime>
+        <Primary>false</Primary>
+        <OrderedDelivery>false</OrderedDelivery>
+        <DeliveryNotification>1</DeliveryNotification>
+        <SendHandler xsi:nil="true" />
+      </SecondaryTransport>
+      <ReceivePipelineData xsi:nil="true" />
+      <Tracking>0</Tracking>
+      <Filter />
+      <Transforms />
+      <OrderedDelivery>false</OrderedDelivery>
+      <Priority>5</Priority>
+      <StopSendingOnFailure>false</StopSendingOnFailure>
+      <RouteFailedMessage>false</RouteFailedMessage>
+      <ApplicationName>MedegaImport</ApplicationName>
+    </SendPort>
+    <SendPort Name="MedegaImport.MailBusinessException" IsStatic="true" IsTwoWay="false" BindingOption="1">
+      <Description xsi:nil="true" />
+      <TransmitPipeline Name="Microsoft.BizTalk.DefaultPipelines.PassThruTransmit" FullyQualifiedName="Microsoft.BizTalk.DefaultPipelines.PassThruTransmit, Microsoft.BizTalk.DefaultPipelines, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" Type="2" TrackingOption="ServiceStartEnd MessageSendReceive PipelineEvents" Description="" />
+      <PrimaryTransport>
+        <Address>peter.borremans@riziv.fgov.be</Address>
+        <TransportType Name="SMTP" Capabilities="2" ConfigurationClsid="8f36b311-b670-4cf6-aaec-04ebb80ed48d" />
+        <TransportTypeData>&lt;CustomProps&gt;&lt;DeliveryReceipt vt="11"&gt;0&lt;/DeliveryReceipt&gt;&lt;From vt="8"&gt;Biztalk.ICT@riziv.fgov.be&lt;/From&gt;&lt;MessagePartsAttachments vt="19"&gt;2&lt;/MessagePartsAttachments&gt;&lt;CC vt="8"&gt;peter.borremans@riziv.fgov.be&lt;/CC&gt;&lt;SMTPAuthenticate vt="19"&gt;0&lt;/SMTPAuthenticate&gt;&lt;EmailBodyText vt="8"&gt;A business exception occured while importing a Guards file.
+The record that caused the error is attached.&lt;/EmailBodyText&gt;&lt;ReadReceipt vt="11"&gt;0&lt;/ReadReceipt&gt;&lt;To vt="8"&gt;peter.borremans@riziv.fgov.be&lt;/To&gt;&lt;EmailBodyFileCharset vt="8"&gt;utf-8&lt;/EmailBodyFileCharset&gt;&lt;Subject vt="8"&gt;MedegaImport business exception&lt;/Subject&gt;&lt;SMTPHost vt="8"&gt;mail.riziv.be&lt;/SMTPHost&gt;&lt;EmailBodyTextCharset vt="8"&gt;utf-8&lt;/EmailBodyTextCharset&gt;&lt;/CustomProps&gt;</TransportTypeData>
+        <RetryCount>3</RetryCount>
+        <RetryInterval>5</RetryInterval>
+        <ServiceWindowEnabled>false</ServiceWindowEnabled>
+        <FromTime>2000-01-01T23:00:00</FromTime>
+        <ToTime>2000-01-01T22:59:59</ToTime>
+        <Primary>true</Primary>
+        <OrderedDelivery>false</OrderedDelivery>
+        <DeliveryNotification>1</DeliveryNotification>
+        <SendHandler Name="BizTalkServerApplication" HostTrusted="true">
+          <TransportType Name="SMTP" Capabilities="2" ConfigurationClsid="8f36b311-b670-4cf6-aaec-04ebb80ed48d" />
+        </SendHandler>
+      </PrimaryTransport>
+      <SecondaryTransport>
+        <Address />
+        <RetryCount>3</RetryCount>
+        <RetryInterval>5</RetryInterval>
+        <ServiceWindowEnabled>false</ServiceWindowEnabled>
+        <FromTime>2000-01-01T23:00:00</FromTime>
+        <ToTime>2000-01-01T22:59:59</ToTime>
+        <Primary>false</Primary>
+        <OrderedDelivery>false</OrderedDelivery>
+        <DeliveryNotification>1</DeliveryNotification>
+        <SendHandler xsi:nil="true" />
+      </SecondaryTransport>
+      <ReceivePipelineData xsi:nil="true" />
+      <Tracking>0</Tracking>
+      <Filter />
+      <Transforms />
+      <OrderedDelivery>false</OrderedDelivery>
+      <Priority>5</Priority>
+      <StopSendingOnFailure>false</StopSendingOnFailure>
+      <RouteFailedMessage>false</RouteFailedMessage>
+      <ApplicationName>MedegaImport</ApplicationName>
+    </SendPort>
+    <SendPort Name="MedegaImport.MailDoneWithErrors" IsStatic="true" IsTwoWay="false" BindingOption="0">
+      <Description xsi:nil="true" />
+      <TransmitPipeline Name="Microsoft.BizTalk.DefaultPipelines.PassThruTransmit" FullyQualifiedName="Microsoft.BizTalk.DefaultPipelines.PassThruTransmit, Microsoft.BizTalk.DefaultPipelines, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" Type="2" TrackingOption="ServiceStartEnd MessageSendReceive PipelineEvents" Description="" />
+      <PrimaryTransport>
+        <Address>peter.borremans@riziv.fgov.be</Address>
+        <TransportType Name="SMTP" Capabilities="2" ConfigurationClsid="8f36b311-b670-4cf6-aaec-04ebb80ed48d" />
+        <TransportTypeData>&lt;CustomProps&gt;&lt;DeliveryReceipt vt="11"&gt;0&lt;/DeliveryReceipt&gt;&lt;From vt="8"&gt;Biztalk.ICT@riziv.fgov.be&lt;/From&gt;&lt;MessagePartsAttachments vt="19"&gt;2&lt;/MessagePartsAttachments&gt;&lt;CC vt="8"&gt;peter.borremans@riziv.fgov.be&lt;/CC&gt;&lt;SMTPAuthenticate vt="19"&gt;0&lt;/SMTPAuthenticate&gt;&lt;EmailBodyText vt="8"&gt;Errors occured while importing the guard file!
+The file Id can be found in the attachment.&lt;/EmailBodyText&gt;&lt;ReadReceipt vt="11"&gt;0&lt;/ReadReceipt&gt;&lt;To vt="8"&gt;peter.borremans@riziv.fgov.be&lt;/To&gt;&lt;EmailBodyFileCharset vt="8"&gt;utf-8&lt;/EmailBodyFileCharset&gt;&lt;Subject vt="8"&gt;Errors occured while importing the guard file!&lt;/Subject&gt;&lt;SMTPHost vt="8"&gt;mail.riziv.be&lt;/SMTPHost&gt;&lt;EmailBodyTextCharset vt="8"&gt;utf-8&lt;/EmailBodyTextCharset&gt;&lt;/CustomProps&gt;</TransportTypeData>
+        <RetryCount>3</RetryCount>
+        <RetryInterval>5</RetryInterval>
+        <ServiceWindowEnabled>false</ServiceWindowEnabled>
+        <FromTime>2000-01-01T23:00:00</FromTime>
+        <ToTime>2000-01-01T22:59:59</ToTime>
+        <Primary>true</Primary>
+        <OrderedDelivery>false</OrderedDelivery>
+        <DeliveryNotification>1</DeliveryNotification>
+        <SendHandler Name="BizTalkServerApplication" HostTrusted="true">
+          <TransportType Name="SMTP" Capabilities="2" ConfigurationClsid="8f36b311-b670-4cf6-aaec-04ebb80ed48d" />
+        </SendHandler>
+      </PrimaryTransport>
+      <SecondaryTransport>
+        <Address />
+        <RetryCount>3</RetryCount>
+        <RetryInterval>5</RetryInterval>
+        <ServiceWindowEnabled>false</ServiceWindowEnabled>
+        <FromTime>2000-01-01T23:00:00</FromTime>
+        <ToTime>2000-01-01T22:59:59</ToTime>
+        <Primary>false</Primary>
+        <OrderedDelivery>false</OrderedDelivery>
+        <DeliveryNotification>1</DeliveryNotification>
+        <SendHandler xsi:nil="true" />
+      </SecondaryTransport>
+      <ReceivePipelineData xsi:nil="true" />
+      <Tracking>0</Tracking>
+      <Filter>&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;Filter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;Group&gt;
+    &lt;Statement Property="MedegaImport.PropertySchema.Status" Operator="0" Value="3" /&gt;
+  &lt;/Group&gt;
+&lt;/Filter&gt;</Filter>
+      <Transforms />
+      <OrderedDelivery>false</OrderedDelivery>
+      <Priority>5</Priority>
+      <StopSendingOnFailure>false</StopSendingOnFailure>
+      <RouteFailedMessage>false</RouteFailedMessage>
+      <ApplicationName>MedegaImport</ApplicationName>
+    </SendPort>
+    <SendPort Name="MedegaImport.SQLCreateXmlNode" IsStatic="true" IsTwoWay="true" BindingOption="0">
+      <Description xsi:nil="true" />
+      <TransmitPipeline Name="Microsoft.BizTalk.DefaultPipelines.XMLTransmit" FullyQualifiedName="Microsoft.BizTalk.DefaultPipelines.XMLTransmit, Microsoft.BizTalk.DefaultPipelines, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" Type="2" TrackingOption="ServiceStartEnd MessageSendReceive PipelineEvents" Description="" />
+      <PrimaryTransport>
+        <Address>SQL://./DHODMedega/</Address>
+        <TransportType Name="SQL" Capabilities="81163" ConfigurationClsid="6e688659-1374-4f37-90dc-40cb6dd3c73d" />
+        <TransportTypeData>&lt;CustomProps&gt;&lt;AdapterConfig vt="8"&gt;&amp;lt;Send xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&amp;gt;&amp;lt;connectionString&amp;gt;Provider=SQLOLEDB.1;Integrated Security=SSPI;Persist Security Info=False;User ID=MedegaImport_user;Initial Catalog=DHODMedega;Data Source=.&amp;lt;/connectionString&amp;gt;&amp;lt;outputRootElementName&amp;gt;CreateMedegaXmlNodeResponse&amp;lt;/outputRootElementName&amp;gt;&amp;lt;documentTargetNamespace&amp;gt;http://inami-riziv.fgov.be.medega&amp;lt;/documentTargetNamespace&amp;gt;&amp;lt;uri&amp;gt;SQL://./DHODMedega/&amp;lt;/uri&amp;gt;&amp;lt;/Send&amp;gt;&lt;/AdapterConfig&gt;&lt;/CustomProps&gt;</TransportTypeData>
+        <RetryCount>3</RetryCount>
+        <RetryInterval>5</RetryInterval>
+        <ServiceWindowEnabled>false</ServiceWindowEnabled>
+        <FromTime>2000-01-01T23:00:00</FromTime>
+        <ToTime>2000-01-01T22:59:59</ToTime>
+        <Primary>true</Primary>
+        <OrderedDelivery>false</OrderedDelivery>
+        <DeliveryNotification>1</DeliveryNotification>
+        <SendHandler Name="BizTalkServerApplication" HostTrusted="true">
+          <TransportType Name="SQL" Capabilities="81163" ConfigurationClsid="6e688659-1374-4f37-90dc-40cb6dd3c73d" />
+        </SendHandler>
+      </PrimaryTransport>
+      <SecondaryTransport>
+        <Address />
+        <RetryCount>3</RetryCount>
+        <RetryInterval>5</RetryInterval>
+        <ServiceWindowEnabled>false</ServiceWindowEnabled>
+        <FromTime>2000-01-01T23:00:00</FromTime>
+        <ToTime>2000-01-01T22:59:59</ToTime>
+        <Primary>false</Primary>
+        <OrderedDelivery>false</OrderedDelivery>
+        <DeliveryNotification>1</DeliveryNotification>
+        <SendHandler xsi:nil="true" />
+      </SecondaryTransport>
+      <ReceivePipeline Name="Microsoft.BizTalk.DefaultPipelines.XMLReceive" FullyQualifiedName="Microsoft.BizTalk.DefaultPipelines.XMLReceive, Microsoft.BizTalk.DefaultPipelines, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" Type="1" TrackingOption="ServiceStartEnd MessageSendReceive InboundMessageBody OutboundMessageBody PipelineEvents" Description="" />
+      <ReceivePipelineData xsi:nil="true" />
+      <Tracking>0</Tracking>
+      <Filter />
+      <Transforms />
+      <InboundTransforms />
+      <OrderedDelivery>false</OrderedDelivery>
+      <Priority>5</Priority>
+      <StopSendingOnFailure>false</StopSendingOnFailure>
+      <RouteFailedMessage>false</RouteFailedMessage>
+      <ApplicationName>MedegaImport</ApplicationName>
+    </SendPort>
+    <SendPort Name="MedegaImport.SQLUpdateFileStatus" IsStatic="true" IsTwoWay="true" BindingOption="1">
+      <Description xsi:nil="true" />
+      <TransmitPipeline Name="Microsoft.BizTalk.DefaultPipelines.XMLTransmit" FullyQualifiedName="Microsoft.BizTalk.DefaultPipelines.XMLTransmit, Microsoft.BizTalk.DefaultPipelines, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" Type="2" TrackingOption="ServiceStartEnd MessageSendReceive PipelineEvents" Description="" />
+      <PrimaryTransport>
+        <Address>SQL://./DHODMedega/</Address>
+        <TransportType Name="SQL" Capabilities="81163" ConfigurationClsid="6e688659-1374-4f37-90dc-40cb6dd3c73d" />
+        <TransportTypeData>&lt;CustomProps&gt;&lt;AdapterConfig vt="8"&gt;&amp;lt;Send xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&amp;gt;&amp;lt;connectionString&amp;gt;Provider=SQLOLEDB.1;Integrated Security=SSPI;Persist Security Info=False;User ID=MedegaImport_user;Initial Catalog=DHODMedega;Data Source=.&amp;lt;/connectionString&amp;gt;&amp;lt;outputRootElementName&amp;gt;SQLUpdateFileStatusResponse&amp;lt;/outputRootElementName&amp;gt;&amp;lt;documentTargetNamespace&amp;gt;http://inami-riziv.fgov.be.medega&amp;lt;/documentTargetNamespace&amp;gt;&amp;lt;uri&amp;gt;SQL://./DHODMedega/&amp;lt;/uri&amp;gt;&amp;lt;/Send&amp;gt;&lt;/AdapterConfig&gt;&lt;/CustomProps&gt;</TransportTypeData>
+        <RetryCount>3</RetryCount>
+        <RetryInterval>5</RetryInterval>
+        <ServiceWindowEnabled>false</ServiceWindowEnabled>
+        <FromTime>2000-01-01T23:00:00</FromTime>
+        <ToTime>2000-01-01T22:59:59</ToTime>
+        <Primary>true</Primary>
+        <OrderedDelivery>false</OrderedDelivery>
+        <DeliveryNotification>1</DeliveryNotification>
+        <SendHandler Name="BizTalkServerApplication" HostTrusted="true">
+          <TransportType Name="SQL" Capabilities="81163" ConfigurationClsid="6e688659-1374-4f37-90dc-40cb6dd3c73d" />
+        </SendHandler>
+      </PrimaryTransport>
+      <SecondaryTransport>
+        <Address />
+        <RetryCount>3</RetryCount>
+        <RetryInterval>5</RetryInterval>
+        <ServiceWindowEnabled>false</ServiceWindowEnabled>
+        <FromTime>2000-01-01T23:00:00</FromTime>
+        <ToTime>2000-01-01T22:59:59</ToTime>
+        <Primary>false</Primary>
+        <OrderedDelivery>false</OrderedDelivery>
+        <DeliveryNotification>1</DeliveryNotification>
+        <SendHandler xsi:nil="true" />
+      </SecondaryTransport>
+      <ReceivePipeline Name="Microsoft.BizTalk.DefaultPipelines.XMLReceive" FullyQualifiedName="Microsoft.BizTalk.DefaultPipelines.XMLReceive, Microsoft.BizTalk.DefaultPipelines, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" Type="1" TrackingOption="ServiceStartEnd MessageSendReceive InboundMessageBody OutboundMessageBody PipelineEvents" Description="" />
+      <ReceivePipelineData xsi:nil="true" />
+      <Tracking>0</Tracking>
+      <Filter />
+      <Transforms />
+      <InboundTransforms />
+      <OrderedDelivery>false</OrderedDelivery>
+      <Priority>5</Priority>
+      <StopSendingOnFailure>false</StopSendingOnFailure>
+      <RouteFailedMessage>false</RouteFailedMessage>
+      <ApplicationName>MedegaImport</ApplicationName>
+    </SendPort>
+    <SendPort Name="MedegaImport.CreateGuardService" IsStatic="true" IsTwoWay="true" BindingOption="1">
+      <Description>service "GuardService" port "basic"</Description>
+      <TransmitPipeline Name="Microsoft.BizTalk.DefaultPipelines.PassThruTransmit" FullyQualifiedName="Microsoft.BizTalk.DefaultPipelines.PassThruTransmit, Microsoft.BizTalk.DefaultPipelines, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" Type="2" TrackingOption="ServiceStartEnd MessageSendReceive PipelineEvents" Description="" />
+      <PrimaryTransport>
+        <Address>http://localhost/GuardSerivce/GuardService.svc/basic</Address>
+        <TransportType Name="WCF-BasicHttp" Capabilities="899" ConfigurationClsid="467c1a52-373f-4f09-9008-27af6b985f14" />
+        <TransportTypeData>&lt;CustomProps&gt;&lt;ServiceCertificate vt="8" /&gt;&lt;InboundBodyLocation vt="8"&gt;UseBodyElement&lt;/InboundBodyLocation&gt;&lt;UseSSO vt="11"&gt;0&lt;/UseSSO&gt;&lt;MessageClientCredentialType vt="8"&gt;UserName&lt;/MessageClientCredentialType&gt;&lt;InboundBodyPathExpression vt="8" /&gt;&lt;SendTimeout vt="8"&gt;00:01:00&lt;/SendTimeout&gt;&lt;OutboundXmlTemplate vt="8"&gt;&amp;lt;bts-msg-body xmlns="http://www.microsoft.com/schemas/bts2007" encoding="xml"/&amp;gt;&lt;/OutboundXmlTemplate&gt;&lt;OpenTimeout vt="8"&gt;00:01:00&lt;/OpenTimeout&gt;&lt;AlgorithmSuite vt="8"&gt;Basic256&lt;/AlgorithmSuite&gt;&lt;SecurityMode vt="8"&gt;None&lt;/SecurityMode&gt;&lt;TransportClientCredentialType vt="8"&gt;None&lt;/TransportClientCredentialType&gt;&lt;ClientCertificate vt="8" /&gt;&lt;ProxyUserName vt="8" /&gt;&lt;MaxReceivedMessageSize vt="3"&gt;65536&lt;/MaxReceivedMessageSize&gt;&lt;TextEncoding vt="8"&gt;utf-8&lt;/TextEncoding&gt;&lt;StaticAction vt="8"&gt;&amp;lt;BtsActionMapping xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&amp;gt;
+  &amp;lt;Operation Name="CreateGuard" Action="http://tempuri.org/IGuardService/CreateGuard" /&amp;gt;
+&amp;lt;/BtsActionMapping&amp;gt;&lt;/StaticAction&gt;&lt;CloseTimeout vt="8"&gt;00:01:00&lt;/CloseTimeout&gt;&lt;ProxyToUse vt="8"&gt;Default&lt;/ProxyToUse&gt;&lt;InboundNodeEncoding vt="8"&gt;Xml&lt;/InboundNodeEncoding&gt;&lt;PropagateFaultMessage vt="11"&gt;-1&lt;/PropagateFaultMessage&gt;&lt;ProxyAddress vt="8" /&gt;&lt;MessageEncoding vt="8"&gt;Text&lt;/MessageEncoding&gt;&lt;OutboundBodyLocation vt="8"&gt;UseBodyElement&lt;/OutboundBodyLocation&gt;&lt;/CustomProps&gt;</TransportTypeData>
+        <RetryCount>3</RetryCount>
+        <RetryInterval>5</RetryInterval>
+        <ServiceWindowEnabled>false</ServiceWindowEnabled>
+        <FromTime>2000-01-01T00:00:00</FromTime>
+        <ToTime>2000-01-01T23:59:59</ToTime>
+        <Primary>true</Primary>
+        <OrderedDelivery>false</OrderedDelivery>
+        <DeliveryNotification>1</DeliveryNotification>
+        <SendHandler Name="BizTalkServerApplication" HostTrusted="true">
+          <TransportType Name="WCF-BasicHttp" Capabilities="899" ConfigurationClsid="467c1a52-373f-4f09-9008-27af6b985f14" />
+        </SendHandler>
+      </PrimaryTransport>
+      <SecondaryTransport>
+        <Address />
+        <RetryCount>3</RetryCount>
+        <RetryInterval>5</RetryInterval>
+        <ServiceWindowEnabled>false</ServiceWindowEnabled>
+        <FromTime>2000-01-01T23:00:00</FromTime>
+        <ToTime>2000-01-01T22:59:59</ToTime>
+        <Primary>false</Primary>
+        <OrderedDelivery>false</OrderedDelivery>
+        <DeliveryNotification>1</DeliveryNotification>
+        <SendHandler xsi:nil="true" />
+      </SecondaryTransport>
+      <ReceivePipeline Name="Microsoft.BizTalk.DefaultPipelines.XMLReceive" FullyQualifiedName="Microsoft.BizTalk.DefaultPipelines.XMLReceive, Microsoft.BizTalk.DefaultPipelines, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" Type="1" TrackingOption="ServiceStartEnd MessageSendReceive InboundMessageBody OutboundMessageBody PipelineEvents" Description="" />
+      <ReceivePipelineData xsi:nil="true" />
+      <Tracking>0</Tracking>
+      <Filter />
+      <Transforms />
+      <InboundTransforms />
+      <OrderedDelivery>false</OrderedDelivery>
+      <Priority>5</Priority>
+      <StopSendingOnFailure>false</StopSendingOnFailure>
+      <RouteFailedMessage>false</RouteFailedMessage>
+      <ApplicationName>MedegaImport</ApplicationName>
+    </SendPort>
+    <SendPort Name="MedegaImport.SQLUpdateNodeStatus" IsStatic="true" IsTwoWay="true" BindingOption="1">
+      <Description xsi:nil="true" />
+      <TransmitPipeline Name="Microsoft.BizTalk.DefaultPipelines.PassThruTransmit" FullyQualifiedName="Microsoft.BizTalk.DefaultPipelines.PassThruTransmit, Microsoft.BizTalk.DefaultPipelines, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" Type="2" TrackingOption="ServiceStartEnd MessageSendReceive PipelineEvents" Description="" />
+      <PrimaryTransport>
+        <Address>SQL://./DHODMedega/</Address>
+        <TransportType Name="SQL" Capabilities="81163" ConfigurationClsid="6e688659-1374-4f37-90dc-40cb6dd3c73d" />
+        <TransportTypeData>&lt;CustomProps&gt;&lt;AdapterConfig vt="8"&gt;&amp;lt;Send xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&amp;gt;&amp;lt;connectionString&amp;gt;Provider=SQLOLEDB.1;Integrated Security=SSPI;Persist Security Info=False;Initial Catalog=DHODMedega;Data Source=.&amp;lt;/connectionString&amp;gt;&amp;lt;outputRootElementName&amp;gt;UpdateNodeStatusResponse&amp;lt;/outputRootElementName&amp;gt;&amp;lt;documentTargetNamespace&amp;gt;http://inami-riziv.fgov.be.medega&amp;lt;/documentTargetNamespace&amp;gt;&amp;lt;uri&amp;gt;SQL://./DHODMedega/&amp;lt;/uri&amp;gt;&amp;lt;/Send&amp;gt;&lt;/AdapterConfig&gt;&lt;/CustomProps&gt;</TransportTypeData>
+        <RetryCount>3</RetryCount>
+        <RetryInterval>5</RetryInterval>
+        <ServiceWindowEnabled>false</ServiceWindowEnabled>
+        <FromTime>2000-01-01T23:00:00</FromTime>
+        <ToTime>2000-01-01T22:59:59</ToTime>
+        <Primary>true</Primary>
+        <OrderedDelivery>false</OrderedDelivery>
+        <DeliveryNotification>1</DeliveryNotification>
+        <SendHandler Name="BizTalkServerApplication" HostTrusted="true">
+          <TransportType Name="SQL" Capabilities="81163" ConfigurationClsid="6e688659-1374-4f37-90dc-40cb6dd3c73d" />
+        </SendHandler>
+      </PrimaryTransport>
+      <SecondaryTransport>
+        <Address />
+        <RetryCount>3</RetryCount>
+        <RetryInterval>5</RetryInterval>
+        <ServiceWindowEnabled>false</ServiceWindowEnabled>
+        <FromTime>2000-01-01T23:00:00</FromTime>
+        <ToTime>2000-01-01T22:59:59</ToTime>
+        <Primary>false</Primary>
+        <OrderedDelivery>false</OrderedDelivery>
+        <DeliveryNotification>1</DeliveryNotification>
+        <SendHandler xsi:nil="true" />
+      </SecondaryTransport>
+      <ReceivePipeline Name="Microsoft.BizTalk.DefaultPipelines.XMLReceive" FullyQualifiedName="Microsoft.BizTalk.DefaultPipelines.XMLReceive, Microsoft.BizTalk.DefaultPipelines, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" Type="1" TrackingOption="ServiceStartEnd MessageSendReceive InboundMessageBody OutboundMessageBody PipelineEvents" Description="" />
+      <ReceivePipelineData xsi:nil="true" />
+      <Tracking>0</Tracking>
+      <Filter />
+      <Transforms />
+      <InboundTransforms />
+      <OrderedDelivery>false</OrderedDelivery>
+      <Priority>5</Priority>
+      <StopSendingOnFailure>false</StopSendingOnFailure>
+      <RouteFailedMessage>false</RouteFailedMessage>
+      <ApplicationName>MedegaImport</ApplicationName>
+    </SendPort>
+    <SendPort Name="MedegaImport.MailInvalidImportGuards" IsStatic="true" IsTwoWay="false" BindingOption="0">
+      <Description xsi:nil="true" />
+      <TransmitPipeline Name="Microsoft.BizTalk.DefaultPipelines.PassThruTransmit" FullyQualifiedName="Microsoft.BizTalk.DefaultPipelines.PassThruTransmit, Microsoft.BizTalk.DefaultPipelines, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" Type="2" TrackingOption="ServiceStartEnd MessageSendReceive PipelineEvents" Description="" />
+      <PrimaryTransport>
+        <Address>peter.borremans@riziv.fgov.be</Address>
+        <TransportType Name="SMTP" Capabilities="2" ConfigurationClsid="8f36b311-b670-4cf6-aaec-04ebb80ed48d" />
+        <TransportTypeData>&lt;CustomProps&gt;&lt;DeliveryReceipt vt="11"&gt;0&lt;/DeliveryReceipt&gt;&lt;From vt="8"&gt;Biztalk.ICT@riziv.fgov.be&lt;/From&gt;&lt;MessagePartsAttachments vt="19"&gt;0&lt;/MessagePartsAttachments&gt;&lt;CC vt="8"&gt;peter.borremans@riziv.fgov.be&lt;/CC&gt;&lt;SMTPAuthenticate vt="19"&gt;0&lt;/SMTPAuthenticate&gt;&lt;EmailBodyText vt="8"&gt;The Xml in the received guard file is either invalid or not well-formed.
+To view the guard file, refer to the folder where invalid guard files are written to (MedegaImport.InvalideImportGuards port).
+
+The file is not attached because it can be big...&lt;/EmailBodyText&gt;&lt;ReadReceipt vt="11"&gt;0&lt;/ReadReceipt&gt;&lt;To vt="8"&gt;peter.borremans@riziv.fgov.be&lt;/To&gt;&lt;EmailBodyFileCharset vt="8"&gt;utf-8&lt;/EmailBodyFileCharset&gt;&lt;Subject vt="8"&gt;Invalid XML in the guard file.&lt;/Subject&gt;&lt;SMTPHost vt="8"&gt;mail.riziv.be&lt;/SMTPHost&gt;&lt;EmailBodyTextCharset vt="8"&gt;utf-8&lt;/EmailBodyTextCharset&gt;&lt;/CustomProps&gt;</TransportTypeData>
+        <RetryCount>3</RetryCount>
+        <RetryInterval>5</RetryInterval>
+        <ServiceWindowEnabled>false</ServiceWindowEnabled>
+        <FromTime>2000-01-01T23:00:00</FromTime>
+        <ToTime>2000-01-01T22:59:59</ToTime>
+        <Primary>true</Primary>
+        <OrderedDelivery>false</OrderedDelivery>
+        <DeliveryNotification>1</DeliveryNotification>
+        <SendHandler Name="BizTalkServerApplication" HostTrusted="true">
+          <TransportType Name="SMTP" Capabilities="2" ConfigurationClsid="8f36b311-b670-4cf6-aaec-04ebb80ed48d" />
+        </SendHandler>
+      </PrimaryTransport>
+      <SecondaryTransport>
+        <Address />
+        <RetryCount>3</RetryCount>
+        <RetryInterval>5</RetryInterval>
+        <ServiceWindowEnabled>false</ServiceWindowEnabled>
+        <FromTime>2000-01-01T23:00:00</FromTime>
+        <ToTime>2000-01-01T22:59:59</ToTime>
+        <Primary>false</Primary>
+        <OrderedDelivery>false</OrderedDelivery>
+        <DeliveryNotification>1</DeliveryNotification>
+        <SendHandler xsi:nil="true" />
+      </SecondaryTransport>
+      <ReceivePipelineData xsi:nil="true" />
+      <Tracking>0</Tracking>
+      <Filter>&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;Filter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;Group&gt;
+    &lt;Statement Property="ErrorReport.ReceivePortName" Operator="0" Value="MedegaImport.ReceiveGuards" /&gt;
+    &lt;Statement Property="ErrorReport.ErrorType" Operator="6" /&gt;
+  &lt;/Group&gt;
+  &lt;Group&gt;
+    &lt;Statement Property="ErrorReport.ReceivePortName" Operator="0" Value="MedegaImport.CreateGuards" /&gt;
+    &lt;Statement Property="ErrorReport.ErrorType" Operator="6" /&gt;
+  &lt;/Group&gt;
+&lt;/Filter&gt;</Filter>
+      <Transforms />
+      <OrderedDelivery>false</OrderedDelivery>
+      <Priority>5</Priority>
+      <StopSendingOnFailure>false</StopSendingOnFailure>
+      <RouteFailedMessage>false</RouteFailedMessage>
+      <ApplicationName>MedegaImport</ApplicationName>
+    </SendPort>
+  </SendPortCollection>
+  <DistributionListCollection />
+  <ReceivePortCollection>
+    <ReceivePort Name="MedegaImport.ReceiveGuards" IsTwoWay="false" BindingOption="1">
+      <Description xsi:nil="true" />
+      <ReceiveLocations>
+        <ReceiveLocation Name="MedegaImportLocalTmp">
+          <Description xsi:nil="true" />
+          <Address>C:\testarea\MedegaImport\MedegaIN\*.xml</Address>
+          <PublicAddress />
+          <Primary>true</Primary>
+          <ReceiveLocationServiceWindowEnabled>false</ReceiveLocationServiceWindowEnabled>
+          <ReceiveLocationFromTime>2000-01-01T23:00:00</ReceiveLocationFromTime>
+          <ReceiveLocationToTime>2000-01-01T22:59:59</ReceiveLocationToTime>
+          <ReceiveLocationStartDateEnabled>false</ReceiveLocationStartDateEnabled>
+          <ReceiveLocationStartDate>2009-01-27T00:00:00</ReceiveLocationStartDate>
+          <ReceiveLocationEndDateEnabled>false</ReceiveLocationEndDateEnabled>
+          <ReceiveLocationEndDate>2009-01-28T23:59:59</ReceiveLocationEndDate>
+          <ReceiveLocationTransportType Name="FILE" Capabilities="11" ConfigurationClsid="5e49e3a6-b4fc-4077-b44c-22f34a242fdb" />
+          <ReceiveLocationTransportTypeData>&lt;CustomProps&gt;&lt;RemoveReceivedFileRetryCount vt="19"&gt;0&lt;/RemoveReceivedFileRetryCount&gt;&lt;RemoveReceivedFileMaxInterval vt="19"&gt;300000&lt;/RemoveReceivedFileMaxInterval&gt;&lt;FileMask vt="8"&gt;*.xml&lt;/FileMask&gt;&lt;BatchSizeInBytes vt="19"&gt;102400&lt;/BatchSizeInBytes&gt;&lt;PollingInterval vt="19"&gt;60000&lt;/PollingInterval&gt;&lt;BatchSize vt="19"&gt;20&lt;/BatchSize&gt;&lt;FileNetFailRetryInt vt="19"&gt;5&lt;/FileNetFailRetryInt&gt;&lt;RemoveReceivedFileDelay vt="19"&gt;10&lt;/RemoveReceivedFileDelay&gt;&lt;RenameReceivedFiles vt="11"&gt;-1&lt;/RenameReceivedFiles&gt;&lt;FileNetFailRetryCount vt="19"&gt;5&lt;/FileNetFailRetryCount&gt;&lt;/CustomProps&gt;</ReceiveLocationTransportTypeData>
+          <ReceivePipeline Name="MedegaImport.Pipelines.MedegaImportFile" FullyQualifiedName="MedegaImport.Pipelines.MedegaImportFile, RIZIV.MedegaImport, Version=2.0.0.0, Culture=neutral, PublicKeyToken=7d624d93bf081b87" Type="1" TrackingOption="ServiceStartEnd MessageSendReceive PipelineEvents" Description="" />
+          <ReceivePipelineData xsi:nil="true" />
+          <SendPipeline xsi:nil="true" />
+          <SendPipelineData xsi:nil="true" />
+          <Enable>true</Enable>
+          <ReceiveHandler Name="BizTalkServerApplication" HostTrusted="true">
+            <TransportType Name="FILE" Capabilities="11" ConfigurationClsid="5e49e3a6-b4fc-4077-b44c-22f34a242fdb" />
+          </ReceiveHandler>
+        </ReceiveLocation>
+      </ReceiveLocations>
+      <SendPipelineData xsi:nil="true" />
+      <Authentication>0</Authentication>
+      <Tracking>0</Tracking>
+      <Transforms />
+      <RouteFailedMessage>true</RouteFailedMessage>
+      <ApplicationName>MedegaImport</ApplicationName>
+    </ReceivePort>
+    <ReceivePort Name="MedegaImport.CreateGuards" IsTwoWay="false" BindingOption="1">
+      <Description xsi:nil="true" />
+      <ReceiveLocations>
+        <ReceiveLocation Name="MedegaImport.CreateGuardsPolling">
+          <Description xsi:nil="true" />
+          <Address>SQL://./DHODMedega/</Address>
+          <PublicAddress />
+          <Primary>true</Primary>
+          <ReceiveLocationServiceWindowEnabled>false</ReceiveLocationServiceWindowEnabled>
+          <ReceiveLocationFromTime>2000-01-01T23:00:00</ReceiveLocationFromTime>
+          <ReceiveLocationToTime>2000-01-01T22:59:59</ReceiveLocationToTime>
+          <ReceiveLocationStartDateEnabled>false</ReceiveLocationStartDateEnabled>
+          <ReceiveLocationStartDate>2010-01-12T00:00:00</ReceiveLocationStartDate>
+          <ReceiveLocationEndDateEnabled>false</ReceiveLocationEndDateEnabled>
+          <ReceiveLocationEndDate>2010-01-13T23:59:59</ReceiveLocationEndDate>
+          <ReceiveLocationTransportType Name="SQL" Capabilities="81163" ConfigurationClsid="6e688659-1374-4f37-90dc-40cb6dd3c73d" />
+          <ReceiveLocationTransportTypeData>&lt;CustomProps&gt;&lt;AdapterConfig vt="8"&gt;&amp;lt;Receive xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&amp;gt;&amp;lt;sqlCommand&amp;gt;exec [sp_BTSCreateGuardPolling]&amp;lt;/sqlCommand&amp;gt;&amp;lt;connectionString&amp;gt;Provider=SQLOLEDB.1;Integrated Security=SSPI;Persist Security Info=False;User ID=MedegaImport_user;Initial Catalog=DHODMedega;Data Source=.&amp;lt;/connectionString&amp;gt;&amp;lt;documentRootElementName&amp;gt;CreateGuardPolling&amp;lt;/documentRootElementName&amp;gt;&amp;lt;documentTargetNamespace&amp;gt;http://inami-riziv.fgov.be.medega&amp;lt;/documentTargetNamespace&amp;gt;&amp;lt;pollingUnitOfMeasure&amp;gt;Seconds&amp;lt;/pollingUnitOfMeasure&amp;gt;&amp;lt;pollingInterval&amp;gt;60&amp;lt;/pollingInterval&amp;gt;&amp;lt;uri&amp;gt;SQL://./DHODMedega/&amp;lt;/uri&amp;gt;&amp;lt;pollWhileDataFound&amp;gt;False&amp;lt;/pollWhileDataFound&amp;gt;&amp;lt;/Receive&amp;gt;&lt;/AdapterConfig&gt;&lt;/CustomProps&gt;</ReceiveLocationTransportTypeData>
+          <ReceivePipeline Name="Microsoft.BizTalk.DefaultPipelines.XMLReceive" FullyQualifiedName="Microsoft.BizTalk.DefaultPipelines.XMLReceive, Microsoft.BizTalk.DefaultPipelines, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" Type="1" TrackingOption="ServiceStartEnd MessageSendReceive InboundMessageBody OutboundMessageBody PipelineEvents" Description="" />
+          <ReceivePipelineData xsi:nil="true" />
+          <SendPipeline xsi:nil="true" />
+          <SendPipelineData xsi:nil="true" />
+          <Enable>false</Enable>
+          <ReceiveHandler Name="BizTalkServerApplication" HostTrusted="true">
+            <TransportType Name="SQL" Capabilities="81163" ConfigurationClsid="6e688659-1374-4f37-90dc-40cb6dd3c73d" />
+          </ReceiveHandler>
+        </ReceiveLocation>
+      </ReceiveLocations>
+      <SendPipelineData xsi:nil="true" />
+      <Authentication>0</Authentication>
+      <Tracking>0</Tracking>
+      <Transforms />
+      <RouteFailedMessage>true</RouteFailedMessage>
+      <ApplicationName>MedegaImport</ApplicationName>
+    </ReceivePort>
+    <ReceivePort Name="MedegaImport.MedegaFileStatus" IsTwoWay="false" BindingOption="0">
+      <Description xsi:nil="true" />
+      <ReceiveLocations>
+        <ReceiveLocation Name="MedegaImport.MedegaFileStatusPolling">
+          <Description xsi:nil="true" />
+          <Address>SQL://./DHODMedega/BTSDonePolling</Address>
+          <PublicAddress />
+          <Primary>true</Primary>
+          <ReceiveLocationServiceWindowEnabled>false</ReceiveLocationServiceWindowEnabled>
+          <ReceiveLocationFromTime>2000-01-01T23:00:00</ReceiveLocationFromTime>
+          <ReceiveLocationToTime>2000-01-01T22:59:59</ReceiveLocationToTime>
+          <ReceiveLocationStartDateEnabled>false</ReceiveLocationStartDateEnabled>
+          <ReceiveLocationStartDate>2010-01-20T00:00:00</ReceiveLocationStartDate>
+          <ReceiveLocationEndDateEnabled>false</ReceiveLocationEndDateEnabled>
+          <ReceiveLocationEndDate>2010-01-21T23:59:59</ReceiveLocationEndDate>
+          <ReceiveLocationTransportType Name="SQL" Capabilities="81163" ConfigurationClsid="6e688659-1374-4f37-90dc-40cb6dd3c73d" />
+          <ReceiveLocationTransportTypeData>&lt;CustomProps&gt;&lt;AdapterConfig vt="8"&gt;&amp;lt;Receive xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&amp;gt;&amp;lt;sqlCommand&amp;gt;exec [sp_BTSDonePolling]&amp;lt;/sqlCommand&amp;gt;&amp;lt;connectionString&amp;gt;Provider=SQLOLEDB.1;Integrated Security=SSPI;Persist Security Info=False;Initial Catalog=DHODMedega;Data Source=.&amp;lt;/connectionString&amp;gt;&amp;lt;documentRootElementName&amp;gt;MedegaFileDone&amp;lt;/documentRootElementName&amp;gt;&amp;lt;documentTargetNamespace&amp;gt;http://inami-riziv.fgov.be.medega&amp;lt;/documentTargetNamespace&amp;gt;&amp;lt;pollingUnitOfMeasure&amp;gt;Seconds&amp;lt;/pollingUnitOfMeasure&amp;gt;&amp;lt;pollingInterval&amp;gt;60&amp;lt;/pollingInterval&amp;gt;&amp;lt;uri&amp;gt;SQL://./DHODMedega/BTSDonePolling&amp;lt;/uri&amp;gt;&amp;lt;pollWhileDataFound&amp;gt;False&amp;lt;/pollWhileDataFound&amp;gt;&amp;lt;/Receive&amp;gt;&lt;/AdapterConfig&gt;&lt;/CustomProps&gt;</ReceiveLocationTransportTypeData>
+          <ReceivePipeline Name="MedegaImport.Pipelines.MedegaFileStatusPolling" FullyQualifiedName="MedegaImport.Pipelines.MedegaFileStatusPolling, RIZIV.MedegaImport, Version=2.0.0.0, Culture=neutral, PublicKeyToken=7d624d93bf081b87" Type="1" TrackingOption="ServiceStartEnd MessageSendReceive PipelineEvents" Description="" />
+          <ReceivePipelineData xsi:nil="true" />
+          <SendPipeline xsi:nil="true" />
+          <SendPipelineData xsi:nil="true" />
+          <Enable>true</Enable>
+          <ReceiveHandler Name="BizTalkServerApplication" HostTrusted="true">
+            <TransportType Name="SQL" Capabilities="81163" ConfigurationClsid="6e688659-1374-4f37-90dc-40cb6dd3c73d" />
+          </ReceiveHandler>
+        </ReceiveLocation>
+      </ReceiveLocations>
+      <SendPipelineData xsi:nil="true" />
+      <Authentication>0</Authentication>
+      <Tracking>0</Tracking>
+      <Transforms />
+      <RouteFailedMessage>false</RouteFailedMessage>
+      <ApplicationName>MedegaImport</ApplicationName>
+    </ReceivePort>
+  </ReceivePortCollection>
+  <PartyCollection />
+</BindingInfo>

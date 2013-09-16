@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:tns="http://riziv.fgov.be/hodmedega/importmedegaguardresult" elementFormDefault="qualified" targetNamespace="http://riziv.fgov.be/hodmedega/importmedegaguardresult" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ImportMedegaGuardResult">
+    <xs:sequence>
+      <xs:element name="FailureCode" nillable="true" type="xs:string" />
+      <xs:element name="FailureDescription" nillable="true" type="xs:string" />
+      <xs:element name="FileId" type="xs:long" />
+      <xs:element name="GuardStatus" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ImportMedegaGuardResult" nillable="true" type="tns:ImportMedegaGuardResult" />
+</xs:schema>

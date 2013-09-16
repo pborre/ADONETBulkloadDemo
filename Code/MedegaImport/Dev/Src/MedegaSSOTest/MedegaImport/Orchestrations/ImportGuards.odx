@@ -1,0 +1,275 @@
+﻿#if __DESIGNER_DATA
+#error Do not define __DESIGNER_DATA.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<om:MetaModel MajorVersion="1" MinorVersion="3" Core="2b131234-7959-458d-834f-2dc0769ce683" ScheduleModel="66366196-361d-448d-976f-cab5e87496d2" xmlns:om="http://schemas.microsoft.com/BizTalk/2003/DesignerData">
+    <om:Element Type="Module" OID="8960eb66-2104-4284-aba7-f9e9c44dafae" LowerBound="1.1" HigherBound="49.1">
+        <om:Property Name="ReportToAnalyst" Value="True" />
+        <om:Property Name="Name" Value="MedegaImport" />
+        <om:Property Name="Signal" Value="False" />
+        <om:Element Type="PortType" OID="8c944f78-7ce4-4aed-9df7-a941d5e62ee7" ParentLink="Module_PortType" LowerBound="4.1" HigherBound="11.1">
+            <om:Property Name="Synchronous" Value="False" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="ReceiveGuardsType" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="OperationDeclaration" OID="dd41b2df-5793-41f4-b8cd-f8531cbf2844" ParentLink="PortType_OperationDeclaration" LowerBound="6.1" HigherBound="10.1">
+                <om:Property Name="OperationType" Value="OneWay" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Import" />
+                <om:Property Name="Signal" Value="True" />
+                <om:Element Type="MessageRef" OID="ab6f55db-b05f-4db3-bd94-7957c9278912" ParentLink="OperationDeclaration_RequestMessageRef" LowerBound="8.13" HigherBound="8.52">
+                    <om:Property Name="Ref" Value="MedegaImportSchema.Schemas.Medega_Guard" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Request" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+        <om:Element Type="ServiceDeclaration" OID="bc8c92f4-7a54-413c-a3e5-d80cfa9508b6" ParentLink="Module_ServiceDeclaration" LowerBound="11.1" HigherBound="48.1">
+            <om:Property Name="InitializedTransactionType" Value="False" />
+            <om:Property Name="IsInvokable" Value="False" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="ImportGuards" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="VariableDeclaration" OID="4549667d-1542-4f73-bc9b-62d2da59c0fb" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="18.1" HigherBound="19.1">
+                <om:Property Name="UseDefaultConstructor" Value="False" />
+                <om:Property Name="Type" Value="System.Int32" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="FileStatusID" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="VariableDeclaration" OID="8f267d80-fa5e-4308-868b-469897bdfee1" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="19.1" HigherBound="20.1">
+                <om:Property Name="UseDefaultConstructor" Value="False" />
+                <om:Property Name="Type" Value="System.String" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="xpathString" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="VariableDeclaration" OID="fbcaebb1-73cb-49f6-ba8c-5912d9bc34c6" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="20.1" HigherBound="21.1">
+                <om:Property Name="UseDefaultConstructor" Value="False" />
+                <om:Property Name="Type" Value="System.String" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="xpathResult" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="VariableDeclaration" OID="df921866-f2da-4d3e-adee-6d3f905a36f9" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="21.1" HigherBound="22.1">
+                <om:Property Name="UseDefaultConstructor" Value="False" />
+                <om:Property Name="Type" Value="System.Int32" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="FileID" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="VariableDeclaration" OID="81bd8524-e237-46c7-a2d7-b374fb1a4225" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="22.1" HigherBound="23.1">
+                <om:Property Name="UseDefaultConstructor" Value="False" />
+                <om:Property Name="Type" Value="System.Int32" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="NewFileStatusID" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="285fc959-77d2-4b5a-abe9-f52e2f4dc6e1" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="16.1" HigherBound="17.1">
+                <om:Property Name="Type" Value="MedegaImportSchema.Schemas.Medega_Guard" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="GuardsFile" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="6121a6fd-8e2f-4443-ad7f-26945ec5c873" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="17.1" HigherBound="18.1">
+                <om:Property Name="Type" Value="MedegaImport.Schemas.DB2_ImportFile.ImportFileResponse" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="DB2ImportFileResponse" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="ServiceBody" OID="fdae6ed7-b4c2-429b-9844-6ff895ed1a85" ParentLink="ServiceDeclaration_ServiceBody">
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="Receive" OID="b1eba16b-ce54-465d-89ea-0bdcccbbf213" ParentLink="ServiceBody_Statement" LowerBound="25.1" HigherBound="29.1">
+                    <om:Property Name="Activate" Value="True" />
+                    <om:Property Name="PortName" Value="ReceiveGuards" />
+                    <om:Property Name="MessageName" Value="GuardsFile" />
+                    <om:Property Name="OperationName" Value="Import" />
+                    <om:Property Name="OperationMessageName" Value="Request" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Receive Guards" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+                <om:Element Type="Call" OID="93d77076-9f32-4db9-9a81-1271a4f685f5" ParentLink="ServiceBody_Statement" LowerBound="29.1" HigherBound="31.1">
+                    <om:Property Name="Identifier" Value="ImportFile" />
+                    <om:Property Name="Invokee" Value="MedegaImport.subImportFile" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="ImportFile" />
+                    <om:Property Name="Signal" Value="False" />
+                    <om:Element Type="Parameter" OID="43a93c6e-1309-4581-a1dd-ce1dee853931" ParentLink="InvokeStatement_Parameter">
+                        <om:Property Name="Direction" Value="Out" />
+                        <om:Property Name="Name" Value="FileID" />
+                        <om:Property Name="Type" Value="System.Int32" />
+                        <om:Property Name="Signal" Value="False" />
+                    </om:Element>
+                    <om:Element Type="Parameter" OID="bf8c29fc-aea9-4635-8574-4bc9200624f0" ParentLink="InvokeStatement_Parameter">
+                        <om:Property Name="Direction" Value="Out" />
+                        <om:Property Name="Name" Value="FileStatusID" />
+                        <om:Property Name="Type" Value="System.Int32" />
+                        <om:Property Name="Signal" Value="False" />
+                    </om:Element>
+                    <om:Element Type="Parameter" OID="17119f27-218e-428c-8970-d03ae2929565" ParentLink="InvokeStatement_Parameter">
+                        <om:Property Name="Direction" Value="In" />
+                        <om:Property Name="Name" Value="GuardsFile" />
+                        <om:Property Name="Type" Value="MedegaImportSchema.Schemas.Medega_Guard" />
+                        <om:Property Name="Signal" Value="False" />
+                    </om:Element>
+                    <om:Element Type="Parameter" OID="d4c3757a-5c3e-431d-86ec-19aa7ff8aeb7" ParentLink="InvokeStatement_Parameter">
+                        <om:Property Name="Direction" Value="Out" />
+                        <om:Property Name="Name" Value="DB2ImportFileResponse" />
+                        <om:Property Name="Type" Value="MedegaImport.Schemas.DB2_ImportFile.ImportFileResponse" />
+                        <om:Property Name="Signal" Value="False" />
+                    </om:Element>
+                </om:Element>
+                <om:Element Type="Decision" OID="de53e2c1-cfa0-47f4-98dc-7dc08e8b9eb4" ParentLink="ServiceBody_Statement" LowerBound="31.1" HigherBound="46.1">
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Verify Status" />
+                    <om:Property Name="Signal" Value="True" />
+                    <om:Element Type="DecisionBranch" OID="fa041359-cc74-4aa4-988b-81e93d753551" ParentLink="ReallyComplexStatement_Branch" LowerBound="32.13" HigherBound="41.1">
+                        <om:Property Name="Expression" Value="FileStatusID != System.Convert.ToInt32( MedegaImport.MedegaImportTypes.MedegaFileStatusEnum.Pending)" />
+                        <om:Property Name="IsGhostBranch" Value="True" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Name" Value="New" />
+                        <om:Property Name="Signal" Value="True" />
+                        <om:Element Type="VariableAssignment" OID="5769510a-a0c1-452d-8383-f5ac62e167a0" ParentLink="ComplexStatement_Statement" LowerBound="34.1" HigherBound="36.1">
+                            <om:Property Name="Expression" Value="NewFileStatusID = System.Convert.ToInt32( MedegaImport.MedegaImportTypes.MedegaFileStatusEnum.Pending );&#xD;&#xA;" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="Set status" />
+                            <om:Property Name="Signal" Value="False" />
+                        </om:Element>
+                        <om:Element Type="Call" OID="eaddda75-a016-4afc-ab05-c3280ff558e7" ParentLink="ComplexStatement_Statement" LowerBound="36.1" HigherBound="38.1">
+                            <om:Property Name="Identifier" Value="CallUpdateStatusId" />
+                            <om:Property Name="Invokee" Value="MedegaImport.subUpdateFileStatus" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="CallUpdateStatusId" />
+                            <om:Property Name="Signal" Value="True" />
+                            <om:Element Type="Parameter" OID="c32c2a06-0cc8-4765-a9e4-a419135650e8" ParentLink="InvokeStatement_Parameter">
+                                <om:Property Name="Direction" Value="In" />
+                                <om:Property Name="Name" Value="FileStatusID" />
+                                <om:Property Name="Type" Value="System.Int32" />
+                                <om:Property Name="Signal" Value="False" />
+                            </om:Element>
+                            <om:Element Type="Parameter" OID="b426c6b1-2c34-44bc-9fe9-60f5434eb614" ParentLink="InvokeStatement_Parameter">
+                                <om:Property Name="Direction" Value="In" />
+                                <om:Property Name="Name" Value="NewFileStatusID" />
+                                <om:Property Name="Type" Value="System.Int32" />
+                                <om:Property Name="Signal" Value="False" />
+                            </om:Element>
+                        </om:Element>
+                        <om:Element Type="Call" OID="7fcfe072-fbbb-4b34-a738-6f41fa0d2057" ParentLink="ComplexStatement_Statement" LowerBound="38.1" HigherBound="40.1">
+                            <om:Property Name="Identifier" Value="ImportRecords" />
+                            <om:Property Name="Invokee" Value="MedegaImport.subImportGuardRecord" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="ImportRecords" />
+                            <om:Property Name="Signal" Value="True" />
+                            <om:Element Type="Parameter" OID="acf8561a-67df-4d3e-b977-89369cc06925" ParentLink="InvokeStatement_Parameter">
+                                <om:Property Name="Direction" Value="In" />
+                                <om:Property Name="Name" Value="GuardsFile" />
+                                <om:Property Name="Type" Value="MedegaImportSchema.Schemas.Medega_Guard" />
+                                <om:Property Name="Signal" Value="False" />
+                            </om:Element>
+                            <om:Element Type="Parameter" OID="2713946b-2377-4de9-837c-13f481900d2f" ParentLink="InvokeStatement_Parameter">
+                                <om:Property Name="Direction" Value="In" />
+                                <om:Property Name="Name" Value="DB2ImportFileResponse" />
+                                <om:Property Name="Type" Value="MedegaImport.Schemas.DB2_ImportFile.ImportFileResponse" />
+                                <om:Property Name="Signal" Value="False" />
+                            </om:Element>
+                            <om:Element Type="Parameter" OID="d04d6762-7f56-4c62-b1db-8c1f42f0fafa" ParentLink="InvokeStatement_Parameter">
+                                <om:Property Name="Direction" Value="In" />
+                                <om:Property Name="Name" Value="FileID" />
+                                <om:Property Name="Type" Value="System.Int32" />
+                                <om:Property Name="Signal" Value="False" />
+                            </om:Element>
+                        </om:Element>
+                    </om:Element>
+                    <om:Element Type="DecisionBranch" OID="f41c35f1-1f66-4dce-afca-7092097af540" ParentLink="ReallyComplexStatement_Branch">
+                        <om:Property Name="IsGhostBranch" Value="True" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Name" Value="Else" />
+                        <om:Property Name="Signal" Value="False" />
+                        <om:Element Type="Terminate" OID="296dd146-6079-4b1f-84d6-b2fdfe61ffab" ParentLink="ComplexStatement_Statement" LowerBound="43.1" HigherBound="45.1">
+                            <om:Property Name="ErrorMessage" Value="&quot;The file status after ImportFile is not correct to continue&quot;;" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="Terminate" />
+                            <om:Property Name="Signal" Value="True" />
+                        </om:Element>
+                    </om:Element>
+                </om:Element>
+            </om:Element>
+            <om:Element Type="PortDeclaration" OID="8aca5fc8-dabf-4acf-b143-aca6efa34ddc" ParentLink="ServiceDeclaration_PortDeclaration" LowerBound="14.1" HigherBound="16.1">
+                <om:Property Name="PortModifier" Value="Implements" />
+                <om:Property Name="Orientation" Value="Left" />
+                <om:Property Name="PortIndex" Value="-1" />
+                <om:Property Name="IsWebPort" Value="False" />
+                <om:Property Name="OrderedDelivery" Value="False" />
+                <om:Property Name="DeliveryNotification" Value="None" />
+                <om:Property Name="Type" Value="MedegaImport.ReceiveGuardsType" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="ReceiveGuards" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="LogicalBindingAttribute" OID="d8090902-4f8e-464a-ac5b-de6d5f0d3fe6" ParentLink="PortDeclaration_CLRAttribute" LowerBound="14.1" HigherBound="15.1">
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+    </om:Element>
+</om:MetaModel>
+#endif // __DESIGNER_DATA
+[Microsoft.XLANGs.BaseTypes.BPELExportable(false)]
+module MedegaImport
+{
+    internal porttype ReceiveGuardsType
+    {
+        oneway Import
+        {
+            MedegaImportSchema.Schemas.Medega_Guard
+        };
+    };
+    [Microsoft.XLANGs.BaseTypes.BPELExportable(false)]
+    internal service ImportGuards
+    {
+        [Microsoft.XLANGs.BaseTypes.LogicalBinding()]
+        port implements ReceiveGuardsType ReceiveGuards;
+        message MedegaImportSchema.Schemas.Medega_Guard GuardsFile;
+        message Schemas.DB2_ImportFile.ImportFileResponse DB2ImportFileResponse;
+        System.Int32 FileStatusID;
+        System.String xpathString;
+        System.String xpathResult;
+        System.Int32 FileID;
+        System.Int32 NewFileStatusID;
+        body ()
+        {
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("b1eba16b-ce54-465d-89ea-0bdcccbbf213")]
+            activate receive (ReceiveGuards.Import, GuardsFile);
+            xpathString = "";
+            xpathResult = "";
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("93d77076-9f32-4db9-9a81-1271a4f685f5")]
+            call MedegaImport.subImportFile (out FileID, out FileStatusID, GuardsFile, out DB2ImportFileResponse);
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("de53e2c1-cfa0-47f4-98dc-7dc08e8b9eb4")]
+            if (FileStatusID != System.Convert.ToInt32( MedegaImport.MedegaImportTypes.MedegaFileStatusEnum.Pending))
+            {
+                [Microsoft.XLANGs.BaseTypes.DesignerPosition("5769510a-a0c1-452d-8383-f5ac62e167a0")]
+                NewFileStatusID = System.Convert.ToInt32( MedegaImport.MedegaImportTypes.MedegaFileStatusEnum.Pending );
+                [Microsoft.XLANGs.BaseTypes.DesignerPosition("eaddda75-a016-4afc-ab05-c3280ff558e7")]
+                call MedegaImport.subUpdateFileStatus (FileStatusID, NewFileStatusID);
+                [Microsoft.XLANGs.BaseTypes.DesignerPosition("7fcfe072-fbbb-4b34-a738-6f41fa0d2057")]
+                call MedegaImport.subImportGuardRecord (GuardsFile, DB2ImportFileResponse, FileID);
+            }
+            else 
+            {
+                [Microsoft.XLANGs.BaseTypes.DesignerPosition("296dd146-6079-4b1f-84d6-b2fdfe61ffab")]
+                terminate "The file status after ImportFile is not correct to continue";;
+            }
+        }
+    }
+}
+

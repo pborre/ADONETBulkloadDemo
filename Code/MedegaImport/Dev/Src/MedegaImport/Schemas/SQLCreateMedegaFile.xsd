@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://inami-riziv.fgov.be.medega" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:annotation>
+    <xs:appinfo>
+      <msbtssql:sqlScript value="exec [sp_BTSCreateMedegaFile] @FileName=&quot; &quot;, @FileStatus=&quot; &quot;" xmlns:msbtssql="http://schemas.microsoft.com/BizTalk/2003" />
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="CreateMedegaFileRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="sp_BTSCreateMedegaFile">
+          <xs:complexType>
+            <xs:attribute name="FileName" type="xs:string" />
+            <xs:attribute name="FileStatus" type="xs:int" />
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateMedegaFileResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Success" type="xs:anyType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

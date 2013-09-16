@@ -1,0 +1,246 @@
+﻿#if __DESIGNER_DATA
+#error Do not define __DESIGNER_DATA.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<om:MetaModel MajorVersion="1" MinorVersion="3" Core="2b131234-7959-458d-834f-2dc0769ce683" ScheduleModel="66366196-361d-448d-976f-cab5e87496d2" xmlns:om="http://schemas.microsoft.com/BizTalk/2003/DesignerData">
+    <om:Element Type="Module" OID="404be20e-9c29-477b-9ba6-3ea7761c0b81" LowerBound="1.1" HigherBound="49.1">
+        <om:Property Name="ReportToAnalyst" Value="True" />
+        <om:Property Name="Name" Value="MedegaImport" />
+        <om:Property Name="Signal" Value="False" />
+        <om:Element Type="PortType" OID="cd3f17ca-29f8-4921-9fe0-361bb659d05c" ParentLink="Module_PortType" LowerBound="9.1" HigherBound="16.1">
+            <om:Property Name="Synchronous" Value="False" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="ErrContextType" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="OperationDeclaration" OID="5d66122d-1ee9-4081-a72b-c1680b89f5f6" ParentLink="PortType_OperationDeclaration" LowerBound="11.1" HigherBound="15.1">
+                <om:Property Name="OperationType" Value="OneWay" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Send" />
+                <om:Property Name="Signal" Value="True" />
+                <om:Element Type="MessageRef" OID="765d8d78-922b-4f94-a5d5-4c34e6f56883" ParentLink="OperationDeclaration_RequestMessageRef" LowerBound="13.13" HigherBound="13.26">
+                    <om:Property Name="Ref" Value="MedegaImport.ExceptionType" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Request" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+        <om:Element Type="PortType" OID="b1f59e34-3574-4e44-b533-187577c7c52e" ParentLink="Module_PortType" LowerBound="16.1" HigherBound="23.1">
+            <om:Property Name="Synchronous" Value="False" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="ErrMsgType" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="OperationDeclaration" OID="578ab68b-7274-42ca-8ee5-7bca42879a70" ParentLink="PortType_OperationDeclaration" LowerBound="18.1" HigherBound="22.1">
+                <om:Property Name="OperationType" Value="OneWay" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Send" />
+                <om:Property Name="Signal" Value="True" />
+                <om:Element Type="MessageRef" OID="c7d0cfc8-b0dd-4581-bd02-54d542f16682" ParentLink="OperationDeclaration_RequestMessageRef" LowerBound="20.13" HigherBound="20.35">
+                    <om:Property Name="Ref" Value="System.Xml.XmlDocument" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Request" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+        <om:Element Type="ServiceDeclaration" OID="1eacb16b-62f9-495d-a40d-8db9afc54f87" ParentLink="Module_ServiceDeclaration" LowerBound="23.1" HigherBound="48.1">
+            <om:Property Name="InitializedTransactionType" Value="False" />
+            <om:Property Name="IsInvokable" Value="True" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="HandleException" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="MessageDeclaration" OID="48316d0e-55dd-41e4-bc37-829c64b5e51e" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="30.1" HigherBound="31.1">
+                <om:Property Name="Type" Value="MedegaImport.ExceptionType" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="MailError" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="ServiceBody" OID="41e9d1bf-b0b5-4dc3-b278-5fed999673f7" ParentLink="ServiceDeclaration_ServiceBody">
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="VariableDeclaration" OID="1d34d6a9-4e62-4300-96ab-2cd725044d8b" ParentLink="ServiceBody_Declaration" LowerBound="31.15" HigherBound="31.41">
+                    <om:Property Name="UseDefaultConstructor" Value="False" />
+                    <om:Property Name="Type" Value="System.Int32" />
+                    <om:Property Name="ParamDirection" Value="Ref" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="errorCode" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+                <om:Element Type="MessageDeclaration" OID="8b9e317d-8f2e-4044-9caa-b21e8cd8027a" ParentLink="ServiceBody_Declaration" LowerBound="31.43" HigherBound="31.81">
+                    <om:Property Name="Type" Value="System.Xml.XmlDocument" />
+                    <om:Property Name="ParamDirection" Value="In" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Context" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+                <om:Element Type="MessageDeclaration" OID="82dc527c-c001-4767-a397-c47ebda69dfa" ParentLink="ServiceBody_Declaration" LowerBound="31.83" HigherBound="31.120">
+                    <om:Property Name="Type" Value="System.Xml.XmlDocument" />
+                    <om:Property Name="ParamDirection" Value="In" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="ErrMsg" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+                <om:Element Type="VariableDeclaration" OID="b7ee5052-a137-4d2f-a005-2955f69bb3e4" ParentLink="ServiceBody_Declaration" LowerBound="31.122" HigherBound="31.156">
+                    <om:Property Name="UseDefaultConstructor" Value="False" />
+                    <om:Property Name="Type" Value="System.String" />
+                    <om:Property Name="ParamDirection" Value="In" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="ExceptionDescription" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+                <om:Element Type="VariableDeclaration" OID="1d34d833-dc03-4b86-92cb-a180eea13cdf" ParentLink="ServiceBody_Declaration" LowerBound="31.158" HigherBound="31.197">
+                    <om:Property Name="UseDefaultConstructor" Value="False" />
+                    <om:Property Name="Type" Value="System.String" />
+                    <om:Property Name="ParamDirection" Value="In" />
+                    <om:Property Name="ReportToAnalyst" Value="False" />
+                    <om:Property Name="Name" Value="InnerExceptionDescription" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+                <om:Element Type="VariableAssignment" OID="72a4140b-919a-4105-a6b9-145bb198ac83" ParentLink="ServiceBody_Statement" LowerBound="33.1" HigherBound="35.1">
+                    <om:Property Name="Expression" Value="System.Diagnostics.EventLog.WriteEntry(&quot;RIZIV-INAMI.MedegaImport&quot;, System.String.Format(&quot;An error occured! Error code returned : {0}\r\nDescription: {1}\r\nInnerException: {2}&quot; ,errorCode, ExceptionDescription, InnerExceptionDescription));&#xD;&#xA;" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Log" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+                <om:Element Type="Construct" OID="5500dde3-20d4-43f3-bb45-a965a593a7d1" ParentLink="ServiceBody_Statement" LowerBound="35.1" HigherBound="42.1">
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Assign Mail message" />
+                    <om:Property Name="Signal" Value="True" />
+                    <om:Element Type="MessageRef" OID="da3f2308-d68f-402e-9fd2-1655c572fc52" ParentLink="Construct_MessageRef" LowerBound="36.23" HigherBound="36.32">
+                        <om:Property Name="Ref" Value="MailError" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Signal" Value="False" />
+                    </om:Element>
+                    <om:Element Type="MessageAssignment" OID="a9e0f9da-7909-4012-a4ec-d240bbfa20af" ParentLink="ComplexStatement_Statement" LowerBound="38.1" HigherBound="41.1">
+                        <om:Property Name="Expression" Value="MailError.Context = Context;&#xD;&#xA;MailError.ErrMsg = ErrMsg;" />
+                        <om:Property Name="ReportToAnalyst" Value="False" />
+                        <om:Property Name="Name" Value="Assign Mail message" />
+                        <om:Property Name="Signal" Value="False" />
+                    </om:Element>
+                </om:Element>
+                <om:Element Type="Send" OID="75f3e358-6b7a-4321-9ebe-7ae237c7bfc5" ParentLink="ServiceBody_Statement" LowerBound="42.1" HigherBound="44.1">
+                    <om:Property Name="PortName" Value="SendErrContext" />
+                    <om:Property Name="MessageName" Value="MailError" />
+                    <om:Property Name="OperationName" Value="Send" />
+                    <om:Property Name="OperationMessageName" Value="Request" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Send Context" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+                <om:Element Type="Send" OID="06a1de23-c34a-43ec-bbb3-0f5e3f62882c" ParentLink="ServiceBody_Statement" LowerBound="44.1" HigherBound="46.1">
+                    <om:Property Name="PortName" Value="SendErrMsg" />
+                    <om:Property Name="MessageName" Value="ErrMsg" />
+                    <om:Property Name="OperationName" Value="Send" />
+                    <om:Property Name="OperationMessageName" Value="Request" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Send Exception" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="PortDeclaration" OID="c55ed462-66b4-46ee-a975-52f7cbc7664a" ParentLink="ServiceDeclaration_PortDeclaration" LowerBound="26.1" HigherBound="28.1">
+                <om:Property Name="PortModifier" Value="Uses" />
+                <om:Property Name="Orientation" Value="Left" />
+                <om:Property Name="PortIndex" Value="15" />
+                <om:Property Name="IsWebPort" Value="False" />
+                <om:Property Name="OrderedDelivery" Value="False" />
+                <om:Property Name="DeliveryNotification" Value="None" />
+                <om:Property Name="Type" Value="MedegaImport.ErrMsgType" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="SendErrMsg" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="LogicalBindingAttribute" OID="7e74c7a8-2b2d-4a1f-9096-79f83794c76b" ParentLink="PortDeclaration_CLRAttribute" LowerBound="26.1" HigherBound="27.1">
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="PortDeclaration" OID="0ee18aeb-622d-496c-a22d-72b9bd5369a1" ParentLink="ServiceDeclaration_PortDeclaration" LowerBound="28.1" HigherBound="30.1">
+                <om:Property Name="PortModifier" Value="Uses" />
+                <om:Property Name="Orientation" Value="Left" />
+                <om:Property Name="PortIndex" Value="9" />
+                <om:Property Name="IsWebPort" Value="False" />
+                <om:Property Name="OrderedDelivery" Value="False" />
+                <om:Property Name="DeliveryNotification" Value="None" />
+                <om:Property Name="Type" Value="MedegaImport.ErrContextType" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="SendErrContext" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="LogicalBindingAttribute" OID="47e466ad-0fe5-4d20-b7a5-f430bc25365f" ParentLink="PortDeclaration_CLRAttribute" LowerBound="28.1" HigherBound="29.1">
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+        <om:Element Type="MultipartMessageType" OID="fe2063b2-a3a2-4b3f-b668-1c3283513615" ParentLink="Module_MessageType" LowerBound="4.1" HigherBound="9.1">
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="ExceptionType" />
+            <om:Property Name="Signal" Value="True" />
+            <om:Element Type="PartDeclaration" OID="4895bd87-cfb6-47d1-b38d-4ba46080849f" ParentLink="MultipartMessageType_PartDeclaration" LowerBound="6.1" HigherBound="7.1">
+                <om:Property Name="ClassName" Value="System.Xml.XmlDocument" />
+                <om:Property Name="IsBodyPart" Value="True" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Context" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="PartDeclaration" OID="8dd531b8-4c27-4d8c-9cc1-6ab87d3e380a" ParentLink="MultipartMessageType_PartDeclaration" LowerBound="7.1" HigherBound="8.1">
+                <om:Property Name="ClassName" Value="System.Xml.XmlDocument" />
+                <om:Property Name="IsBodyPart" Value="False" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="ErrMsg" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+        </om:Element>
+    </om:Element>
+</om:MetaModel>
+#endif // __DESIGNER_DATA
+[Microsoft.XLANGs.BaseTypes.BPELExportable(false)]
+module MedegaImport
+{
+    internal messagetype ExceptionType
+    {
+        body System.Xml.XmlDocument Context;
+        System.Xml.XmlDocument ErrMsg;
+    };
+    internal porttype ErrContextType
+    {
+        oneway Send
+        {
+            ExceptionType
+        };
+    };
+    internal porttype ErrMsgType
+    {
+        oneway Send
+        {
+            System.Xml.XmlDocument
+        };
+    };
+    [Microsoft.XLANGs.BaseTypes.BPELExportable(false)]
+    internal service HandleException
+    {
+        [Microsoft.XLANGs.BaseTypes.LogicalBinding()]
+        port uses ErrMsgType SendErrMsg;
+        [Microsoft.XLANGs.BaseTypes.LogicalBinding()]
+        port uses ErrContextType SendErrContext;
+        message ExceptionType MailError;
+        body (ref System.Int32 errorCode, message System.Xml.XmlDocument Context, message System.Xml.XmlDocument ErrMsg, System.String ExceptionDescription, System.String InnerExceptionDescription)
+        {
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("72a4140b-919a-4105-a6b9-145bb198ac83")]
+            System.Diagnostics.EventLog.WriteEntry("RIZIV-INAMI.MedegaImport", System.String.Format("An error occured! Error code returned : {0}\r\nDescription: {1}\r\nInnerException: {2}" ,errorCode, ExceptionDescription, InnerExceptionDescription));
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("5500dde3-20d4-43f3-bb45-a965a593a7d1")]
+            construct MailError
+            {
+                [Microsoft.XLANGs.BaseTypes.DesignerPosition("a9e0f9da-7909-4012-a4ec-d240bbfa20af")]
+                MailError.Context = Context;
+                MailError.ErrMsg = ErrMsg;
+            }
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("75f3e358-6b7a-4321-9ebe-7ae237c7bfc5")]
+            send (SendErrContext.Send, MailError);
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("06a1de23-c34a-43ec-bbb3-0f5e3f62882c")]
+            send (SendErrMsg.Send, ErrMsg);
+        }
+    }
+}
+

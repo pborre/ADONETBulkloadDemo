@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<discovery xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.xmlsoap.org/disco/">
+  <contractRef ref="http://biztalk-val/Riziv.Applications.BizTalk.Logging_Proxy/WebService_Riziv_Applications_BizTalk_Logging.asmx?wsdl" docRef="http://biztalk-val/Riziv.Applications.BizTalk.Logging_Proxy/WebService_Riziv_Applications_BizTalk_Logging.asmx" xmlns="http://schemas.xmlsoap.org/disco/scl/" />
+  <soap address="http://biztalk-val/Riziv.Applications.BizTalk.Logging_Proxy/WebService_Riziv_Applications_BizTalk_Logging.asmx" xmlns:q1="http://riziv-inami.fgov.be" binding="q1:WebService_Riziv_Applications_BizTalk_LoggingSoap" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+  <soap address="http://biztalk-val/Riziv.Applications.BizTalk.Logging_Proxy/WebService_Riziv_Applications_BizTalk_Logging.asmx" xmlns:q2="http://riziv-inami.fgov.be" binding="q2:WebService_Riziv_Applications_BizTalk_LoggingSoap12" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+</discovery>

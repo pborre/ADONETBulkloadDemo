@@ -1,0 +1,108 @@
+﻿#if __DESIGNER_DATA
+#error Do not define __DESIGNER_DATA.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<om:MetaModel MajorVersion="1" MinorVersion="3" Core="2b131234-7959-458d-834f-2dc0769ce683" ScheduleModel="66366196-361d-448d-976f-cab5e87496d2" xmlns:om="http://schemas.microsoft.com/BizTalk/2003/DesignerData">
+    <om:Element Type="Module" OID="eb0589b5-2691-4824-a84c-615a75aa7596" LowerBound="1.1" HigherBound="27.1">
+        <om:Property Name="ReportToAnalyst" Value="True" />
+        <om:Property Name="Name" Value="MedegaImport" />
+        <om:Property Name="Signal" Value="False" />
+        <om:Element Type="PortType" OID="dda28efb-b4f2-4b5f-b03a-7cc0a252f0c1" ParentLink="Module_PortType" LowerBound="12.1" HigherBound="19.1">
+            <om:Property Name="Synchronous" Value="True" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="AnalystComments" Value="Adapter metadata port type: " />
+            <om:Property Name="Name" Value="TableOp_dbo_MedegaXmlNode" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="OperationDeclaration" OID="84080c98-6cc3-41af-873e-94c1bbb283ed" ParentLink="PortType_OperationDeclaration" LowerBound="14.1" HigherBound="18.1">
+                <om:Property Name="OperationType" Value="RequestResponse" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="AnalystComments" Value="Adapter metadata operation: " />
+                <om:Property Name="Name" Value="Insert" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="MessageRef" OID="ce3ff8a7-7bbc-42ef-a156-145485d276f3" ParentLink="OperationDeclaration_RequestMessageRef" LowerBound="16.13" HigherBound="16.58">
+                    <om:Property Name="Ref" Value="MedegaImport.TableOp_dbo_MedegaXmlNode_Insert_InputMessage" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="AnalystComments" Value="Adapter metadata operation message: " />
+                    <om:Property Name="Name" Value="Request" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+                <om:Element Type="MessageRef" OID="81115b71-28ae-408f-9391-3e294e527ff2" ParentLink="OperationDeclaration_ResponseMessageRef" LowerBound="16.60" HigherBound="16.106">
+                    <om:Property Name="Ref" Value="MedegaImport.TableOp_dbo_MedegaXmlNode_Insert_OutputMessage" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="AnalystComments" Value="Adapter metadata operation message: " />
+                    <om:Property Name="Name" Value="Response" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+        <om:Element Type="MultipartMessageType" OID="429d7a36-1a44-4c07-8da4-13d17c8534ba" ParentLink="Module_MessageType" LowerBound="4.1" HigherBound="8.1">
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="AnalystComments" Value="Adapter metadata message type: " />
+            <om:Property Name="Name" Value="TableOp_dbo_MedegaXmlNode_Insert_InputMessage" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="PartDeclaration" OID="2282c557-e4fb-44cc-9253-16da3c9d361e" ParentLink="MultipartMessageType_PartDeclaration" LowerBound="6.1" HigherBound="7.1">
+                <om:Property Name="ClassName" Value="MedegaImport.sqlBinding_MedegaXmlNode.Insert" />
+                <om:Property Name="IsBodyPart" Value="True" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="AnalystComments" Value="Adapter metadata message part: " />
+                <om:Property Name="Name" Value="parameters" />
+                <om:Property Name="Signal" Value="False" />
+            </om:Element>
+        </om:Element>
+        <om:Element Type="MultipartMessageType" OID="801970d8-4102-4e51-bb74-5ba0384ad1ef" ParentLink="Module_MessageType" LowerBound="8.1" HigherBound="12.1">
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="AnalystComments" Value="Adapter metadata message type: " />
+            <om:Property Name="Name" Value="TableOp_dbo_MedegaXmlNode_Insert_OutputMessage" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="PartDeclaration" OID="0197aa73-7f64-4abc-b943-41b240a34c9b" ParentLink="MultipartMessageType_PartDeclaration" LowerBound="10.1" HigherBound="11.1">
+                <om:Property Name="ClassName" Value="MedegaImport.sqlBinding_MedegaXmlNode.InsertResponse" />
+                <om:Property Name="IsBodyPart" Value="True" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="AnalystComments" Value="Adapter metadata message part: " />
+                <om:Property Name="Name" Value="parameters" />
+                <om:Property Name="Signal" Value="False" />
+            </om:Element>
+        </om:Element>
+        <om:Element Type="ServiceDeclaration" OID="b112dead-e387-441d-8bf2-f77d76219550" ParentLink="Module_ServiceDeclaration" LowerBound="19.1" HigherBound="26.1">
+            <om:Property Name="InitializedTransactionType" Value="False" />
+            <om:Property Name="IsInvokable" Value="True" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="Orchestration_2" />
+            <om:Property Name="Signal" Value="True" />
+            <om:Element Type="ServiceBody" OID="1a98da3c-dc98-4c8f-ad25-b50baad02883" ParentLink="ServiceDeclaration_ServiceBody">
+                <om:Property Name="Signal" Value="False" />
+            </om:Element>
+        </om:Element>
+    </om:Element>
+</om:MetaModel>
+#endif // __DESIGNER_DATA
+[Microsoft.XLANGs.BaseTypes.BPELExportable(false)]
+module MedegaImport
+{
+    internal messagetype TableOp_dbo_MedegaXmlNode_Insert_InputMessage
+    {
+        body sqlBinding_MedegaXmlNode.Insert parameters;
+    };
+    internal messagetype TableOp_dbo_MedegaXmlNode_Insert_OutputMessage
+    {
+        body sqlBinding_MedegaXmlNode.InsertResponse parameters;
+    };
+    internal porttype TableOp_dbo_MedegaXmlNode
+    {
+        requestresponse Insert
+        {
+            TableOp_dbo_MedegaXmlNode_Insert_InputMessage, TableOp_dbo_MedegaXmlNode_Insert_OutputMessage
+        };
+    };
+    [Microsoft.XLANGs.BaseTypes.BPELExportable(false)]
+    internal service Orchestration_2
+    {
+        body ()
+        {
+        }
+    }
+}
+

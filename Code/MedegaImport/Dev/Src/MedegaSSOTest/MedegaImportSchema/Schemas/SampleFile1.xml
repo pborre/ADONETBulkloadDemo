@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Created with Liquid XML Studio - FREE Community Edition 7.0.0.604 (http://www.liquid-technologies.com) -->
+<tns:ROWSET xmlns:tns="http://www.riziv.fgov.be/medega/v1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.riziv.fgov.be/medega/v1.0 file:///D:/Data/Visual%20Studio%202005/Projects/MedegaImport/MedegaImportSchema/Schemas/Medega_Guard_Record.xsd">
+  <ROW>
+    <MEMBER_INAMI_NUMBER>string</MEMBER_INAMI_NUMBER>
+    <MEMBER_LASTNAME>string</MEMBER_LASTNAME>
+    <MEMBER_FIRSTNAME>string</MEMBER_FIRSTNAME>
+    <MEMBER_BANK_ACCOUNT>string</MEMBER_BANK_ACCOUNT>
+    <FEE_DATE>1977-08-08</FEE_DATE>
+    <ASSOCIATION_ID>118</ASSOCIATION_ID>
+    <ASSOCIATION_NAME>string</ASSOCIATION_NAME>
+    <GEOGRAPHIC_ENTITY_NAME>string</GEOGRAPHIC_ENTITY_NAME>
+    <NIS_CODE>string</NIS_CODE>
+    <ZIP_CODE>ABC</ZIP_CODE>
+    <MANAGER_LASTNAME>string</MANAGER_LASTNAME>
+    <MANAGER_FIRSTNAME>string</MANAGER_FIRSTNAME>
+    <MANAGER_INAMI_NUMBER>string</MANAGER_INAMI_NUMBER>
+    <PERIOD_START_TIME>21:38:32.91</PERIOD_START_TIME>
+    <PERIOD_END_TIME>21:07:32.25</PERIOD_END_TIME>
+  </ROW>
+</tns:ROWSET>

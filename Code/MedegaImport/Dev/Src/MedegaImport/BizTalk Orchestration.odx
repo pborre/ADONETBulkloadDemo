@@ -1,0 +1,108 @@
+﻿#if __DESIGNER_DATA
+#error Do not define __DESIGNER_DATA.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<om:MetaModel MajorVersion="1" MinorVersion="3" Core="2b131234-7959-458d-834f-2dc0769ce683" ScheduleModel="66366196-361d-448d-976f-cab5e87496d2" xmlns:om="http://schemas.microsoft.com/BizTalk/2003/DesignerData">
+    <om:Element Type="Module" OID="ec935b32-2754-4ffa-bf2b-0dbaeab8ebde">
+        <om:Property Name="ReportToAnalyst" Value="True" />
+        <om:Property Name="Name" Value="MedegaImport" />
+        <om:Property Name="Signal" Value="False" />
+        <om:Element Type="PortType" OID="a1d792a4-35cb-4ae9-9f43-70e345536577" ParentLink="Module_PortType">
+            <om:Property Name="Synchronous" Value="True" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="AnalystComments" Value="Adapter metadata port type: " />
+            <om:Property Name="Name" Value="Procedures_dbo" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="OperationDeclaration" OID="0d189d5d-7bba-4e91-9da0-82c93155882c" ParentLink="PortType_OperationDeclaration">
+                <om:Property Name="OperationType" Value="RequestResponse" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="AnalystComments" Value="Adapter metadata operation: " />
+                <om:Property Name="Name" Value="sp_CreateMedegaXmlNode" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="MessageRef" OID="3421e66a-6445-4321-81c9-66a0f47ab4f9" ParentLink="OperationDeclaration_RequestMessageRef">
+                    <om:Property Name="Ref" Value="MedegaImport.Procedures_dbo_sp_CreateMedegaXmlNode_InputMessage" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="AnalystComments" Value="Adapter metadata operation message: " />
+                    <om:Property Name="Name" Value="Request" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+                <om:Element Type="MessageRef" OID="4c7f4fec-b06b-4c26-980a-cbf7ffa90c65" ParentLink="OperationDeclaration_ResponseMessageRef">
+                    <om:Property Name="Ref" Value="MedegaImport.Procedures_dbo_sp_CreateMedegaXmlNode_OutputMessage" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="AnalystComments" Value="Adapter metadata operation message: " />
+                    <om:Property Name="Name" Value="Response" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+        <om:Element Type="MultipartMessageType" OID="f4478a9d-66c3-4d50-9212-5bcdb9aa3d48" ParentLink="Module_MessageType">
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="AnalystComments" Value="Adapter metadata message type: " />
+            <om:Property Name="Name" Value="Procedures_dbo_sp_CreateMedegaXmlNode_InputMessage" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="PartDeclaration" OID="11f6b5db-b866-4db6-aa2f-dd3d97e9e0a2" ParentLink="MultipartMessageType_PartDeclaration">
+                <om:Property Name="ClassName" Value="MedegaImport.WCFSQL_dbo.sp_CreateMedegaXmlNode" />
+                <om:Property Name="IsBodyPart" Value="True" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="AnalystComments" Value="Adapter metadata message part: " />
+                <om:Property Name="Name" Value="parameters" />
+                <om:Property Name="Signal" Value="False" />
+            </om:Element>
+        </om:Element>
+        <om:Element Type="MultipartMessageType" OID="1916dbe2-fc6b-4373-9e75-dbf8cab5b538" ParentLink="Module_MessageType">
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="AnalystComments" Value="Adapter metadata message type: " />
+            <om:Property Name="Name" Value="Procedures_dbo_sp_CreateMedegaXmlNode_OutputMessage" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="PartDeclaration" OID="6b0e7589-e5f6-4bad-a55e-8d81ad720df8" ParentLink="MultipartMessageType_PartDeclaration">
+                <om:Property Name="ClassName" Value="MedegaImport.WCFSQL_dbo.sp_CreateMedegaXmlNodeResponse" />
+                <om:Property Name="IsBodyPart" Value="True" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="AnalystComments" Value="Adapter metadata message part: " />
+                <om:Property Name="Name" Value="parameters" />
+                <om:Property Name="Signal" Value="False" />
+            </om:Element>
+        </om:Element>
+        <om:Element Type="ServiceDeclaration" OID="d2fc1ae5-883c-4b66-b90b-0cb45454dfb0" ParentLink="Module_ServiceDeclaration">
+            <om:Property Name="InitializedTransactionType" Value="False" />
+            <om:Property Name="IsInvokable" Value="True" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="Orchestration_1" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="ServiceBody" OID="7616cfb5-ab3e-47ca-8d10-71ac712809ec" ParentLink="ServiceDeclaration_ServiceBody">
+                <om:Property Name="Signal" Value="False" />
+            </om:Element>
+        </om:Element>
+    </om:Element>
+</om:MetaModel>
+#endif // __DESIGNER_DATA
+[Microsoft.XLANGs.BaseTypes.BPELExportable(false)]
+module MedegaImport
+{
+    internal messagetype Procedures_dbo_sp_CreateMedegaXmlNode_InputMessage
+    {
+        body WCFSQL_dbo.sp_CreateMedegaXmlNode parameters;
+    };
+    internal messagetype Procedures_dbo_sp_CreateMedegaXmlNode_OutputMessage
+    {
+        body WCFSQL_dbo.sp_CreateMedegaXmlNodeResponse parameters;
+    };
+    internal porttype Procedures_dbo
+    {
+        requestresponse sp_CreateMedegaXmlNode
+        {
+            Procedures_dbo_sp_CreateMedegaXmlNode_InputMessage, Procedures_dbo_sp_CreateMedegaXmlNode_OutputMessage
+        };
+    };
+    [Microsoft.XLANGs.BaseTypes.BPELExportable(false)]
+    internal service Orchestration_1
+    {
+        body ()
+        {
+        }
+    }
+}
+

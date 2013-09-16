@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation=".\GuardService_riziv_fgov_be_hodmedega_importmedegaguardrequest.xsd" namespace="http://riziv.fgov.be/hodmedega/importmedegaguardrequest" />
+  <xs:import schemaLocation=".\GuardService_riziv_fgov_be_hodmedega_importmedegaguardresult.xsd" namespace="http://riziv.fgov.be/hodmedega/importmedegaguardresult" />
+  <xs:element name="CreateGuard">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://riziv.fgov.be/hodmedega/importmedegaguardrequest" minOccurs="0" name="medegaGuardRequest" nillable="true" type="q1:ImportMedegaGuardRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateGuardResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://riziv.fgov.be/hodmedega/importmedegaguardresult" minOccurs="0" name="CreateGuardResult" nillable="true" type="q2:ImportMedegaGuardResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

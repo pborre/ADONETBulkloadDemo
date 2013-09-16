@@ -1,0 +1,6 @@
+<ExtensionObjects>
+   <ExtensionObject
+      Namespace="http://schemas.microsoft.com/BizTalk/2003/ScriptNS0"
+      AssemblyName="RIZIV.MedegaImportTypes, Version=2.0.0.0, Culture=neutral, PublicKeyToken=7d624d93bf081b87"
+      ClassName="MedegaImport.MedegaImportTypes.NodeStatus" />
+</ExtensionObjects>

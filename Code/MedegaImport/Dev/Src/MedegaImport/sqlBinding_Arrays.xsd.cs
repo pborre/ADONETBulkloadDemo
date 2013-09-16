@@ -1,0 +1,59 @@
+namespace MedegaImport {
+    using Microsoft.XLANGs.BaseTypes;
+    
+    
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.BizTalk.Schema.Compiler", "3.0.1.0")]
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+    [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
+    [SchemaType(SchemaTypeEnum.Document)]
+    [Schema(@"http://schemas.microsoft.com/2003/10/Serialization/Arrays",@"ArrayOflong")]
+    [System.SerializableAttribute()]
+    [SchemaRoots(new string[] {@"ArrayOflong"})]
+    public sealed class sqlBinding_Arrays : Microsoft.XLANGs.BaseTypes.SchemaBase {
+        
+        [System.NonSerializedAttribute()]
+        private static object _rawSchema;
+        
+        [System.NonSerializedAttribute()]
+        private const string _strSchema = @"<?xml version=""1.0"" encoding=""utf-16""?>
+<schema xmlns:array=""http://schemas.microsoft.com/2003/10/Serialization/Arrays"" xmlns:b=""http://schemas.microsoft.com/BizTalk/2003"" elementFormDefault=""qualified"" targetNamespace=""http://schemas.microsoft.com/2003/10/Serialization/Arrays"" version=""1.0"" xmlns=""http://www.w3.org/2001/XMLSchema"">
+  <annotation>
+    <appinfo>
+      <fileNameHint xmlns=""http://schemas.microsoft.com/servicemodel/adapters/metadata/xsd"">SimpleTypeArray</fileNameHint>
+    </appinfo>
+  </annotation>
+  <complexType name=""ArrayOflong_136325"">
+    <sequence>
+      <element minOccurs=""0"" maxOccurs=""unbounded"" name=""long"" type=""long"" />
+    </sequence>
+  </complexType>
+  <element name=""ArrayOflong"" nillable=""true"" type=""array:ArrayOflong_136325"" />
+</schema>";
+        
+        public sqlBinding_Arrays() {
+        }
+        
+        public override string XmlContent {
+            get {
+                return _strSchema;
+            }
+        }
+        
+        public override string[] RootNodes {
+            get {
+                string[] _RootElements = new string [1];
+                _RootElements[0] = "ArrayOflong";
+                return _RootElements;
+            }
+        }
+        
+        protected override object RawSchema {
+            get {
+                return _rawSchema;
+            }
+            set {
+                _rawSchema = value;
+            }
+        }
+    }
+}

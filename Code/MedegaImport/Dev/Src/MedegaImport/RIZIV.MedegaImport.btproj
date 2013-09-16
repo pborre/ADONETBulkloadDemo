@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <ProductVersion>8.0.30319</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{602843A2-E311-47B4-A584-319C88DF7B47}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Development</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <AssemblyName>RIZIV.MedegaImport</AssemblyName>
+    <OutputType>library</OutputType>
+    <RootNamespace>MedegaImport</RootNamespace>
+    <AssemblyOriginatorKeyFile>Key\hod.snk</AssemblyOriginatorKeyFile>
+    <DelaySign>False</DelaySign>
+    <WebReference_EnableProperties>true</WebReference_EnableProperties>
+    <WebReference_EnableSQLTypes>false</WebReference_EnableSQLTypes>
+    <WebReference_EnableLegacyEventingModel>true</WebReference_EnableLegacyEventingModel>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <ProjectTypeGuids>{EF7E3281-CD33-11D4-8326-00C04FA0CE8D};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <GenericProcessing>true</GenericProcessing>
+    <SignAssembly>true</SignAssembly>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <ModifySolutionConfiguration>true</ModifySolutionConfiguration>
+    <BpelCompliance>True</BpelCompliance>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Development|AnyCPU' ">
+    <OutputPath>bin\Development\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <ErrorReport>prompt</ErrorReport>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Deployment|AnyCPU' ">
+    <OutputPath>bin\Deployment\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <ErrorReport>prompt</ErrorReport>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MedegaImportSchema\RIZIV.MedegaImportSchema.btproj">
+      <Name>MedegaImportSchema</Name>
+      <Project>{BC1EF6A3-CA99-42D4-9DE1-602FB3AADDD0}</Project>
+      <Package>{EF7E3281-CD33-11D4-8326-00C04FA0CE8D}</Package>
+    </ProjectReference>
+    <ProjectReference Include="..\MedegaImportTypes\RIZIV.MedegaImportTypes.csproj">
+      <Name>MedegaImportTypes</Name>
+      <Project>{4E813134-5ABA-44AF-A3B7-A1186C903F50}</Project>
+      <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
+    </ProjectReference>
+    <ProjectReference Include="..\Riziv.MedegaImport.Bulkloader\Riziv.MedegaImport.Bulkloader.csproj">
+      <Name>Riziv.MedegaImport.Bulkloader</Name>
+      <Project>{6E7DBE9E-B4AF-4DC2-BDF2-6EDE0269F3E8}</Project>
+      <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
+    </ProjectReference>
+    <Reference Include="Microsoft.BizTalk.DefaultPipelines">
+      <Name>Microsoft.BizTalk.DefaultPipelines</Name>
+    </Reference>
+    <Reference Include="Microsoft.BizTalk.GlobalPropertySchemas">
+      <Name>Microsoft.BizTalk.GlobalPropertySchemas</Name>
+    </Reference>
+    <Reference Include="Microsoft.BizTalk.Pipeline, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.BizTalk.Pipeline.Components">
+      <Name>Microsoft.BizTalk.Pipeline.Components</Name>
+      <HintPath>C:\windows\assembly\GAC_MSIL\Microsoft.BizTalk.Pipeline.Components\3.0.1.0__31bf3856ad364e35\Microsoft.BizTalk.Pipeline.Components.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.BizTalk.TestTools, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.XLANGs.BaseTypes, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="RIZIV.BizTalk.Common.BTSConfigReader">
+      <Name>RIZIV.BizTalk.Common.BTSConfigReader</Name>
+      <HintPath>..\..\Lib\BTSConfigReader\RIZIV.BizTalk.Common.BTSConfigReader.dll</HintPath>
+    </Reference>
+    <Reference Include="Riziv.HODMedega.Validator">
+      <Name>Riziv.HODMedega.Validator</Name>
+      <HintPath>..\..\Lib\MedegaValidation\Riziv.HODMedega.Validator.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Configuration">
+      <Name>System.configuration</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+    <Reference Include="XslTransform">
+      <Name>XslTransform</Name>
+      <HintPath>..\..\Lib\XslTransform\XslTransform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Web References\GuardsImportService\Reference.map.cs">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <None Include="AssemblyInfo.cs" />
+    <None Include="Key\hod.snk" />
+    <None Include="Mappings\ExtensionObjectMedegaXmlNodeStatus.xml" />
+    <None Include="Mappings\SQLCreateMedegaXmlNode.xsl" />
+    <Schema Include="WCFSQL_dbo.xsd">
+      <TypeName>WCFSQL_dbo</TypeName>
+      <Namespace>MedegaImport</Namespace>
+    </Schema>
+    <Schema Include="WCFSQL_System_x2eData.xsd">
+      <TypeName>WCFSQL_System_x2eData</TypeName>
+      <Namespace>MedegaImport</Namespace>
+    </Schema>
+    <Schema Include="sqlBinding_Arrays.xsd">
+      <TypeName>sqlBinding_Arrays</TypeName>
+      <Namespace>MedegaImport</Namespace>
+    </Schema>
+    <Schema Include="sqlBinding_dbo.xsd">
+      <TypeName>sqlBinding_dbo</TypeName>
+      <Namespace>MedegaImport</Namespace>
+    </Schema>
+    <Schema Include="sqlBinding_MedegaXmlNode.xsd">
+      <TypeName>sqlBinding_MedegaXmlNode</TypeName>
+      <Namespace>MedegaImport</Namespace>
+    </Schema>
+    <Schema Include="WCFSQL_SP.xsd">
+      <TypeName>WCFSQL_SP</TypeName>
+      <Namespace>MedegaImport</Namespace>
+    </Schema>
+    <None Include="Web References\GuardsImportService\GuardsImportService.disco" />
+    <None Include="Web References\GuardsImportService\GuardsImportService.wsdl" />
+    <None Include="Web References\GuardsImportService\Reference.map">
+      <Generator>BtsDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.odx</LastGenOutput>
+    </None>
+    <Schema Include="Web References\GuardsImportService\Reference.xsd">
+      <DependentUpon>Reference.map</DependentUpon>
+      <TypeName>Reference</TypeName>
+      <Namespace>MedegaImport.GuardsImportService</Namespace>
+    </Schema>
+    <WebReferences Include="Web References\" />
+    <WebReferenceUrl Include="http://iisd-tst/szvmedegaservice/GuardsImportService.asmx">
+      <RelPath>Web References\GuardsImportService\</RelPath>
+      <UrlBehavior>Static</UrlBehavior>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup>
+    <Map Include="Mappings\MapCreateGuardRequest.btm">
+      <Namespace>MedegaImport</Namespace>
+      <TypeName>MapCreateGuardRequest</TypeName>
+    </Map>
+  </ItemGroup>
+  <ItemGroup>
+    <Map Include="Mappings\SQLCreateMedegaXmlNode.btm">
+      <Namespace>MedegaImport.Mappings</Namespace>
+      <TypeName>SQLCreateMedegaXmlNode</TypeName>
+    </Map>
+  </ItemGroup>
+  <ItemGroup>
+    <XLang Include="Orchestrations\CreateGuard.odx">
+      <TypeName>CreateGuard</TypeName>
+      <Namespace>MedegaImport.Orchestrations</Namespace>
+    </XLang>
+  </ItemGroup>
+  <ItemGroup>
+    <XLang Include="Orchestrations\HandleException.odx">
+      <TypeName>HandleException</TypeName>
+      <Namespace>MedegaImport.Orchestrations</Namespace>
+    </XLang>
+  </ItemGroup>
+  <ItemGroup>
+    <XLang Include="Orchestrations\ImportGuards.odx">
+      <TypeName>ImportGuards</TypeName>
+      <Namespace>MedegaImport.Orchestrations</Namespace>
+    </XLang>
+  </ItemGroup>
+  <ItemGroup>
+    <XLang Include="Orchestrations\subImportFile.odx">
+      <TypeName>subImportFile</TypeName>
+      <Namespace>MedegaImport.Orchestrations</Namespace>
+    </XLang>
+  </ItemGroup>
+  <ItemGroup>
+    <XLang Include="Orchestrations\subImportGuardRecord.odx">
+      <TypeName>subImportGuardRecord</TypeName>
+      <Namespace>MedegaImport.Orchestrations</Namespace>
+    </XLang>
+  </ItemGroup>
+  <ItemGroup>
+    <XLang Include="Orchestrations\subUpdateFileStatus.odx">
+      <TypeName>subUpdateFileStatus</TypeName>
+      <Namespace>MedegaImport.Orchestrations</Namespace>
+    </XLang>
+  </ItemGroup>
+  <ItemGroup>
+    <XLang Include="Orchestrations\subUpdateNodeStatus.odx">
+      <TypeName>subUpdateNodeStatus</TypeName>
+      <Namespace>MedegaImport.Orchestrations</Namespace>
+    </XLang>
+  </ItemGroup>
+  <ItemGroup>
+    <Pipeline Include="Pipelines\CreateGuardRcv.btp">
+      <Namespace>MedegaImport.Pipelines</Namespace>
+      <TypeName>CreateGuardRcv</TypeName>
+    </Pipeline>
+  </ItemGroup>
+  <ItemGroup>
+    <Pipeline Include="Pipelines\MedegaFileStatusPolling.btp">
+      <Namespace>MedegaImport.Pipelines</Namespace>
+      <TypeName>MedegaFileStatusPolling</TypeName>
+    </Pipeline>
+  </ItemGroup>
+  <ItemGroup>
+    <Pipeline Include="Pipelines\MedegaImportFile.btp">
+      <Namespace>MedegaImport.Pipelines</Namespace>
+      <TypeName>MedegaImportFile</TypeName>
+    </Pipeline>
+  </ItemGroup>
+  <ItemGroup>
+    <Schema Include="Schemas\CreateGuardNode.xsd">
+      <Namespace>MedegaImport.Schemas</Namespace>
+      <TypeName>CreateGuardNode</TypeName>
+    </Schema>
+  </ItemGroup>
+  <ItemGroup>
+    <Schema Include="Schemas\GuardService_riziv_fgov_be_hodmedega_importmedegaguardrequest.xsd">
+      <Namespace>MedegaImport</Namespace>
+      <TypeName>GuardService_riziv_fgov_be_hodmedega_importmedegaguardrequest</TypeName>
+    </Schema>
+  </ItemGroup>
+  <ItemGroup>
+    <Schema Include="Schemas\GuardService_riziv_fgov_be_hodmedega_importmedegaguardresult.xsd">
+      <Namespace>MedegaImport</Namespace>
+      <TypeName>GuardService_riziv_fgov_be_hodmedega_importmedegaguardresult</TypeName>
+    </Schema>
+  </ItemGroup>
+  <ItemGroup>
+    <Schema Include="Schemas\GuardService_schemas_microsoft_com_2003_10_Serialization.xsd">
+      <Namespace>MedegaImport</Namespace>
+      <TypeName>GuardService_schemas_microsoft_com_2003_10_Serialization</TypeName>
+    </Schema>
+  </ItemGroup>
+  <ItemGroup>
+    <Schema Include="Schemas\GuardService_tempuri_org.xsd">
+      <Namespace>MedegaImport</Namespace>
+      <TypeName>GuardService_tempuri_org</TypeName>
+    </Schema>
+  </ItemGroup>
+  <ItemGroup>
+    <Schema Include="Schemas\MedegaFileStatus.xsd">
+      <Namespace>MedegaImport.Schemas</Namespace>
+      <TypeName>MedegaFileStatus</TypeName>
+    </Schema>
+  </ItemGroup>
+  <ItemGroup>
+    <Schema Include="Schemas\MedegaPropertySchema.xsd">
+      <Namespace>MedegaImport.PropertySchema</Namespace>
+      <TypeName>MedegaPropertySchema</TypeName>
+    </Schema>
+  </ItemGroup>
+  <ItemGroup>
+    <Schema Include="Schemas\SQLCreateGuardPolling.xsd">
+      <Namespace>MedegaImport</Namespace>
+      <TypeName>SQLCreateGuardPolling</TypeName>
+    </Schema>
+  </ItemGroup>
+  <ItemGroup>
+    <Schema Include="Schemas\SQLCreateMedegaFile.xsd">
+      <Namespace>MedegaImport</Namespace>
+      <TypeName>SQLCreateMedegaFile</TypeName>
+    </Schema>
+  </ItemGroup>
+  <ItemGroup>
+    <Schema Include="Schemas\SQLCreateMedegaXmlNode.xsd">
+      <Namespace>MedegaImport</Namespace>
+      <TypeName>SQLCreateMedegaXmlNode</TypeName>
+    </Schema>
+  </ItemGroup>
+  <ItemGroup>
+    <Schema Include="Schemas\SQLMedegaFileDonePolling.xsd">
+      <Namespace>MedegaImport</Namespace>
+      <TypeName>SQLMedegaFileDonePolling</TypeName>
+    </Schema>
+  </ItemGroup>
+  <ItemGroup>
+    <Schema Include="Schemas\SQLUpdateFileStatus.xsd">
+      <Namespace>MedegaImport</Namespace>
+      <TypeName>SQLUpdateFileStatus</TypeName>
+    </Schema>
+  </ItemGroup>
+  <ItemGroup>
+    <Schema Include="Schemas\SQLUpdateNodeStatus.xsd">
+      <Namespace>MedegaImport</Namespace>
+      <TypeName>SQLUpdateNodeStatus</TypeName>
+    </Schema>
+  </ItemGroup>
+  <ItemGroup>
+    <XLang Include="Web References\GuardsImportService\Reference.odx">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+      <TypeName>Reference</TypeName>
+      <Namespace>MedegaImport.GuardsImportService</Namespace>
+    </XLang>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <XLang Include="BizTalk Orchestration.odx">
+      <TypeName>BizTalk_Orchestration</TypeName>
+      <Namespace>MedegaImport</Namespace>
+    </XLang>
+  </ItemGroup>
+  <ItemGroup>
+    <Map Include="Mappings\WCFSQLmap.btm">
+      <TypeName>WCFSQLmap</TypeName>
+      <Namespace>MedegaImport.Mappings</Namespace>
+    </Map>
+  </ItemGroup>
+  <ItemGroup>
+    <XLang Include="BizTalk Orchestration_1.odx">
+      <TypeName>BizTalk_Orchestration_1</TypeName>
+      <Namespace>MedegaImport</Namespace>
+    </XLang>
+  </ItemGroup>
+  <ItemGroup>
+    <Map Include="Mappings\WCFSQLInsert.btm">
+      <TypeName>WCFSQLInsert</TypeName>
+      <Namespace>MedegaImport.Mappings</Namespace>
+    </Map>
+  </ItemGroup>
+  <ItemGroup>
+    <Map Include="Mappings\WCFSQLSP.btm">
+      <TypeName>WCFSQLSP</TypeName>
+      <Namespace>MedegaImport.Mappings</Namespace>
+    </Map>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\BizTalk\BizTalkC.targets" />
+  <PropertyGroup>
+    <PreBuildEvent />
+    <PostBuildEvent />
+  </PropertyGroup>
+</Project>

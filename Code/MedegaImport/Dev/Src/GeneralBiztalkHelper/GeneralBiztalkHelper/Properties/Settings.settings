@@ -1,0 +1,9 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="GeneralBiztalkHelper.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="GeneralBiztalkHelper_riziv_inami_fgov_be_logging_WebService_BizTalk_DashBoard" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://biztalk-val/Riziv.Applications.BizTalk.Logging_Proxy/WebService_Riziv_Applications_BizTalk_Logging.asmx</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://riziv-inami.fgov.be" xmlns:s1="http://BizTalk_DashBoard.Schemas.UserLogging" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:s2="http://BizTalk_DashBoard.Schemas.ServiceLogInfo" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://riziv-inami.fgov.be" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">BizTalk assembly "Riziv.Applications.BizTalk.Logging, Version=1.0.0.0, Culture=neutral, PublicKeyToken=5f53b0d9abde3c2f" published web service.</wsdl:documentation>
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://riziv-inami.fgov.be">
+      <s:import namespace="http://BizTalk_DashBoard.Schemas.UserLogging" />
+      <s:import namespace="http://BizTalk_DashBoard.Schemas.ServiceLogInfo" />
+      <s:element name="SaveUserLogging">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" ref="s1:UserLogInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SaveUserLoggingResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserLoggingResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element minOccurs="0" maxOccurs="1" name="Success" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SaveServiceLogging">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" ref="s2:LogInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SaveServiceLoggingResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="part" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://BizTalk_DashBoard.Schemas.UserLogging">
+      <s:element name="UserLogInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="ID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="UserId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="NationalRegistryNb" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Application" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Status" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Request" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="RequestString" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://BizTalk_DashBoard.Schemas.ServiceLogInfo">
+      <s:element name="LogInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="ServiceLogID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="ApplicationName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="ServiceName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="ServiceType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="ServiceState" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="ServiceFileName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="SaveUserLoggingSoapIn">
+    <wsdl:part name="parameters" element="tns:SaveUserLogging" />
+  </wsdl:message>
+  <wsdl:message name="SaveUserLoggingSoapOut">
+    <wsdl:part name="parameters" element="tns:SaveUserLoggingResponse" />
+  </wsdl:message>
+  <wsdl:message name="SaveServiceLoggingSoapIn">
+    <wsdl:part name="parameters" element="tns:SaveServiceLogging" />
+  </wsdl:message>
+  <wsdl:message name="SaveServiceLoggingSoapOut">
+    <wsdl:part name="parameters" element="tns:SaveServiceLoggingResponse" />
+  </wsdl:message>
+  <wsdl:portType name="WebService_Riziv_Applications_BizTalk_LoggingSoap">
+    <wsdl:operation name="SaveUserLogging">
+      <wsdl:input message="tns:SaveUserLoggingSoapIn" />
+      <wsdl:output message="tns:SaveUserLoggingSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveServiceLogging">
+      <wsdl:input message="tns:SaveServiceLoggingSoapIn" />
+      <wsdl:output message="tns:SaveServiceLoggingSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WebService_Riziv_Applications_BizTalk_LoggingSoap" type="tns:WebService_Riziv_Applications_BizTalk_LoggingSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="SaveUserLogging">
+      <soap:operation soapAction="http://riziv-inami.fgov.be/WebService_Riziv_Applications_BizTalk_Logging/SaveUserLogging" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveServiceLogging">
+      <soap:operation soapAction="http://riziv-inami.fgov.be/WebService_Riziv_Applications_BizTalk_Logging/SaveServiceLogging" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WebService_Riziv_Applications_BizTalk_LoggingSoap12" type="tns:WebService_Riziv_Applications_BizTalk_LoggingSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="SaveUserLogging">
+      <soap12:operation soapAction="http://riziv-inami.fgov.be/WebService_Riziv_Applications_BizTalk_Logging/SaveUserLogging" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveServiceLogging">
+      <soap12:operation soapAction="http://riziv-inami.fgov.be/WebService_Riziv_Applications_BizTalk_Logging/SaveServiceLogging" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WebService_Riziv_Applications_BizTalk_Logging">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">BizTalk assembly "Riziv.Applications.BizTalk.Logging, Version=1.0.0.0, Culture=neutral, PublicKeyToken=5f53b0d9abde3c2f" published web service.</wsdl:documentation>
+    <wsdl:port name="WebService_Riziv_Applications_BizTalk_LoggingSoap" binding="tns:WebService_Riziv_Applications_BizTalk_LoggingSoap">
+      <soap:address location="http://biztalk-val/Riziv.Applications.BizTalk.Logging_Proxy/WebService_Riziv_Applications_BizTalk_Logging.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WebService_Riziv_Applications_BizTalk_LoggingSoap12" binding="tns:WebService_Riziv_Applications_BizTalk_LoggingSoap12">
+      <soap12:address location="http://biztalk-val/Riziv.Applications.BizTalk.Logging_Proxy/WebService_Riziv_Applications_BizTalk_Logging.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

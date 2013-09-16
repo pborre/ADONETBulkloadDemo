@@ -1,0 +1,118 @@
+<?xml version="1.0"?>
+<schema xmlns:ns3="http://schemas.microsoft.com/Sql/2008/05/Types/Tables/dbo" elementFormDefault="qualified" targetNamespace="http://schemas.microsoft.com/Sql/2008/05/Types/Tables/dbo" version="1.0" xmlns="http://www.w3.org/2001/XMLSchema">
+  <annotation>
+    <appinfo>
+      <fileNameHint xmlns="http://schemas.microsoft.com/servicemodel/adapters/metadata/xsd">Table.dbo</fileNameHint>
+    </appinfo>
+  </annotation>
+  <complexType name="MedegaXmlNode_136325">
+    <sequence>
+      <element minOccurs="0" maxOccurs="1" name="id" nillable="true" type="long" />
+      <element minOccurs="0" maxOccurs="1" name="MedegaFileId" nillable="true" type="long" />
+      <element minOccurs="0" maxOccurs="1" name="ReasonOfFailure" nillable="true">
+        <simpleType>
+          <restriction base="string">
+            <maxLength value="255" />
+          </restriction>
+        </simpleType>
+      </element>
+      <element minOccurs="0" maxOccurs="1" name="Status" nillable="true" type="int" />
+      <element minOccurs="0" maxOccurs="1" name="MEMBER_INAMI_NUMBER" nillable="true">
+        <simpleType>
+          <restriction base="string">
+            <maxLength value="255" />
+          </restriction>
+        </simpleType>
+      </element>
+      <element minOccurs="0" maxOccurs="1" name="MEMBER_LASTNAME" nillable="true">
+        <simpleType>
+          <restriction base="string">
+            <maxLength value="255" />
+          </restriction>
+        </simpleType>
+      </element>
+      <element minOccurs="0" maxOccurs="1" name="MEMBER_FIRSTNAME" nillable="true">
+        <simpleType>
+          <restriction base="string">
+            <maxLength value="255" />
+          </restriction>
+        </simpleType>
+      </element>
+      <element minOccurs="0" maxOccurs="1" name="MEMBER_BANK_ACCOUNT" nillable="true">
+        <simpleType>
+          <restriction base="string">
+            <maxLength value="255" />
+          </restriction>
+        </simpleType>
+      </element>
+      <element minOccurs="0" maxOccurs="1" name="MEMBER_BANK_ACCOUNT_OWNER" nillable="true">
+        <simpleType>
+          <restriction base="string">
+            <maxLength value="255" />
+          </restriction>
+        </simpleType>
+      </element>
+      <element minOccurs="0" maxOccurs="1" name="FEE_DATE" nillable="true" type="dateTime" />
+      <element minOccurs="0" maxOccurs="1" name="ASSOCIATION_ID" nillable="true" type="int" />
+      <element minOccurs="0" maxOccurs="1" name="ASSOCIATION_NAME" nillable="true">
+        <simpleType>
+          <restriction base="string">
+            <maxLength value="255" />
+          </restriction>
+        </simpleType>
+      </element>
+      <element minOccurs="0" maxOccurs="1" name="GEOGRAPHIC_ENTITY_NAME" nillable="true">
+        <simpleType>
+          <restriction base="string">
+            <maxLength value="255" />
+          </restriction>
+        </simpleType>
+      </element>
+      <element minOccurs="0" maxOccurs="1" name="NIS_CODE" nillable="true">
+        <simpleType>
+          <restriction base="string">
+            <maxLength value="255" />
+          </restriction>
+        </simpleType>
+      </element>
+      <element minOccurs="0" maxOccurs="1" name="ZIP_CODE" nillable="true">
+        <simpleType>
+          <restriction base="string">
+            <maxLength value="255" />
+          </restriction>
+        </simpleType>
+      </element>
+      <element minOccurs="0" maxOccurs="1" name="MANAGER_LASTNAME" nillable="true">
+        <simpleType>
+          <restriction base="string">
+            <maxLength value="255" />
+          </restriction>
+        </simpleType>
+      </element>
+      <element minOccurs="0" maxOccurs="1" name="MANAGER_FIRSTNAME" nillable="true">
+        <simpleType>
+          <restriction base="string">
+            <maxLength value="255" />
+          </restriction>
+        </simpleType>
+      </element>
+      <element minOccurs="0" maxOccurs="1" name="MANAGER_INAMI_NUMBER" nillable="true">
+        <simpleType>
+          <restriction base="string">
+            <maxLength value="255" />
+          </restriction>
+        </simpleType>
+      </element>
+      <element minOccurs="0" maxOccurs="1" name="PERIOD_START_TIME" nillable="true" type="dateTime" />
+      <element minOccurs="0" maxOccurs="1" name="PERIOD_END_TIME" nillable="true" type="dateTime" />
+      <element minOccurs="0" maxOccurs="1" name="ProcessTime" nillable="true" type="dateTime" />
+    </sequence>
+  </complexType>
+  <element name="MedegaXmlNode" nillable="true" type="ns3:MedegaXmlNode_136325" />
+  <complexType name="ArrayOfMedegaXmlNode_136325">
+    <sequence>
+      <element minOccurs="0" maxOccurs="unbounded" name="MedegaXmlNode" type="ns3:MedegaXmlNode_136325" />
+    </sequence>
+  </complexType>
+  <element name="ArrayOfMedegaXmlNode" nillable="true" type="ns3:ArrayOfMedegaXmlNode_136325" />
+</schema>
